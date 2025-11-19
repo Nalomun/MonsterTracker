@@ -1,0 +1,59 @@
+name: Monster Deal Tracker
+
+on:
+  schedule:
+    # Run every day at 9 AM and 6 PM UTC
+    - cron: '0 9,18 * * *'
+  workflow_dispatch:  # Allow manual trigger
+
+jobs:
+  check-deals:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+    
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+    
+    - name: Install dependencies
+      run: |
+        pip install requests beautifulsoup4 lxml
+    
+    - name: Run deal tracker
+      run: |
+        python tracker.py
+    
+    - name: Commit price history
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add price_history.json deal_report.md
+        git diff --quiet && git diff --staged --quiet || git commit -m "Update prices - $(date +'%Y-%m-%d %H:%M')"
+        git push
+    
+    - name: Check for deals and create issue
+      uses: actions/github-script@v6
+      with:
+        script: |
+          const fs = require('fs');
+          
+          // Read the report
+          const report = fs.readFileSync('deal_report.md', 'utf8');
+          
+          // Check if deals were found
+          if (report.includes('🎉')) {
+            // Create an issue
+            await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: `🚨 Monster Energy Deal Alert - ${new Date().toLocaleDateString()}`,
+              body: report,
+              labels: ['deal-alert']
+            });
+          }
