@@ -261,7 +261,7 @@ def main():
     with open('deal_report.md', 'w') as f:
         f.write(report)
     
-    print(f"\n✅ Report saved to deal_report.md")
+    print(f"\n✅ Report saved to deal_reporta.md")
     
     # Print summary
     deals = tracker.find_deals()
