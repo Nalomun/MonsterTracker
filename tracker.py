@@ -88,33 +88,65 @@ class MonsterDealTracker:
             if 'monster' not in title.lower():
                 return None
             
-            # Extract price - Amazon has multiple price formats
+            # Extract price - check multiple sources to find the CHEAPEST option
             price = None
+            seller_info = None
+            prices_found = []
             
-            # Try whole price + fraction
-            price_whole = soup.find('span', class_='a-price-whole')
-            price_fraction = soup.find('span', class_='a-price-fraction')
+            # Method 1: Main buy box price
+            buy_box_section = soup.find('div', {'id': 'apex_desktop'})
+            if buy_box_section:
+                price_whole = buy_box_section.find('span', class_='a-price-whole')
+                price_fraction = buy_box_section.find('span', class_='a-price-fraction')
+                
+                if price_whole:
+                    price_str = price_whole.get_text(strip=True).replace(',', '').replace('.', '')
+                    if price_fraction:
+                        price_str += '.' + price_fraction.get_text(strip=True)
+                    try:
+                        buybox_price = float(price_str)
+                        prices_found.append(('Buy Box', buybox_price, 'Main listing'))
+                    except:
+                        pass
             
-            if price_whole:
-                price_str = price_whole.get_text(strip=True).replace(',', '').replace('.', '')
-                if price_fraction:
-                    price_str += '.' + price_fraction.get_text(strip=True)
-                try:
-                    price = float(price_str)
-                except:
-                    pass
+            # Method 2: Check "Other Sellers" section for cheaper alternatives
+            other_sellers = soup.find('div', {'id': 'aod-offer-list'})
+            if other_sellers:
+                offers = other_sellers.find_all('div', {'id': re.compile(r'aod-offer-')})
+                for offer in offers[:10]:  # Check up to 10 offers
+                    try:
+                        offer_price_elem = offer.find('span', class_='a-offscreen')
+                        if offer_price_elem:
+                            offer_price_text = offer_price_elem.get_text(strip=True)
+                            offer_price_match = re.search(r'\$?([\d,]+\.?\d*)', offer_price_text)
+                            if offer_price_match:
+                                offer_price = float(offer_price_match.group(1).replace(',', ''))
+                                
+                                # Try to get seller name
+                                seller_name_elem = offer.find('div', {'id': re.compile(r'aod-offer-soldBy-')})
+                                seller_name = seller_name_elem.get_text(strip=True) if seller_name_elem else 'Third-party'
+                                
+                                prices_found.append(('Other Seller', offer_price, seller_name))
+                    except:
+                        continue
             
-            # Alternative: try a-offscreen price
-            if not price:
+            # Method 3: Offscreen price (backup)
+            if not prices_found:
                 price_elem = soup.find('span', class_='a-offscreen')
                 if price_elem:
                     price_text = price_elem.get_text(strip=True)
                     price_match = re.search(r'\$?([\d,]+\.?\d*)', price_text)
                     if price_match:
                         try:
-                            price = float(price_match.group(1).replace(',', ''))
+                            fallback_price = float(price_match.group(1).replace(',', ''))
+                            prices_found.append(('Offscreen', fallback_price, 'Unknown'))
                         except:
                             pass
+            
+            # Choose the CHEAPEST price found
+            if prices_found:
+                prices_found.sort(key=lambda x: x[1])  # Sort by price
+                price_source, price, seller_info = prices_found[0]
             
             if not price:
                 return None
@@ -139,6 +171,7 @@ class MonsterDealTracker:
                 'fl_oz': fl_oz,
                 'price_per_oz': round(price_per_oz, 4),
                 'link': f"https://www.amazon.com/dp/{asin}",
+                'seller_info': seller_info if seller_info else 'Amazon/Unknown',
                 'timestamp': datetime.now().isoformat()
             }
             
@@ -280,6 +313,7 @@ class MonsterDealTracker:
             for deal in sorted(deals, key=lambda x: x['price_per_oz']):
                 report += f"### {deal['title']}\n\n"
                 report += f"- **Retailer:** {deal['retailer']}\n"
+                report += f"- **Seller:** {deal.get('seller_info', 'Unknown')}\n"
                 report += f"- **Price:** ${deal['price']:.2f} ({deal['fl_oz']:.0f} fl oz total)\n"
                 report += f"- **Price per fl oz:** ${deal['price_per_oz']:.4f} ⭐ **BELOW THRESHOLD**\n"
                 report += f"- **Link:** [{deal['asin']}]({deal['link']})\n"
