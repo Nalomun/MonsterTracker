@@ -19,12 +19,11 @@ class MonsterDealTracker:
         }
         
         # Known Monster Energy products to check
+        # To find more: search Amazon, copy ASIN from URL (amazon.com/dp/ASIN)
         self.amazon_asins = [
-            'B0BL7316GD',  # Monster Energy Ultra, Sugar Free, 16 Fl Oz (Pack of 24)
-            'B01MZDN3TW',  # Monster Energy Drink, Green, Original, 16 Fl Oz (Pack of 24)
-            'B094GZ4H4H',  # Monster Energy Zero Ultra, Sugar Free Energy Drink
-            'B08GKYCLQT',  # Monster Energy Mega Monster
-            'B0CLD3DXFT',  # Monster Energy Variety Pack
+            'B0BL7316GD',  # Monster Energy Zero Ultra, 16 Ounce (Pack of 15)
+            # Add more ASINs here as you find good deals
+            # Example: 'B0XXXXXXXX',  # Description
         ]
     
     def check_amazon_product(self, asin):
@@ -152,18 +151,22 @@ class MonsterDealTracker:
             
         text_lower = text.lower()
         
-        # Patterns to match
+        # Patterns to match (order matters - most specific first)
         patterns = [
+            # "16 Ounce (Pack of 15)" - YOUR PRODUCT FORMAT
+            r'(\d+\.?\d*)\s*ounce\s*\(pack\s+of\s+(\d+)\)',
+            # "16 Fl Oz (Pack of 24)"
+            r'(\d+\.?\d*)\s*fl\.?\s*oz\.?\s*\(pack\s+of\s+(\d+)\)',
             # "24 Pack, 16 Fl Oz"
             r'(\d+)\s*pack[,\s]+(\d+\.?\d*)\s*fl\.?\s*oz',
             # "Pack of 24, 16 oz"
-            r'pack\s+of\s+(\d+)[,\s]+(\d+\.?\d*)\s*oz',
+            r'pack\s+of\s+(\d+)[,\s]+(\d+\.?\d*)\s*(?:fl\.?\s*)?oz',
             # "24 x 16 fl oz"
             r'(\d+)\s*x\s*(\d+\.?\d*)\s*fl\.?\s*oz',
-            # "16 Fl Oz (Pack of 24)"
-            r'(\d+\.?\d*)\s*fl\.?\s*oz\s*\(pack\s+of\s+(\d+)\)',
             # "(24 Count) 16 oz"
-            r'\((\d+)\s*count\)[,\s]*(\d+\.?\d*)\s*oz',
+            r'\((\d+)\s*count\)[,\s]*(\d+\.?\d*)\s*(?:fl\.?\s*)?oz',
+            # "24-Pack 16 oz"
+            r'(\d+)-pack\s+(\d+\.?\d*)\s*oz',
         ]
         
         for pattern in patterns:
@@ -172,12 +175,9 @@ class MonsterDealTracker:
                 try:
                     num1 = float(match.group(1))
                     num2 = float(match.group(2))
-                    # Determine which is pack size vs can size
-                    # Usually pack size is larger number
-                    if num1 > num2:
-                        return num1 * num2
-                    else:
-                        return num2 * num1
+                    # Calculate total fluid oz
+                    total = num1 * num2
+                    return total
                 except:
                     continue
         
@@ -258,10 +258,10 @@ def main():
     print("=" * 60)
     
     # Save report
-    with open('deal_report.md', 'w') as f:
+    with open('deal_report.md', 'w', encoding='utf-8') as f:
         f.write(report)
     
-    print(f"\n✅ Report saved to deal_reporta.md")
+    print(f"\n✅ Report saved to deal_report.md")
     
     # Print summary
     deals = tracker.find_deals()

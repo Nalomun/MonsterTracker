@@ -1,1 +1,22 @@
-[]
+[
+  {
+    "retailer": "Amazon",
+    "asin": "B0BL7316GD",
+    "title": "Monster Energy Zero Ultra, Sugar Free Energy Drink, 16 Ounce (Pack of 15)",
+    "price": 24.72,
+    "fl_oz": 240.0,
+    "price_per_oz": 0.103,
+    "link": "https://www.amazon.com/dp/B0BL7316GD",
+    "timestamp": "2025-12-04T14:30:37.017944"
+  },
+  {
+    "retailer": "Amazon",
+    "asin": "B0BL7316GD",
+    "title": "Monster Energy Zero Ultra, Sugar Free Energy Drink, 16 Ounce (Pack of 15)",
+    "price": 24.72,
+    "fl_oz": 240.0,
+    "price_per_oz": 0.103,
+    "link": "https://www.amazon.com/dp/B0BL7316GD",
+    "timestamp": "2025-12-04T14:31:22.811628"
+  }
+]
