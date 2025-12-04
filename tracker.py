@@ -4,6 +4,7 @@ import os
 import re
 from datetime import datetime
 from bs4 import BeautifulSoup
+import time
 
 class MonsterDealTracker:
     def __init__(self):
@@ -17,24 +18,59 @@ class MonsterDealTracker:
             'Connection': 'keep-alive',
             'Upgrade-Insecure-Requests': '1'
         }
+    
+    def search_amazon_monsters(self, max_pages=3):
+        """Search Amazon for Monster Energy drinks and extract all products"""
+        print("\n🔍 Searching Amazon for Monster Energy drinks...")
         
-        # Known Monster Energy products to check
-        # To find more: search Amazon, copy ASIN from URL (amazon.com/dp/ASIN)
-        self.amazon_asins = [
-            'B0BL7316GD',  # Monster Energy Zero Ultra, 16 Ounce (Pack of 15)
-            # Add more ASINs here as you find good deals
-            # Example: 'B0XXXXXXXX',  # Description
-        ]
+        all_asins = set()
+        
+        for page in range(1, max_pages + 1):
+            url = f"https://www.amazon.com/s?k=monster+energy+drink&page={page}"
+            
+            try:
+                time.sleep(2)  # Be polite to Amazon
+                response = requests.get(url, headers=self.headers, timeout=15)
+                
+                if response.status_code != 200:
+                    print(f"  Page {page}: Status {response.status_code}, skipping")
+                    continue
+                
+                soup = BeautifulSoup(response.content, 'html.parser')
+                
+                # Find all product cards
+                products = soup.find_all('div', {'data-component-type': 's-search-result'})
+                
+                if not products:
+                    print(f"  Page {page}: No products found (Amazon may have changed layout)")
+                    break
+                
+                page_asins = 0
+                for product in products:
+                    # Extract ASIN from data-asin attribute
+                    asin = product.get('data-asin')
+                    if asin and asin not in all_asins:
+                        all_asins.add(asin)
+                        page_asins += 1
+                
+                print(f"  Page {page}: Found {page_asins} products")
+                
+            except Exception as e:
+                print(f"  Page {page}: Error - {e}")
+                break
+        
+        print(f"\n📦 Total unique products found: {len(all_asins)}")
+        return list(all_asins)
     
     def check_amazon_product(self, asin):
         """Check a specific Amazon product by ASIN"""
         url = f"https://www.amazon.com/dp/{asin}"
         
         try:
+            time.sleep(1)  # Rate limiting
             response = requests.get(url, headers=self.headers, timeout=15)
             
             if response.status_code != 200:
-                print(f"Failed to fetch {asin}: Status {response.status_code}")
                 return None
             
             soup = BeautifulSoup(response.content, 'html.parser')
@@ -46,7 +82,10 @@ class MonsterDealTracker:
                 title = title_elem.get_text(strip=True)
             
             if not title:
-                print(f"Could not find title for {asin}")
+                return None
+            
+            # Skip non-Monster products (sometimes search returns related items)
+            if 'monster' not in title.lower():
                 return None
             
             # Extract price - Amazon has multiple price formats
@@ -78,14 +117,16 @@ class MonsterDealTracker:
                             pass
             
             if not price:
-                print(f"Could not find price for {asin}: {title}")
                 return None
             
             # Extract fluid oz from title and product details
             fl_oz = self.extract_fluid_oz_advanced(title, soup)
             
             if not fl_oz:
-                print(f"Could not determine fluid oz for {asin}: {title}")
+                return None
+            
+            # Skip if unreasonably small (single cans, etc.) - focus on bulk deals
+            if fl_oz < 64:  # Less than 4 cans worth
                 return None
             
             price_per_oz = price / fl_oz
@@ -101,20 +142,41 @@ class MonsterDealTracker:
                 'timestamp': datetime.now().isoformat()
             }
             
-            print(f"✓ Found: {title[:50]}... - ${price:.2f} (${price_per_oz:.4f}/oz)")
+            # Show what we found
+            status = "⭐ DEAL" if price_per_oz <= self.price_threshold else "  "
+            print(f"  {status} ${price_per_oz:.4f}/oz - {title[:60]}...")
+            
             return result
             
         except Exception as e:
-            print(f"Error checking Amazon ASIN {asin}: {e}")
             return None
     
     def check_amazon(self):
-        """Check all Amazon products"""
-        print("\n🔍 Checking Amazon products...")
-        for asin in self.amazon_asins:
+        """Search Amazon and check all Monster Energy products"""
+        # First, search to get ASINs
+        asins = self.search_amazon_monsters(max_pages=3)
+        
+        if not asins:
+            print("⚠️  No products found in search")
+            return
+        
+        print(f"\n🔎 Checking prices for {len(asins)} products...")
+        print("=" * 70)
+        
+        checked = 0
+        for asin in asins:
             result = self.check_amazon_product(asin)
             if result:
                 self.results.append(result)
+                checked += 1
+            
+            # Limit to avoid excessive requests
+            if checked >= 20:
+                print(f"\n  (Limited to first 20 valid products to avoid rate limiting)")
+                break
+        
+        print("=" * 70)
+        print(f"✓ Successfully checked {len(self.results)} products")
     
     def extract_fluid_oz_advanced(self, title, soup):
         """Extract fluid ounces from title and product details"""
@@ -153,7 +215,7 @@ class MonsterDealTracker:
         
         # Patterns to match (order matters - most specific first)
         patterns = [
-            # "16 Ounce (Pack of 15)" - YOUR PRODUCT FORMAT
+            # "16 Ounce (Pack of 15)"
             r'(\d+\.?\d*)\s*ounce\s*\(pack\s+of\s+(\d+)\)',
             # "16 Fl Oz (Pack of 24)"
             r'(\d+\.?\d*)\s*fl\.?\s*oz\.?\s*\(pack\s+of\s+(\d+)\)',
@@ -214,7 +276,7 @@ class MonsterDealTracker:
         deals = self.find_deals()
         
         if deals:
-            report += f"## 🎉 {len(deals)} Deal(s) Found!\n\n"
+            report += f"## 🎉 {len(deals)} Deal(s) Found Below ${self.price_threshold}/oz!\n\n"
             for deal in sorted(deals, key=lambda x: x['price_per_oz']):
                 report += f"### {deal['title']}\n\n"
                 report += f"- **Retailer:** {deal['retailer']}\n"
@@ -227,25 +289,25 @@ class MonsterDealTracker:
             if self.results:
                 report += f"Checked {len(self.results)} product(s). Best current prices:\n\n"
                 sorted_results = sorted(self.results, key=lambda x: x['price_per_oz'])[:5]
-                for result in sorted_results:
-                    report += f"- **{result['retailer']}**: ${result['price_per_oz']:.4f}/fl oz\n"
-                    report += f"  - {result['title'][:80]}...\n"
-                    report += f"  - [View on Amazon]({result['link']})\n\n"
+                for i, result in enumerate(sorted_results, 1):
+                    report += f"**#{i}. ${result['price_per_oz']:.4f}/fl oz** - {result['title'][:80]}\n"
+                    report += f"   - ${result['price']:.2f} for {result['fl_oz']:.0f} fl oz\n"
+                    report += f"   - [View on Amazon]({result['link']})\n\n"
         
         return report
 
 def main():
     tracker = MonsterDealTracker()
     
-    print("=" * 60)
+    print("=" * 70)
     print("🔋 MONSTER ENERGY DEAL TRACKER")
-    print("=" * 60)
+    print("=" * 70)
     
     tracker.check_amazon()
     
     if not tracker.results:
         print("\n⚠️  No results found. Amazon may be blocking requests.")
-        print("Try running again or check your internet connection.")
+        print("Try running again later or check your internet connection.")
         return
     
     # Save results
@@ -253,9 +315,9 @@ def main():
     
     # Generate report
     report = tracker.generate_report()
-    print("\n" + "=" * 60)
+    print("\n" + "=" * 70)
     print(report)
-    print("=" * 60)
+    print("=" * 70)
     
     # Save report
     with open('deal_report.md', 'w', encoding='utf-8') as f:
@@ -267,6 +329,8 @@ def main():
     deals = tracker.find_deals()
     if deals:
         print(f"\n🚨 ALERT: {len(deals)} deal(s) below ${tracker.price_threshold}/oz threshold!")
+        for deal in deals:
+            print(f"   • ${deal['price_per_oz']:.4f}/oz - {deal['title'][:50]}...")
     else:
         print(f"\n📊 No deals below threshold. Keep monitoring!")
 
