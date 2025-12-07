@@ -228,5 +228,16 @@
     "price_per_oz": 0.1022,
     "link": "https://www.amazon.com/dp/B0CYDV671T",
     "timestamp": "2025-12-04T14:40:43.671932"
+  },
+  {
+    "retailer": "Amazon",
+    "asin": "B08ZG9D95Q",
+    "title": "Monster Mix Energy Ultra Watermelon, 16 Fl Oz (Pack of 24) Net Wt 384 Fl Oz",
+    "price": 59.52,
+    "fl_oz": 384.0,
+    "price_per_oz": 0.155,
+    "link": "https://www.amazon.com/dp/B08ZG9D95Q",
+    "seller_info": "Main listing",
+    "timestamp": "2025-12-07T18:32:20.794374"
   }
 ]
