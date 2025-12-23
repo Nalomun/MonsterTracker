@@ -1,6 +1,6 @@
 # Monster Energy Deal Report
 
-**Generated:** 2025-12-07 18:32:46 UTC
+**Generated:** 2025-12-23 09:31:05 UTC
 
 **Price Threshold:** $0.120/fl oz
 
@@ -8,7 +8,7 @@
 
 Checked 1 product(s). Best current prices:
 
-**#1. $0.1550/fl oz** - Monster Mix Energy Ultra Watermelon, 16 Fl Oz (Pack of 24) Net Wt 384 Fl Oz
-   - $59.52 for 384 fl oz
-   - [View on Amazon](https://www.amazon.com/dp/B08ZG9D95Q)
+**#1. $0.1751/fl oz** - Monster Energy Ultra 3 Flavor Variety Pack, Zero Ultra, Ultra Red, Ultra Blue, S
+   - $33.61 for 192 fl oz
+   - [View on Amazon](https://www.amazon.com/dp/B0CTBK1WMT)
 
