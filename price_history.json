@@ -250,5 +250,16 @@
     "link": "https://www.amazon.com/dp/B0CTBK1WMT",
     "seller_info": "Unknown",
     "timestamp": "2025-12-23T09:30:50.292516"
+  },
+  {
+    "retailer": "Amazon",
+    "asin": "B00IB9RZSM",
+    "title": "Monster Energy Import, Energy Drink, 18.6 Ounce (Pack of 12)",
+    "price": 31.99,
+    "fl_oz": 223.20000000000002,
+    "price_per_oz": 0.1433,
+    "link": "https://www.amazon.com/dp/B00IB9RZSM",
+    "seller_info": "Main listing",
+    "timestamp": "2025-12-26T09:27:48.620386"
   }
 ]

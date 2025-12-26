@@ -1,6 +1,6 @@
 # Monster Energy Deal Report
 
-**Generated:** 2025-12-23 09:31:05 UTC
+**Generated:** 2025-12-26 09:28:09 UTC
 
 **Price Threshold:** $0.120/fl oz
 
@@ -8,7 +8,7 @@
 
 Checked 1 product(s). Best current prices:
 
-**#1. $0.1751/fl oz** - Monster Energy Ultra 3 Flavor Variety Pack, Zero Ultra, Ultra Red, Ultra Blue, S
-   - $33.61 for 192 fl oz
-   - [View on Amazon](https://www.amazon.com/dp/B0CTBK1WMT)
+**#1. $0.1433/fl oz** - Monster Energy Import, Energy Drink, 18.6 Ounce (Pack of 12)
+   - $31.99 for 223 fl oz
+   - [View on Amazon](https://www.amazon.com/dp/B00IB9RZSM)
 
