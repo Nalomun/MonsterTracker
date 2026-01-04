@@ -272,5 +272,49 @@
     "link": "https://www.amazon.com/dp/B0DWCX9R49",
     "seller_info": "Main listing",
     "timestamp": "2025-12-28T09:26:24.137244"
+  },
+  {
+    "retailer": "Amazon",
+    "asin": "B0BL77J44B",
+    "title": "Monster Energy Juice Monster Mango Loco, Energy + Juice, Energy Drink, 16 Ounce (Pack of 15)",
+    "price": 31.48,
+    "fl_oz": 240.0,
+    "price_per_oz": 0.1312,
+    "link": "https://www.amazon.com/dp/B0BL77J44B",
+    "seller_info": "Main listing",
+    "timestamp": "2026-01-04T18:34:53.657784"
+  },
+  {
+    "retailer": "Amazon",
+    "asin": "B0G312MKQQ",
+    "title": "Monster Energy Ultra Wild Passion, Sugar Free Energy Drink, 16 Ounce (Pack of 15)",
+    "price": 31.48,
+    "fl_oz": 240.0,
+    "price_per_oz": 0.1312,
+    "link": "https://www.amazon.com/dp/B0G312MKQQ",
+    "seller_info": "Main listing",
+    "timestamp": "2026-01-04T18:35:08.756932"
+  },
+  {
+    "retailer": "Amazon",
+    "asin": "B0BL7D61N5",
+    "title": "Monster Energy Ultra Strawberry Dreams, Sugar Free Energy Drink, 16 Ounce (Pack of 15)",
+    "price": 36.18,
+    "fl_oz": 240.0,
+    "price_per_oz": 0.1507,
+    "link": "https://www.amazon.com/dp/B0BL7D61N5",
+    "seller_info": "Main listing",
+    "timestamp": "2026-01-04T18:35:11.421046"
+  },
+  {
+    "retailer": "Amazon",
+    "asin": "B0DH59KH15",
+    "title": "Monster Energy Ultra Vice Guava, Sugar Free Energy Drink, 16 Ounce (Pack of 15)",
+    "price": 35.0,
+    "fl_oz": 240.0,
+    "price_per_oz": 0.1458,
+    "link": "https://www.amazon.com/dp/B0DH59KH15",
+    "seller_info": "Main listing",
+    "timestamp": "2026-01-04T18:35:18.303355"
   }
 ]
