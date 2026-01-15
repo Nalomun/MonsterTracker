@@ -327,5 +327,38 @@
     "link": "https://www.amazon.com/dp/B07MXRTTBV",
     "seller_info": "Main listing",
     "timestamp": "2026-01-11T18:34:41.363004"
+  },
+  {
+    "retailer": "Amazon",
+    "asin": "B0BJX5VNVF",
+    "title": "Monster Energy Drink, Green, Original, 16 Ounce (Pack of 15)",
+    "price": 27.49,
+    "fl_oz": 240.0,
+    "price_per_oz": 0.1145,
+    "link": "https://www.amazon.com/dp/B0BJX5VNVF",
+    "seller_info": "Main listing",
+    "timestamp": "2026-01-15T09:33:08.163161"
+  },
+  {
+    "retailer": "Amazon",
+    "asin": "B0CRGZGF1C",
+    "title": "Monster Energy Reserve Peaches N Creme, Energy Drink, 16 Ounce (Pack of 15)",
+    "price": 31.48,
+    "fl_oz": 240.0,
+    "price_per_oz": 0.1312,
+    "link": "https://www.amazon.com/dp/B0CRGZGF1C",
+    "seller_info": "Unknown",
+    "timestamp": "2026-01-15T09:33:14.298977"
+  },
+  {
+    "retailer": "Amazon",
+    "asin": "B00PWOIV5U",
+    "title": "Monster Energy Drink, Zero Ultra, 16 Ounce (Pack of 48)",
+    "price": 31.48,
+    "fl_oz": 768.0,
+    "price_per_oz": 0.041,
+    "link": "https://www.amazon.com/dp/B00PWOIV5U",
+    "seller_info": "Unknown",
+    "timestamp": "2026-01-15T09:33:29.168613"
   }
 ]

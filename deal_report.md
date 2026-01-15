@@ -1,14 +1,26 @@
 # Monster Energy Deal Report
 
-**Generated:** 2026-01-11 18:35:28 UTC
+**Generated:** 2026-01-15 09:33:42 UTC
 
 **Price Threshold:** $0.120/fl oz
 
-## ℹ️ No deals found below threshold
+## 🎉 2 Deal(s) Found Below $0.12/oz!
 
-Checked 1 product(s). Best current prices:
+### Monster Energy Drink, Zero Ultra, 16 Ounce (Pack of 48)
 
-**#1. $0.2810/fl oz** - New Monster Java Variety Pack : Loca Moca, Salted Caramel, Mean Bean, Irish, Kon
-   - $59.00 for 210 fl oz
-   - [View on Amazon](https://www.amazon.com/dp/B07MXRTTBV)
+- **Retailer:** Amazon
+- **Seller:** Unknown
+- **Price:** $31.48 (768 fl oz total)
+- **Price per fl oz:** $0.0410 ⭐ **BELOW THRESHOLD**
+- **Link:** [B00PWOIV5U](https://www.amazon.com/dp/B00PWOIV5U)
+- **Savings:** $60.67 vs threshold
+
+### Monster Energy Drink, Green, Original, 16 Ounce (Pack of 15)
+
+- **Retailer:** Amazon
+- **Seller:** Main listing
+- **Price:** $27.49 (240 fl oz total)
+- **Price per fl oz:** $0.1145 ⭐ **BELOW THRESHOLD**
+- **Link:** [B0BJX5VNVF](https://www.amazon.com/dp/B0BJX5VNVF)
+- **Savings:** $1.32 vs threshold
 
