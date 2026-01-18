@@ -360,5 +360,49 @@
     "link": "https://www.amazon.com/dp/B00PWOIV5U",
     "seller_info": "Unknown",
     "timestamp": "2026-01-15T09:33:29.168613"
+  },
+  {
+    "retailer": "Amazon",
+    "asin": "B084D5C6YJ",
+    "title": "Monster Energy Drink Zero Ultra Variety - Paradise, Violet, Sunrise, Red 16 ounce (Pack of 16) and Stinger Chews (Assorted)",
+    "price": 55.99,
+    "fl_oz": 256.0,
+    "price_per_oz": 0.2187,
+    "link": "https://www.amazon.com/dp/B084D5C6YJ",
+    "seller_info": "Main listing",
+    "timestamp": "2026-01-18T18:33:56.439027"
+  },
+  {
+    "retailer": "Amazon",
+    "asin": "B071YLX6NP",
+    "title": "Monster Energy Drink - Ultra Violet - 16fl.oz.(Pack of 8)",
+    "price": 29.98,
+    "fl_oz": 128.0,
+    "price_per_oz": 0.2342,
+    "link": "https://www.amazon.com/dp/B071YLX6NP",
+    "seller_info": "Main listing",
+    "timestamp": "2026-01-18T18:34:11.820325"
+  },
+  {
+    "retailer": "Amazon",
+    "asin": "B075HLT415",
+    "title": "Monster Energy Juice - Mango Loco - 16fl.oz.(Pack of 16)",
+    "price": 31.48,
+    "fl_oz": 256.0,
+    "price_per_oz": 0.123,
+    "link": "https://www.amazon.com/dp/B075HLT415",
+    "seller_info": "Unknown",
+    "timestamp": "2026-01-18T18:34:15.166999"
+  },
+  {
+    "retailer": "Amazon",
+    "asin": "B01MSJ13HP",
+    "title": "Monster Energy Java Monster Loca Moca, Coffee + Energy Drink, 11 Ounce (Pack of 24)",
+    "price": 35.89,
+    "fl_oz": 264.0,
+    "price_per_oz": 0.1359,
+    "link": "https://www.amazon.com/dp/B01MSJ13HP",
+    "seller_info": "Unknown",
+    "timestamp": "2026-01-18T18:34:35.384991"
   }
 ]
