@@ -404,5 +404,27 @@
     "link": "https://www.amazon.com/dp/B01MSJ13HP",
     "seller_info": "Unknown",
     "timestamp": "2026-01-18T18:34:35.384991"
+  },
+  {
+    "retailer": "Amazon",
+    "asin": "B0G2Z5FDCZ",
+    "title": "Monster Energy Orange Dreamsicle, Energy Drink, 16 Ounce (Pack of 15)",
+    "price": 31.62,
+    "fl_oz": 240.0,
+    "price_per_oz": 0.1318,
+    "link": "https://www.amazon.com/dp/B0G2Z5FDCZ",
+    "seller_info": "Main listing",
+    "timestamp": "2026-01-26T18:42:23.618170"
+  },
+  {
+    "retailer": "Amazon",
+    "asin": "B0DSGRDCHY",
+    "title": "Monster Energy Ultra Blue Hawaiian, Sugar Free Energy Drink, 16 Ounce (Pack of 15)",
+    "price": 31.48,
+    "fl_oz": 240.0,
+    "price_per_oz": 0.1312,
+    "link": "https://www.amazon.com/dp/B0DSGRDCHY",
+    "seller_info": "Main listing",
+    "timestamp": "2026-01-26T18:42:42.635018"
   }
 ]
