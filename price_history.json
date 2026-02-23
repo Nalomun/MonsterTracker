@@ -437,5 +437,137 @@
     "link": "https://www.amazon.com/dp/B07N3GP6BD",
     "seller_info": "Unknown",
     "timestamp": "2026-02-08T18:43:14.788037"
+  },
+  {
+    "retailer": "Amazon",
+    "asin": "B01N1TWTR1",
+    "title": "Monster Energy, Zero Ultra, 16 fl oz (pack of 10)",
+    "price": 19.19,
+    "fl_oz": 160.0,
+    "price_per_oz": 0.1199,
+    "link": "https://www.amazon.com/dp/B01N1TWTR1",
+    "seller_info": "Unknown",
+    "timestamp": "2026-02-23T19:10:01.769517"
+  },
+  {
+    "retailer": "Amazon",
+    "asin": "B0G312MKQQ",
+    "title": "Monster Energy Ultra Wild Passion, Sugar Free Energy Drink, 16 Ounce (Pack of 15)",
+    "price": 31.48,
+    "fl_oz": 240.0,
+    "price_per_oz": 0.1312,
+    "link": "https://www.amazon.com/dp/B0G312MKQQ",
+    "seller_info": "Main listing",
+    "timestamp": "2026-02-23T19:10:07.491991"
+  },
+  {
+    "retailer": "Amazon",
+    "asin": "B0DWCX9R49",
+    "title": "Monster Energy Ultra Variety Pack, Blue Hawaiian, Ultra Vice Guava, Ultra Fantasy Ruby Red, Sugar Free Energy Drink, 16 Ounce (Pack of 15)",
+    "price": 31.48,
+    "fl_oz": 240.0,
+    "price_per_oz": 0.1312,
+    "link": "https://www.amazon.com/dp/B0DWCX9R49",
+    "seller_info": "Main listing",
+    "timestamp": "2026-02-23T19:10:10.646408"
+  },
+  {
+    "retailer": "Amazon",
+    "asin": "B0G6ZBRFNV",
+    "title": "Monster Energy Ultra, Zero Ultra Sugar Free Energy Drink 6 Pack, 72 Fl Oz",
+    "price": 19.0,
+    "fl_oz": 432.0,
+    "price_per_oz": 0.044,
+    "link": "https://www.amazon.com/dp/B0G6ZBRFNV",
+    "seller_info": "Main listing",
+    "timestamp": "2026-02-23T19:10:31.878253"
+  },
+  {
+    "retailer": "Amazon",
+    "asin": "B006K329DM",
+    "title": "Java Monster Coffee + Energy Drink, Loca Moca, 15 Fl Oz (Pack of 24)",
+    "price": 34.56,
+    "fl_oz": 360.0,
+    "price_per_oz": 0.096,
+    "link": "https://www.amazon.com/dp/B006K329DM",
+    "seller_info": "Unknown",
+    "timestamp": "2026-02-23T19:10:34.734804"
+  },
+  {
+    "retailer": "Amazon",
+    "asin": "B08M9LHPPM",
+    "title": "Monster Energy Ultra Sunrise, Sugar Free Energy Drink, 16 Ounce (Pack of 12)",
+    "price": 38.31,
+    "fl_oz": 192.0,
+    "price_per_oz": 0.1995,
+    "link": "https://www.amazon.com/dp/B08M9LHPPM",
+    "seller_info": "Main listing",
+    "timestamp": "2026-02-23T19:10:40.604858"
+  },
+  {
+    "retailer": "Amazon",
+    "asin": "B0CTBK1WMT",
+    "title": "Monster Energy Ultra 3 Flavor Variety Pack, Zero Ultra, Ultra Red, Ultra Blue, Sugar Free Energy Drink, 16 Ounce (Pack of 12)",
+    "price": 33.44,
+    "fl_oz": 192.0,
+    "price_per_oz": 0.1742,
+    "link": "https://www.amazon.com/dp/B0CTBK1WMT",
+    "seller_info": "Unknown",
+    "timestamp": "2026-02-23T19:10:46.469451"
+  },
+  {
+    "retailer": "Amazon",
+    "asin": "B0BL6X167P",
+    "title": "Monster Energy Zero Sugar, Green, Original, Low Calorie Energy Drink, 16 Ounce (Pack of 15)",
+    "price": 29.98,
+    "fl_oz": 240.0,
+    "price_per_oz": 0.1249,
+    "link": "https://www.amazon.com/dp/B0BL6X167P",
+    "seller_info": "Main listing",
+    "timestamp": "2026-02-23T19:11:03.611593"
+  },
+  {
+    "retailer": "Amazon",
+    "asin": "B084D5C6YJ",
+    "title": "Monster Energy Drink Zero Ultra Variety - Paradise, Violet, Sunrise, Red 16 ounce (Pack of 16) and Stinger Chews (Assorted)",
+    "price": 55.99,
+    "fl_oz": 256.0,
+    "price_per_oz": 0.2187,
+    "link": "https://www.amazon.com/dp/B084D5C6YJ",
+    "seller_info": "Main listing",
+    "timestamp": "2026-02-23T19:11:18.283201"
+  },
+  {
+    "retailer": "Amazon",
+    "asin": "B006IMBHVU",
+    "title": "Monster Energy Drink, Green, Original, 16 Ounce (Pack of 24)",
+    "price": 29.98,
+    "fl_oz": 384.0,
+    "price_per_oz": 0.0781,
+    "link": "https://www.amazon.com/dp/B006IMBHVU",
+    "seller_info": "Unknown",
+    "timestamp": "2026-02-23T19:11:50.310625"
+  },
+  {
+    "retailer": "Amazon",
+    "asin": "B0CYDV671T",
+    "title": "Monster Energy Ultra Peachy Keen, Sugar Free Energy Drink, 16 Ounce (Pack of 4)",
+    "price": 29.98,
+    "fl_oz": 64.0,
+    "price_per_oz": 0.4684,
+    "link": "https://www.amazon.com/dp/B0CYDV671T",
+    "seller_info": "Unknown",
+    "timestamp": "2026-02-23T19:11:53.110728"
+  },
+  {
+    "retailer": "Amazon",
+    "asin": "B0G2Z28NT8",
+    "title": "Monster Energy Electric Blue, Energy Drink, 16 Ounce (Pack of 15)",
+    "price": 31.48,
+    "fl_oz": 240.0,
+    "price_per_oz": 0.1312,
+    "link": "https://www.amazon.com/dp/B0G2Z28NT8",
+    "seller_info": "Main listing",
+    "timestamp": "2026-02-23T19:12:03.121028"
   }
 ]
