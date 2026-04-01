@@ -580,5 +580,16 @@
     "link": "https://www.amazon.com/dp/B0CTBK1WMT",
     "seller_info": "Unknown",
     "timestamp": "2026-03-27T19:01:41.412938"
+  },
+  {
+    "retailer": "Amazon",
+    "asin": "B006IMBHVU",
+    "title": "Monster Energy Drink, Green, Original, 16 Ounce (Pack of 24)",
+    "price": 29.04,
+    "fl_oz": 384.0,
+    "price_per_oz": 0.0756,
+    "link": "https://www.amazon.com/dp/B006IMBHVU",
+    "seller_info": "Unknown",
+    "timestamp": "2026-04-01T10:09:27.135881"
   }
 ]
