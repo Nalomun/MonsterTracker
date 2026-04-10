@@ -591,5 +591,27 @@
     "link": "https://www.amazon.com/dp/B006IMBHVU",
     "seller_info": "Unknown",
     "timestamp": "2026-04-01T10:09:27.135881"
+  },
+  {
+    "retailer": "Amazon",
+    "asin": "B0G5BC65FV",
+    "title": "Monster Energy Juice Voodoo Grape, Energy + Juice, Energy Drink, 16 Ounce (Pack of 15)",
+    "price": 33.12,
+    "fl_oz": 240.0,
+    "price_per_oz": 0.138,
+    "link": "https://www.amazon.com/dp/B0G5BC65FV",
+    "seller_info": "Main listing",
+    "timestamp": "2026-04-10T10:10:15.751416"
+  },
+  {
+    "retailer": "Amazon",
+    "asin": "B0DWCX9R49",
+    "title": "Monster Energy Ultra Variety Pack, Blue Hawaiian, Ultra Vice Guava, Ultra Fantasy Ruby Red, Sugar Free Energy Drink, 16 Ounce (Pack of 15)",
+    "price": 31.48,
+    "fl_oz": 240.0,
+    "price_per_oz": 0.1312,
+    "link": "https://www.amazon.com/dp/B0DWCX9R49",
+    "seller_info": "Main listing",
+    "timestamp": "2026-04-10T10:10:47.689362"
   }
 ]
