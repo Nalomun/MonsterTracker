@@ -1,14 +1,28 @@
 # Monster Energy Deal Report
 
-**Generated:** 2026-05-04 19:46:32 UTC
+**Generated:** 2025-12-07 15:45:36 UTC
 
 **Price Threshold:** $0.120/fl oz
 
-## ℹ️ No deals found below threshold
+## 🎉 2 Deal(s) Found Below $0.12/oz!
 
-Checked 1 product(s). Best current prices:
+### Monster Energy Zero Ultra, 24 ounce (Pack of 12)
 
-**#1. $0.1291/fl oz** - Monster Energy Drink, Green, Original, 16 Ounce (Pack of 12)
-   - $24.78 for 192 fl oz
-   - [View on Amazon](https://www.amazon.com/dp/B08M9NXMVS)
+- **Retailer:** Amazon
+- **Availability:** ⚠️ Unknown
+- **Seller:** Unknown
+- **Price:** $21.99 (288 fl oz total)
+- **Price per fl oz:** $0.0764 ⭐ **BELOW THRESHOLD**
+- **Link:** [B088MLP1L9](https://www.amazon.com/dp/B088MLP1L9)
+- **Savings:** $12.56 vs threshold
+
+### Monster Energy Drink - Ultra Violet - 16fl.oz.(Pack of 16)
+
+- **Retailer:** Amazon
+- **Availability:** ⚠️ Unknown
+- **Seller:** Unknown
+- **Price:** $27.06 (256 fl oz total)
+- **Price per fl oz:** $0.1057 ⭐ **BELOW THRESHOLD**
+- **Link:** [B07114CCRS](https://www.amazon.com/dp/B07114CCRS)
+- **Savings:** $3.66 vs threshold
 
