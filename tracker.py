@@ -2,6 +2,7 @@ import requests
 import json
 import os
 import re
+import random
 from datetime import datetime
 from bs4 import BeautifulSoup
 import time
@@ -29,7 +30,7 @@ class MonsterDealTracker:
             url = f"https://www.amazon.com/s?k=monster+energy+drink&page={page}"
             
             try:
-                time.sleep(2)  # Be polite to Amazon
+                time.sleep(random.uniform(2, 4))  # Random delay between pages
                 response = requests.get(url, headers=self.headers, timeout=15)
                 
                 if response.status_code != 200:
@@ -62,12 +63,12 @@ class MonsterDealTracker:
         print(f"\n📦 Total unique products found: {len(all_asins)}")
         return list(all_asins)
     
-    def check_amazon_product(self, asin):
+    def check_amazon_product(self, asin, save_debug=False):
         """Check a specific Amazon product by ASIN"""
         url = f"https://www.amazon.com/dp/{asin}"
         
         try:
-            time.sleep(1)  # Rate limiting
+            time.sleep(random.uniform(3, 7))  # Random delay 3-7 seconds
             response = requests.get(url, headers=self.headers, timeout=15)
             
             if response.status_code != 200:
@@ -75,12 +76,35 @@ class MonsterDealTracker:
             
             soup = BeautifulSoup(response.content, 'html.parser')
             
+            # Save debug HTML if requested (for troubleshooting)
+            if save_debug:
+                debug_dir = 'debug_html'
+                os.makedirs(debug_dir, exist_ok=True)
+                with open(f'{debug_dir}/{asin}.html', 'w', encoding='utf-8') as f:
+                    f.write(response.text)
+                print(f"  💾 Saved debug HTML to debug_html/{asin}.html")
+            
             # Extract title
             title = None
             title_elem = soup.find('span', {'id': 'productTitle'})
             if title_elem:
                 title = title_elem.get_text(strip=True)
             
+            # Check if product is actually available for purchase
+            availability = "Unknown"
+            availability_elem = soup.find('div', {'id': 'availability'})
+            if availability_elem:
+                avail_text = availability_elem.get_text(strip=True).lower()
+                if 'in stock' in avail_text or 'available' in avail_text:
+                    availability = "In Stock"
+                elif 'out of stock' in avail_text or 'unavailable' in avail_text:
+                    availability = "Out of Stock"
+                    print(f"  ⚠️  SKIPPED (out of stock): {title[:50] if title else asin}...")
+                    return None
+                elif 'see all buying options' in avail_text:
+                    availability = "Third-party only"
+            
+            # Skip if title not found
             if not title:
                 return None
             
@@ -88,32 +112,63 @@ class MonsterDealTracker:
             if 'monster' not in title.lower():
                 return None
             
-            # Extract price - check multiple sources to find the CHEAPEST option
+            # Extract price - ONLY for THIS specific ASIN, not related products
             price = None
             seller_info = None
             prices_found = []
             
-            # Method 1: Main buy box price
-            buy_box_section = soup.find('div', {'id': 'apex_desktop'})
+            if save_debug:
+                print(f"\n  🔍 DEBUG MODE for {asin}:")
+            
+            # CRITICAL: Find the MAIN product info section that belongs to THIS ASIN only
+            # Exclude all recommendation carousels and "Consider these alternatives"
+            
+            # Method 1: Buy box in the right column (most reliable for the actual product)
+            buy_box_section = soup.find('div', {'id': 'rightCol'})
+            if not buy_box_section:
+                buy_box_section = soup.find('div', {'id': 'apex_desktop'})
+            
             if buy_box_section:
-                price_whole = buy_box_section.find('span', class_='a-price-whole')
-                price_fraction = buy_box_section.find('span', class_='a-price-fraction')
+                # Make sure we're not in a carousel by checking for carousel markers
+                parent_text = str(buy_box_section.parent) if buy_box_section.parent else ""
+                is_in_carousel = any(marker in parent_text for marker in ['carousel', 'faceout', 'alternative'])
                 
-                if price_whole:
-                    price_str = price_whole.get_text(strip=True).replace(',', '').replace('.', '')
-                    if price_fraction:
-                        price_str += '.' + price_fraction.get_text(strip=True)
-                    try:
-                        buybox_price = float(price_str)
-                        prices_found.append(('Buy Box', buybox_price, 'Main listing'))
-                    except:
-                        pass
+                if not is_in_carousel:
+                    price_whole = buy_box_section.find('span', class_='a-price-whole')
+                    price_fraction = buy_box_section.find('span', class_='a-price-fraction')
+                    
+                    if price_whole:
+                        price_str = price_whole.get_text(strip=True).replace(',', '').replace('.', '')
+                        if price_fraction:
+                            price_str += '.' + price_fraction.get_text(strip=True)
+                        try:
+                            buybox_price = float(price_str)
+                            
+                            # Filter out unit prices
+                            if buybox_price >= 5.0:
+                                price_context = buy_box_section.get_text(strip=True).lower()
+                                if 'subscribe' in price_context or 'subscription' in price_context:
+                                    if save_debug:
+                                        print(f"    - Buy Box: ${buybox_price:.2f} (Subscribe & Save)")
+                                    prices_found.append(('Buy Box (S&S)', buybox_price, 'Subscribe & Save'))
+                                else:
+                                    prices_found.append(('Buy Box', buybox_price, 'Main listing'))
+                                    if save_debug:
+                                        print(f"    - Buy Box: ${buybox_price:.2f}")
+                            elif save_debug:
+                                print(f"    - Buy Box: ${buybox_price:.2f} (SKIPPED - likely unit price)")
+                        except Exception as e:
+                            if save_debug:
+                                print(f"    - Buy Box parse error: {e}")
             
             # Method 2: Check "Other Sellers" section for cheaper alternatives
             other_sellers = soup.find('div', {'id': 'aod-offer-list'})
             if other_sellers:
                 offers = other_sellers.find_all('div', {'id': re.compile(r'aod-offer-')})
-                for offer in offers[:10]:  # Check up to 10 offers
+                if save_debug:
+                    print(f"    - Found {len(offers)} other seller offers")
+                    
+                for i, offer in enumerate(offers[:10]):  # Check up to 10 offers
                     try:
                         offer_price_elem = offer.find('span', class_='a-offscreen')
                         if offer_price_elem:
@@ -122,33 +177,72 @@ class MonsterDealTracker:
                             if offer_price_match:
                                 offer_price = float(offer_price_match.group(1).replace(',', ''))
                                 
+                                # Filter out unit prices
+                                if offer_price < 5.0:
+                                    if save_debug:
+                                        print(f"    - Offer {i+1}: ${offer_price:.2f} (SKIPPED - likely unit price)")
+                                    continue
+                                
                                 # Try to get seller name
                                 seller_name_elem = offer.find('div', {'id': re.compile(r'aod-offer-soldBy-')})
                                 seller_name = seller_name_elem.get_text(strip=True) if seller_name_elem else 'Third-party'
                                 
                                 prices_found.append(('Other Seller', offer_price, seller_name))
-                    except:
-                        continue
+                                if save_debug:
+                                    print(f"    - Offer {i+1}: ${offer_price:.2f} from {seller_name}")
+                    except Exception as e:
+                        if save_debug:
+                            print(f"    - Offer {i+1} parse error: {e}")
             
-            # Method 3: Offscreen price (backup)
+            # Method 3: Look for price ONLY in product-specific sections
+            # Exclude any div that has "faceout", "carousel", or "alternative" in its attributes
             if not prices_found:
-                price_elem = soup.find('span', class_='a-offscreen')
-                if price_elem:
-                    price_text = price_elem.get_text(strip=True)
-                    price_match = re.search(r'\$?([\d,]+\.?\d*)', price_text)
-                    if price_match:
-                        try:
-                            fallback_price = float(price_match.group(1).replace(',', ''))
-                            prices_found.append(('Offscreen', fallback_price, 'Unknown'))
-                        except:
-                            pass
+                # Find price elements but validate they're not in recommendation sections
+                all_price_sections = soup.find_all('div', class_=re.compile(r'a-section.*'))
+                
+                for section in all_price_sections:
+                    # Skip if this section is part of a carousel or alternatives
+                    section_html = str(section)
+                    if any(skip_word in section_html.lower() for skip_word in ['carousel', 'faceout', 'alternative', 'data-asin', 'consider these']):
+                        continue
+                    
+                    # Look for price in this clean section
+                    price_elem = section.find('span', class_='a-offscreen')
+                    if price_elem:
+                        price_text = price_elem.get_text(strip=True)
+                        price_match = re.search(r'\$?([\d,]+\.?\d*)', price_text)
+                        if price_match:
+                            try:
+                                section_price = float(price_match.group(1).replace(',', ''))
+                                
+                                if section_price >= 5.0 and section_price <= 100.0:
+                                    prices_found.append(('Section scan', section_price, 'Unknown'))
+                                    if save_debug:
+                                        print(f"    - Section price: ${section_price:.2f}")
+                                    break  # Take first valid price
+                            except:
+                                pass
+                
+                if save_debug and not prices_found:
+                    print(f"    - No valid prices found in clean sections")
             
-            # Choose the CHEAPEST price found
+            # Choose the CHEAPEST price found, but prefer in-stock items
             if prices_found:
                 prices_found.sort(key=lambda x: x[1])  # Sort by price
                 price_source, price, seller_info = prices_found[0]
+                
+                # Additional check: if availability is unknown/questionable, note it
+                is_reliable = (availability == "In Stock" or 'Main listing' in seller_info or 'amazon' in seller_info.lower())
+                
+                if save_debug:
+                    print(f"    ✓ Selected: ${price:.2f} from {price_source} ({seller_info})")
+                    print(f"    All prices found: {[f'${p[1]:.2f}' for p in prices_found]}")
+                    if not is_reliable:
+                        print(f"    ⚠️  Warning: Availability questionable for this price")
             
             if not price:
+                if save_debug:
+                    print(f"    ✗ No price found")
                 return None
             
             # Extract fluid oz from title and product details
@@ -172,12 +266,14 @@ class MonsterDealTracker:
                 'price_per_oz': round(price_per_oz, 4),
                 'link': f"https://www.amazon.com/dp/{asin}",
                 'seller_info': seller_info if seller_info else 'Amazon/Unknown',
+                'availability': availability,
                 'timestamp': datetime.now().isoformat()
             }
             
-            # Show what we found
+            # Show what we found with availability warning
             status = "⭐ DEAL" if price_per_oz <= self.price_threshold else "  "
-            print(f"  {status} ${price_per_oz:.4f}/oz - {title[:60]}...")
+            avail_icon = "✅" if availability == "In Stock" else "⚠️ "
+            print(f"  {status} {avail_icon} ${price_per_oz:.4f}/oz - {title[:60]}...")
             
             return result
             
@@ -197,8 +293,10 @@ class MonsterDealTracker:
         print("=" * 70)
         
         checked = 0
-        for asin in asins:
-            result = self.check_amazon_product(asin)
+        for i, asin in enumerate(asins):
+            # Enable debug for first 3 products to see what's happening
+            save_debug = (i < 3)
+            result = self.check_amazon_product(asin, save_debug=save_debug)
             if result:
                 self.results.append(result)
                 checked += 1
@@ -311,9 +409,18 @@ class MonsterDealTracker:
         if deals:
             report += f"## 🎉 {len(deals)} Deal(s) Found Below ${self.price_threshold}/oz!\n\n"
             for deal in sorted(deals, key=lambda x: x['price_per_oz']):
+                avail_status = deal.get('availability', 'Unknown')
+                avail_emoji = "✅" if avail_status == "In Stock" else "⚠️"
+                seller = deal.get('seller_info', 'Unknown')
+                
+                # Add warning for Subscribe & Save
+                if 'subscribe' in seller.lower() or 's&s' in seller.lower():
+                    seller += " (requires subscription)"
+                
                 report += f"### {deal['title']}\n\n"
                 report += f"- **Retailer:** {deal['retailer']}\n"
-                report += f"- **Seller:** {deal.get('seller_info', 'Unknown')}\n"
+                report += f"- **Availability:** {avail_emoji} {avail_status}\n"
+                report += f"- **Seller:** {seller}\n"
                 report += f"- **Price:** ${deal['price']:.2f} ({deal['fl_oz']:.0f} fl oz total)\n"
                 report += f"- **Price per fl oz:** ${deal['price_per_oz']:.4f} ⭐ **BELOW THRESHOLD**\n"
                 report += f"- **Link:** [{deal['asin']}]({deal['link']})\n"
