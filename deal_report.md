@@ -1,28 +1,48 @@
 # Monster Energy Deal Report
 
-**Generated:** 2025-12-07 15:45:36 UTC
+**Generated:** 2026-05-12 20:07:03 UTC
 
 **Price Threshold:** $0.120/fl oz
 
-## 🎉 2 Deal(s) Found Below $0.12/oz!
+## 🎉 4 Deal(s) Found Below $0.12/oz!
 
-### Monster Energy Zero Ultra, 24 ounce (Pack of 12)
+### Monster Energy Ultra, Zero Ultra Sugar Free Energy Drink 6 Pack, 72 Fl Oz
+
+- **Retailer:** Amazon
+- **Availability:** ✅ In Stock
+- **Seller:** Unknown
+- **Price:** $26.99 (432 fl oz total)
+- **Price per fl oz:** $0.0625 ⭐ **BELOW THRESHOLD**
+- **Link:** [B0G6ZBRFNV](https://www.amazon.com/dp/B0G6ZBRFNV)
+- **Savings:** $24.84 vs threshold
+
+### Monster Energy Drink, Green, Original, 16 Ounce (Pack of 24)
 
 - **Retailer:** Amazon
 - **Availability:** ⚠️ Unknown
 - **Seller:** Unknown
-- **Price:** $21.99 (288 fl oz total)
-- **Price per fl oz:** $0.0764 ⭐ **BELOW THRESHOLD**
-- **Link:** [B088MLP1L9](https://www.amazon.com/dp/B088MLP1L9)
-- **Savings:** $12.56 vs threshold
+- **Price:** $29.99 (384 fl oz total)
+- **Price per fl oz:** $0.0781 ⭐ **BELOW THRESHOLD**
+- **Link:** [B019AKA6YU](https://www.amazon.com/dp/B019AKA6YU)
+- **Savings:** $16.09 vs threshold
 
-### Monster Energy Drink - Ultra Violet - 16fl.oz.(Pack of 16)
+### Monster Energy Drink, Green, Original, 16 Ounce (Pack of 24)
 
 - **Retailer:** Amazon
 - **Availability:** ⚠️ Unknown
 - **Seller:** Unknown
-- **Price:** $27.06 (256 fl oz total)
-- **Price per fl oz:** $0.1057 ⭐ **BELOW THRESHOLD**
-- **Link:** [B07114CCRS](https://www.amazon.com/dp/B07114CCRS)
-- **Savings:** $3.66 vs threshold
+- **Price:** $29.99 (384 fl oz total)
+- **Price per fl oz:** $0.0781 ⭐ **BELOW THRESHOLD**
+- **Link:** [B006IMBHVU](https://www.amazon.com/dp/B006IMBHVU)
+- **Savings:** $16.09 vs threshold
+
+### Monster Energy Ultra Peachy Keen, Sugar Free Energy Drink, 16 Ounce (Pack of 4)
+
+- **Retailer:** Amazon
+- **Availability:** ✅ In Stock
+- **Seller:** Unknown
+- **Price:** $7.67 (64 fl oz total)
+- **Price per fl oz:** $0.1198 ⭐ **BELOW THRESHOLD**
+- **Link:** [B0CYDV671T](https://www.amazon.com/dp/B0CYDV671T)
+- **Savings:** $0.01 vs threshold
 
