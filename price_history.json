@@ -1212,5 +1212,77 @@
     "seller_info": "Unknown",
     "availability": "In Stock",
     "timestamp": "2026-05-23T10:47:36.404487"
+  },
+  {
+    "retailer": "Amazon",
+    "asin": "B0GVGBN9BH",
+    "title": "Monster Energy Juice Strawberry Lemonade, Energy + Juice, Energy Drink, 16 Ounce (Pack of 15)",
+    "price": 31.48,
+    "fl_oz": 240.0,
+    "price_per_oz": 0.1312,
+    "link": "https://www.amazon.com/dp/B0GVGBN9BH",
+    "seller_info": "Unknown",
+    "availability": "In Stock",
+    "timestamp": "2026-05-24T10:43:23.617664"
+  },
+  {
+    "retailer": "Amazon",
+    "asin": "B08M9NXMVS",
+    "title": "Monster Energy Drink, Green, Original, 16 Ounce (Pack of 12)",
+    "price": 27.49,
+    "fl_oz": 192.0,
+    "price_per_oz": 0.1432,
+    "link": "https://www.amazon.com/dp/B08M9NXMVS",
+    "seller_info": "Unknown",
+    "availability": "Unknown",
+    "timestamp": "2026-05-24T10:43:37.677849"
+  },
+  {
+    "retailer": "Amazon",
+    "asin": "B0G6ZBRFNV",
+    "title": "Monster Energy Ultra, Zero Ultra Sugar Free Energy Drink 6 Pack, 72 Fl Oz",
+    "price": 27.48,
+    "fl_oz": 432.0,
+    "price_per_oz": 0.0636,
+    "link": "https://www.amazon.com/dp/B0G6ZBRFNV",
+    "seller_info": "Unknown",
+    "availability": "Unknown",
+    "timestamp": "2026-05-24T10:45:41.501816"
+  },
+  {
+    "retailer": "Amazon",
+    "asin": "B08LNZSM2Q",
+    "title": "Monster Energy Drink Zero Ultra Variety - Paradise, Watermelon, Rosa, Fiesta 16 ounce (Pack of 16) and Stinger Pomegranate Passionfruit Chews",
+    "price": 54.89,
+    "fl_oz": 256.0,
+    "price_per_oz": 0.2144,
+    "link": "https://www.amazon.com/dp/B08LNZSM2Q",
+    "seller_info": "Unknown",
+    "availability": "In Stock",
+    "timestamp": "2026-05-24T10:45:47.720118"
+  },
+  {
+    "retailer": "Amazon",
+    "asin": "B0G312MKQQ",
+    "title": "Monster Energy Ultra Wild Passion, Sugar Free Energy Drink, 16 Ounce (Pack of 15)",
+    "price": 31.48,
+    "fl_oz": 240.0,
+    "price_per_oz": 0.1312,
+    "link": "https://www.amazon.com/dp/B0G312MKQQ",
+    "seller_info": "Unknown",
+    "availability": "In Stock",
+    "timestamp": "2026-05-24T10:45:59.762757"
+  },
+  {
+    "retailer": "Amazon",
+    "asin": "B019AKA6YU",
+    "title": "Monster Energy Drink, Green, Original, 16 Ounce (Pack of 24)",
+    "price": 27.49,
+    "fl_oz": 384.0,
+    "price_per_oz": 0.0716,
+    "link": "https://www.amazon.com/dp/B019AKA6YU",
+    "seller_info": "Unknown",
+    "availability": "Unknown",
+    "timestamp": "2026-05-24T10:48:35.411400"
   }
 ]
