@@ -1,6 +1,6 @@
 # Monster Energy Deal Report
 
-**Generated:** 2026-05-24 19:33:22 UTC
+**Generated:** 2026-05-25 12:49:13 UTC
 
 **Price Threshold:** $0.120/fl oz
 
@@ -21,20 +21,20 @@
 - **Retailer:** Amazon
 - **Availability:** ⚠️ Unknown
 - **Seller:** Unknown
-- **Price:** $29.99 (384 fl oz total)
-- **Price per fl oz:** $0.0781 ⭐ **BELOW THRESHOLD**
+- **Price:** $27.49 (384 fl oz total)
+- **Price per fl oz:** $0.0716 ⭐ **BELOW THRESHOLD**
 - **Link:** [B019AKA6YU](https://www.amazon.com/dp/B019AKA6YU)
-- **Savings:** $16.09 vs threshold
+- **Savings:** $18.59 vs threshold
 
-### Monster Zero Ultra Variety: Zero Ultra, Ultra Red, Ultra Violet, Ultra Blue, Sunrise, Paradise, Rosa, Fiesta, 16 ounce (Pack of 16) and Stinger Orange Blossom Chews
+### Monster Energy Drink, 16 Fl Oz (Pack of 24)
 
 - **Retailer:** Amazon
 - **Availability:** ⚠️ Unknown
 - **Seller:** Unknown
-- **Price:** $27.49 (256 fl oz total)
-- **Price per fl oz:** $0.1074 ⭐ **BELOW THRESHOLD**
-- **Link:** [B088Q3K8QZ](https://www.amazon.com/dp/B088Q3K8QZ)
-- **Savings:** $3.23 vs threshold
+- **Price:** $27.49 (384 fl oz total)
+- **Price per fl oz:** $0.0716 ⭐ **BELOW THRESHOLD**
+- **Link:** [B0072MDT5W](https://www.amazon.com/dp/B0072MDT5W)
+- **Savings:** $18.59 vs threshold
 
 ### Monster Energy Zero Sugar, Green, Original, Low Calorie Energy Drink, 16 Ounce (Pack of 15), Can
 
