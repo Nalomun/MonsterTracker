@@ -2244,5 +2244,29 @@
     "seller_info": "Unknown",
     "availability": "In Stock",
     "timestamp": "2026-05-27T12:35:05.421953"
+  },
+  {
+    "retailer": "Amazon",
+    "asin": "B0CYFJMRDD",
+    "title": "Monster Energy Ultra 3 Flavor Variety Pack, Zero Ultra, Ultra Peachy Keen, Ultra Strawberry Dreams, Sugar Free Energy Drink, 16 Ounce (Pack of 12)",
+    "price": 29.98,
+    "fl_oz": 192.0,
+    "price_per_oz": 0.1561,
+    "link": "https://www.amazon.com/dp/B0CYFJMRDD",
+    "seller_info": "Unknown",
+    "availability": "Unknown",
+    "timestamp": "2026-05-28T12:31:01.434718"
+  },
+  {
+    "retailer": "Amazon",
+    "asin": "B0DWCX9R49",
+    "title": "Monster Energy Variety Pack, Can, Blue Hawaiian, Vice Guava, Fantasy Ruby Red, Sugar Free Energy Drink, 16 Ounce (Pack of 15)",
+    "price": 31.48,
+    "fl_oz": 240.0,
+    "price_per_oz": 0.1312,
+    "link": "https://www.amazon.com/dp/B0DWCX9R49",
+    "seller_info": "Unknown",
+    "availability": "In Stock",
+    "timestamp": "2026-05-28T12:32:38.128124"
   }
 ]
