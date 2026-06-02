@@ -1,30 +1,40 @@
 # Monster Energy Deal Report
 
-**Generated:** 2026-05-29 12:30:01 UTC
+**Generated:** 2026-06-02 21:04:20 UTC
 
 **Price Threshold:** $0.120/fl oz
 
-## 🎉 3 Deal(s) Found Below $0.12/oz!
+## 🎉 5 Deal(s) Found Below $0.12/oz!
 
-### Monster Energy Ultra, Zero Ultra Sugar Free Energy Drink 6 Pack, 72 Fl Oz
-
-- **Retailer:** Amazon
-- **Availability:** ⚠️ Unknown
-- **Seller:** Unknown
-- **Price:** $27.47 (432 fl oz total)
-- **Price per fl oz:** $0.0636 ⭐ **BELOW THRESHOLD**
-- **Link:** [B0G6ZBRFNV](https://www.amazon.com/dp/B0G6ZBRFNV)
-- **Savings:** $24.36 vs threshold
-
-### Monster Energy Drink, Green, Original, 16 Ounce (Pack of 24)
+### Monster Energy Drink - Ultra Violet - 16fl.oz.(Pack of 16)
 
 - **Retailer:** Amazon
 - **Availability:** ⚠️ Unknown
 - **Seller:** Unknown
-- **Price:** $27.49 (384 fl oz total)
-- **Price per fl oz:** $0.0716 ⭐ **BELOW THRESHOLD**
-- **Link:** [B019AKA6YU](https://www.amazon.com/dp/B019AKA6YU)
-- **Savings:** $18.59 vs threshold
+- **Price:** $27.84 (256 fl oz total)
+- **Price per fl oz:** $0.1087 ⭐ **BELOW THRESHOLD**
+- **Link:** [B07114CCRS](https://www.amazon.com/dp/B07114CCRS)
+- **Savings:** $2.89 vs threshold
+
+### Monster Energy Ultra 3 Flavor Variety Pack, Zero Ultra, Ultra Peachy Keen, Ultra Strawberry Dreams, Sugar Free Energy Drink, 16 Ounce (Pack of 12)
+
+- **Retailer:** Amazon
+- **Availability:** ⚠️ Unknown
+- **Seller:** Unknown
+- **Price:** $21.49 (192 fl oz total)
+- **Price per fl oz:** $0.1119 ⭐ **BELOW THRESHOLD**
+- **Link:** [B0CYFJMRDD](https://www.amazon.com/dp/B0CYFJMRDD)
+- **Savings:** $1.56 vs threshold
+
+### Monster Energy Drink, Green, Original, 16 Ounce (Pack of 15)
+
+- **Retailer:** Amazon
+- **Availability:** ✅ In Stock
+- **Seller:** Unknown
+- **Price:** $27.49 (240 fl oz total)
+- **Price per fl oz:** $0.1145 ⭐ **BELOW THRESHOLD**
+- **Link:** [B0BJX5VNVF](https://www.amazon.com/dp/B0BJX5VNVF)
+- **Savings:** $1.32 vs threshold
 
 ### Monster Energy Zero Sugar, Green, Original, Low Calorie Energy Drink, 16 Ounce (Pack of 15), Can
 
@@ -35,4 +45,14 @@
 - **Price per fl oz:** $0.1145 ⭐ **BELOW THRESHOLD**
 - **Link:** [B0BL6X167P](https://www.amazon.com/dp/B0BL6X167P)
 - **Savings:** $1.32 vs threshold
+
+### Monster Energy Drink, Green, Original, 16 Ounce (Pack of 12)
+
+- **Retailer:** Amazon
+- **Availability:** ⚠️ Unknown
+- **Seller:** Unknown
+- **Price:** $22.99 (192 fl oz total)
+- **Price per fl oz:** $0.1197 ⭐ **BELOW THRESHOLD**
+- **Link:** [B08M9NXMVS](https://www.amazon.com/dp/B08M9NXMVS)
+- **Savings:** $0.06 vs threshold
 
