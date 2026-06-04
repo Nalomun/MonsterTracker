@@ -3228,5 +3228,17 @@
     "seller_info": "Unknown",
     "availability": "In Stock",
     "timestamp": "2026-06-03T21:32:04.315877"
+  },
+  {
+    "retailer": "Amazon",
+    "asin": "B08M9T242Z",
+    "title": "Monster Energy Juice Monster Mango Loco, Energy + Juice, Energy Drink, 16 Ounce (Pack of 12)",
+    "price": 41.0,
+    "fl_oz": 192.0,
+    "price_per_oz": 0.2135,
+    "link": "https://www.amazon.com/dp/B08M9T242Z",
+    "seller_info": "Unknown",
+    "availability": "In Stock",
+    "timestamp": "2026-06-04T12:00:38.323647"
   }
 ]
