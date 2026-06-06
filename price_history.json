@@ -3240,5 +3240,29 @@
     "seller_info": "Unknown",
     "availability": "In Stock",
     "timestamp": "2026-06-04T12:00:38.323647"
+  },
+  {
+    "retailer": "Amazon",
+    "asin": "B0G2Z5FDCZ",
+    "title": "Monster Energy Orange Dreamsicle, Energy Drink, 16 Ounce (Pack of 15)",
+    "price": 31.48,
+    "fl_oz": 240.0,
+    "price_per_oz": 0.1312,
+    "link": "https://www.amazon.com/dp/B0G2Z5FDCZ",
+    "seller_info": "Unknown",
+    "availability": "Unknown",
+    "timestamp": "2026-06-06T19:38:52.658416"
+  },
+  {
+    "retailer": "Amazon",
+    "asin": "B0G5BBHY3H",
+    "title": "Monster Energy Strawberry Shot, Green, Original, Energy Drink, 16 Ounce (Pack of 15)",
+    "price": 31.48,
+    "fl_oz": 240.0,
+    "price_per_oz": 0.1312,
+    "link": "https://www.amazon.com/dp/B0G5BBHY3H",
+    "seller_info": "Unknown",
+    "availability": "Unknown",
+    "timestamp": "2026-06-06T19:39:44.926043"
   }
 ]
