@@ -4464,5 +4464,29 @@
     "seller_info": "Unknown",
     "availability": "In Stock",
     "timestamp": "2026-06-12T20:26:38.749699"
+  },
+  {
+    "retailer": "Amazon",
+    "asin": "B0GVG9K1HY",
+    "title": "Monster Energy Ultra Red White & Blue Razz, Sugar Free Energy Drink, 16 Ounce (Pack of 15)",
+    "price": 32.48,
+    "fl_oz": 240.0,
+    "price_per_oz": 0.1353,
+    "link": "https://www.amazon.com/dp/B0GVG9K1HY",
+    "seller_info": "Unknown",
+    "availability": "In Stock",
+    "timestamp": "2026-06-13T11:18:07.441773"
+  },
+  {
+    "retailer": "Amazon",
+    "asin": "B0BL6X167P",
+    "title": "Monster Energy Zero Sugar, Green, Original, Low Calorie Energy Drink, 16 Ounce (Pack of 15), Can",
+    "price": 27.48,
+    "fl_oz": 240.0,
+    "price_per_oz": 0.1145,
+    "link": "https://www.amazon.com/dp/B0BL6X167P",
+    "seller_info": "Unknown",
+    "availability": "Unknown",
+    "timestamp": "2026-06-13T11:18:26.512497"
   }
 ]
