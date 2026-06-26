@@ -1,30 +1,30 @@
 # Monster Energy Deal Report
 
-**Generated:** 2026-06-24 11:58:12 UTC
+**Generated:** 2026-06-26 11:55:40 UTC
 
 **Price Threshold:** $0.120/fl oz
 
-## 🎉 9 Deal(s) Found Below $0.12/oz!
+## 🎉 8 Deal(s) Found Below $0.12/oz!
 
 ### Monster Energy Drink, Green, Original, 16 Ounce (Pack of 24)
 
 - **Retailer:** Amazon
 - **Availability:** ⚠️ Unknown
 - **Seller:** Unknown
-- **Price:** $29.97 (384 fl oz total)
-- **Price per fl oz:** $0.0780 ⭐ **BELOW THRESHOLD**
+- **Price:** $29.98 (384 fl oz total)
+- **Price per fl oz:** $0.0781 ⭐ **BELOW THRESHOLD**
 - **Link:** [B019AKA6YU](https://www.amazon.com/dp/B019AKA6YU)
-- **Savings:** $16.13 vs threshold
+- **Savings:** $16.09 vs threshold
 
 ### Monster Energy Drink, Green, Original, 16 Ounce (Pack of 24)
 
 - **Retailer:** Amazon
 - **Availability:** ⚠️ Unknown
 - **Seller:** Unknown
-- **Price:** $29.97 (384 fl oz total)
-- **Price per fl oz:** $0.0780 ⭐ **BELOW THRESHOLD**
+- **Price:** $29.98 (384 fl oz total)
+- **Price per fl oz:** $0.0781 ⭐ **BELOW THRESHOLD**
 - **Link:** [B006IMBHVU](https://www.amazon.com/dp/B006IMBHVU)
-- **Savings:** $16.13 vs threshold
+- **Savings:** $16.09 vs threshold
 
 ### Monster Energy Zero Sugar, Green, Original, Low Calorie Energy Drink, 16 Ounce (Pack of 15), Can
 
@@ -36,15 +36,15 @@
 - **Link:** [B0BL6X167P](https://www.amazon.com/dp/B0BL6X167P)
 - **Savings:** $5.45 vs threshold
 
-### Monster Energy Strawberry Shot, Green, Original, Energy Drink, 16 Ounce (Pack of 15)
+### Monster Energy Zero Ultra, 24 ounce (Pack of 12)
 
 - **Retailer:** Amazon
-- **Availability:** ✅ In Stock
+- **Availability:** ⚠️ Unknown
 - **Seller:** Unknown
-- **Price:** $25.18 (240 fl oz total)
-- **Price per fl oz:** $0.1049 ⭐ **BELOW THRESHOLD**
-- **Link:** [B0G5BBHY3H](https://www.amazon.com/dp/B0G5BBHY3H)
-- **Savings:** $3.62 vs threshold
+- **Price:** $29.99 (288 fl oz total)
+- **Price per fl oz:** $0.1041 ⭐ **BELOW THRESHOLD**
+- **Link:** [B088MLP1L9](https://www.amazon.com/dp/B088MLP1L9)
+- **Savings:** $4.58 vs threshold
 
 ### Monster Energy Ultra Wild Passion, Sugar Free Energy Drink, 16 Ounce (Pack of 15)
 
@@ -75,16 +75,6 @@
 - **Price per fl oz:** $0.1141 ⭐ **BELOW THRESHOLD**
 - **Link:** [B0G5B6MM22](https://www.amazon.com/dp/B0G5B6MM22)
 - **Savings:** $1.42 vs threshold
-
-### Monster Energy Voodoo Grape, Energy + Juice, Energy Drink, Can, 16 Ounce (Pack of 15)
-
-- **Retailer:** Amazon
-- **Availability:** ✅ In Stock
-- **Seller:** Unknown
-- **Price:** $27.88 (240 fl oz total)
-- **Price per fl oz:** $0.1162 ⭐ **BELOW THRESHOLD**
-- **Link:** [B0G5BC65FV](https://www.amazon.com/dp/B0G5BC65FV)
-- **Savings:** $0.91 vs threshold
 
 ### Monster Energy Ultra 3 Flavor Variety Pack, Zero Ultra, Ultra Peachy Keen, Ultra Strawberry Dreams, Sugar Free Energy Drink, 16 Ounce (Pack of 12)
 
