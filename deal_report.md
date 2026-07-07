@@ -1,6 +1,6 @@
 # Monster Energy Deal Report
 
-**Generated:** 2026-07-06 20:13:01 UTC
+**Generated:** 2026-07-07 12:06:17 UTC
 
 **Price Threshold:** $0.120/fl oz
 
@@ -21,10 +21,10 @@
 - **Retailer:** Amazon
 - **Availability:** ⚠️ Unknown
 - **Seller:** Unknown
-- **Price:** $28.33 (288 fl oz total)
-- **Price per fl oz:** $0.0984 ⭐ **BELOW THRESHOLD**
+- **Price:** $28.37 (288 fl oz total)
+- **Price per fl oz:** $0.0985 ⭐ **BELOW THRESHOLD**
 - **Link:** [B088MLP1L9](https://www.amazon.com/dp/B088MLP1L9)
-- **Savings:** $6.22 vs threshold
+- **Savings:** $6.19 vs threshold
 
 ### Monster Energy Zero Sugar, Green, Original, Low Calorie Energy Drink, 16 Ounce (Pack of 15), Can
 
