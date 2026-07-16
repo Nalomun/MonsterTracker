@@ -1,10 +1,10 @@
 # Monster Energy Deal Report
 
-**Generated:** 2026-07-15 19:28:17 UTC
+**Generated:** 2026-07-16 19:31:09 UTC
 
 **Price Threshold:** $0.120/fl oz
 
-## 🎉 6 Deal(s) Found Below $0.12/oz!
+## 🎉 4 Deal(s) Found Below $0.12/oz!
 
 ### Monster Energy Drink, Green, Original, 16 Ounce (Pack of 24)
 
@@ -31,38 +31,18 @@
 - **Retailer:** Amazon
 - **Availability:** ⚠️ Unknown
 - **Seller:** Unknown
-- **Price:** $29.97 (288 fl oz total)
+- **Price:** $29.98 (288 fl oz total)
 - **Price per fl oz:** $0.1041 ⭐ **BELOW THRESHOLD**
 - **Link:** [B088MLP1L9](https://www.amazon.com/dp/B088MLP1L9)
 - **Savings:** $4.58 vs threshold
 
-### Monster Zero Ultra Variety: Zero Ultra, Ultra Red, Ultra Violet, Ultra Blue, Sunrise, Paradise, Rosa, Fiesta, 16 ounce (Pack of 16) and Stinger Orange Blossom Chews
+### Monster Energy Ultra Red White & Blue Razz, Sugar Free Energy Drink, 16 Ounce (Pack of 15)
 
 - **Retailer:** Amazon
 - **Availability:** ⚠️ Unknown
 - **Seller:** Unknown
-- **Price:** $29.98 (256 fl oz total)
-- **Price per fl oz:** $0.1171 ⭐ **BELOW THRESHOLD**
-- **Link:** [B088Q3K8QZ](https://www.amazon.com/dp/B088Q3K8QZ)
-- **Savings:** $0.74 vs threshold
-
-### Monster Energy Drink, Green, Original, 16 Ounce (Pack of 15)
-
-- **Retailer:** Amazon
-- **Availability:** ⚠️ Unknown
-- **Seller:** Unknown
-- **Price:** $28.48 (240 fl oz total)
-- **Price per fl oz:** $0.1187 ⭐ **BELOW THRESHOLD**
-- **Link:** [B0BJX5VNVF](https://www.amazon.com/dp/B0BJX5VNVF)
-- **Savings:** $0.31 vs threshold
-
-### Monster Energy Drink, Green, Original, 16 Ounce (Pack of 12)
-
-- **Retailer:** Amazon
-- **Availability:** ⚠️ Unknown
-- **Seller:** Unknown
-- **Price:** $22.99 (192 fl oz total)
-- **Price per fl oz:** $0.1197 ⭐ **BELOW THRESHOLD**
-- **Link:** [B08M9NXMVS](https://www.amazon.com/dp/B08M9NXMVS)
-- **Savings:** $0.06 vs threshold
+- **Price:** $27.53 (240 fl oz total)
+- **Price per fl oz:** $0.1147 ⭐ **BELOW THRESHOLD**
+- **Link:** [B0GVG9K1HY](https://www.amazon.com/dp/B0GVG9K1HY)
+- **Savings:** $1.27 vs threshold
 
