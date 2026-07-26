@@ -1,10 +1,10 @@
 # Monster Energy Deal Report
 
-**Generated:** 2026-07-25 19:17:50 UTC
+**Generated:** 2026-07-26 10:51:21 UTC
 
 **Price Threshold:** $0.120/fl oz
 
-## 🎉 4 Deal(s) Found Below $0.12/oz!
+## 🎉 5 Deal(s) Found Below $0.12/oz!
 
 ### Monster Energy Drink, Green, Original, 16 Ounce (Pack of 24)
 
@@ -35,6 +35,16 @@
 - **Price per fl oz:** $0.1145 ⭐ **BELOW THRESHOLD**
 - **Link:** [B0BL6X167P](https://www.amazon.com/dp/B0BL6X167P)
 - **Savings:** $1.32 vs threshold
+
+### Monster Energy Ultra Red White & Blue Razz, Sugar Free Energy Drink, 16 Ounce (Pack of 15)
+
+- **Retailer:** Amazon
+- **Availability:** ⚠️ Unknown
+- **Seller:** Unknown
+- **Price:** $27.53 (240 fl oz total)
+- **Price per fl oz:** $0.1147 ⭐ **BELOW THRESHOLD**
+- **Link:** [B0GVG9K1HY](https://www.amazon.com/dp/B0GVG9K1HY)
+- **Savings:** $1.27 vs threshold
 
 ### Monster Energy Drink, Green, Original, 16 Ounce (Pack of 15)
 
