@@ -14340,5 +14340,17 @@
     "seller_info": "Unknown",
     "availability": "In Stock",
     "timestamp": "2026-07-30T11:20:01.771972"
+  },
+  {
+    "retailer": "Amazon",
+    "asin": "B084D5C6YJ",
+    "title": "Monster Energy Drink Zero Ultra Variety - Paradise, Violet, Sunrise, Red 16 ounce (Pack of 16) and Stinger Chews (Assorted)",
+    "price": 56.99,
+    "fl_oz": 256.0,
+    "price_per_oz": 0.2226,
+    "link": "https://www.amazon.com/dp/B084D5C6YJ",
+    "seller_info": "Unknown",
+    "availability": "Unknown",
+    "timestamp": "2026-07-30T19:41:05.095126"
   }
 ]
