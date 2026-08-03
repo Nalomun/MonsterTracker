@@ -1,38 +1,18 @@
 # Monster Energy Deal Report
 
-**Generated:** 2026-08-01 10:54:20 UTC
+**Generated:** 2026-08-03 12:32:22 UTC
 
 **Price Threshold:** $0.120/fl oz
 
-## 🎉 3 Deal(s) Found Below $0.12/oz!
+## ℹ️ No deals found below threshold
 
-### Monster Energy, Lo-Carb Monster, Low Carb Energy Drink, 16 Ounce (Pack of 15) | Pack of 15
+Checked 2 product(s). Best current prices:
 
-- **Retailer:** Amazon
-- **Availability:** ✅ In Stock
-- **Seller:** Unknown
-- **Price:** $27.48 (240 fl oz total)
-- **Price per fl oz:** $0.1145 ⭐ **BELOW THRESHOLD**
-- **Link:** [B0BL75738K](https://www.amazon.com/dp/B0BL75738K)
-- **Savings:** $1.32 vs threshold
+**#1. $0.2760/fl oz** - Monster Energy Drink Variety -Low Calorie Pack - 16 ounce (Pack of 12) + Stinger
+   - $53.00 for 192 fl oz
+   - [View on Amazon](https://www.amazon.com/dp/B00X1P70N6)
 
-### Monster Energy Zero Sugar, Green, Original, Low Calorie Energy Drink, 16 Ounce (Pack of 15), Can
-
-- **Retailer:** Amazon
-- **Availability:** ✅ In Stock
-- **Seller:** Unknown
-- **Price:** $27.48 (240 fl oz total)
-- **Price per fl oz:** $0.1145 ⭐ **BELOW THRESHOLD**
-- **Link:** [B0BL6X167P](https://www.amazon.com/dp/B0BL6X167P)
-- **Savings:** $1.32 vs threshold
-
-### Monster Energy Drink, Green, Original, 16 Ounce (Pack of 12)
-
-- **Retailer:** Amazon
-- **Availability:** ⚠️ Unknown
-- **Seller:** Unknown
-- **Price:** $21.99 (192 fl oz total)
-- **Price per fl oz:** $0.1145 ⭐ **BELOW THRESHOLD**
-- **Link:** [B08M9NXMVS](https://www.amazon.com/dp/B08M9NXMVS)
-- **Savings:** $1.06 vs threshold
+**#2. $0.2952/fl oz** - New Monster Java Variety Pack : Loca Moca, Salted Caramel, Mean Bean, Irish, Kon
+   - $61.99 for 210 fl oz
+   - [View on Amazon](https://www.amazon.com/dp/B07MXRTTBV)
 
