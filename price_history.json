@@ -15648,5 +15648,29 @@
     "seller_info": "Unknown",
     "availability": "In Stock",
     "timestamp": "2026-08-07T00:14:13.719011"
+  },
+  {
+    "retailer": "Amazon",
+    "asin": "B08M9LHPPM",
+    "title": "Monster Energy Ultra Sunrise, Sugar Free Energy Drink, 16 Ounce (Pack of 12)",
+    "price": 38.31,
+    "fl_oz": 192.0,
+    "price_per_oz": 0.1995,
+    "link": "https://www.amazon.com/dp/B08M9LHPPM",
+    "seller_info": "Unknown",
+    "availability": "In Stock",
+    "timestamp": "2026-08-07T10:04:48.537423"
+  },
+  {
+    "retailer": "Amazon",
+    "asin": "B084D5C6YJ",
+    "title": "Monster Energy Drink Zero Ultra Variety - Paradise, Violet, Sunrise, Red 16 ounce (Pack of 16) and Stinger Chews (Assorted)",
+    "price": 56.99,
+    "fl_oz": 256.0,
+    "price_per_oz": 0.2226,
+    "link": "https://www.amazon.com/dp/B084D5C6YJ",
+    "seller_info": "Unknown",
+    "availability": "In Stock",
+    "timestamp": "2026-08-07T10:06:35.458266"
   }
 ]
