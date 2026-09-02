@@ -1,20 +1,20 @@
 # Monster Energy Deal Report
 
-**Generated:** 2026-09-02 13:36:23 UTC
+**Generated:** 2026-09-02 21:00:21 UTC
 
 **Price Threshold:** $0.120/fl oz
 
-## 🎉 6 Deal(s) Found Below $0.12/oz!
+## 🎉 7 Deal(s) Found Below $0.12/oz!
 
-### Monster Energy Ultra, Zero Ultra Sugar Free Energy Drink 6 Pack, 72 Fl Oz
+### Monster Energy Drink, Green, Original, 16 Ounce (Pack of 24)
 
 - **Retailer:** Amazon
-- **Availability:** ✅ In Stock
+- **Availability:** ⚠️ Unknown
 - **Seller:** Unknown
-- **Price:** $26.98 (432 fl oz total)
-- **Price per fl oz:** $0.0625 ⭐ **BELOW THRESHOLD**
-- **Link:** [B0G6ZBRFNV](https://www.amazon.com/dp/B0G6ZBRFNV)
-- **Savings:** $24.84 vs threshold
+- **Price:** $26.98 (384 fl oz total)
+- **Price per fl oz:** $0.0703 ⭐ **BELOW THRESHOLD**
+- **Link:** [B0072MDT5W](https://www.amazon.com/dp/B0072MDT5W)
+- **Savings:** $19.08 vs threshold
 
 ### Monster Energy Drink, Green, Original, 16 Ounce (Pack of 24)
 
@@ -26,16 +26,6 @@
 - **Link:** [B006IMBHVU](https://www.amazon.com/dp/B006IMBHVU)
 - **Savings:** $19.08 vs threshold
 
-### Monster Energy, Lo-Carb Monster, Low Carb Energy Drink, 16 Ounce (Pack of 15)
-
-- **Retailer:** Amazon
-- **Availability:** ✅ In Stock
-- **Seller:** Unknown
-- **Price:** $26.98 (240 fl oz total)
-- **Price per fl oz:** $0.1124 ⭐ **BELOW THRESHOLD**
-- **Link:** [B0BL75738K](https://www.amazon.com/dp/B0BL75738K)
-- **Savings:** $1.82 vs threshold
-
 ### Monster Energy Drink, Green, Original, 16 Ounce (Pack of 15)
 
 - **Retailer:** Amazon
@@ -44,6 +34,26 @@
 - **Price:** $26.98 (240 fl oz total)
 - **Price per fl oz:** $0.1124 ⭐ **BELOW THRESHOLD**
 - **Link:** [B0BJX5VNVF](https://www.amazon.com/dp/B0BJX5VNVF)
+- **Savings:** $1.82 vs threshold
+
+### Monster Energy Zero Sugar, Green, Original, Low Calorie Energy Drink, 16 Ounce (Pack of 15), Can
+
+- **Retailer:** Amazon
+- **Availability:** ✅ In Stock
+- **Seller:** Unknown
+- **Price:** $26.98 (240 fl oz total)
+- **Price per fl oz:** $0.1124 ⭐ **BELOW THRESHOLD**
+- **Link:** [B0BL6X167P](https://www.amazon.com/dp/B0BL6X167P)
+- **Savings:** $1.82 vs threshold
+
+### Monster Energy, Lo-Carb Monster, Low Carb Energy Drink, 16 Ounce (Pack of 15)
+
+- **Retailer:** Amazon
+- **Availability:** ✅ In Stock
+- **Seller:** Unknown
+- **Price:** $26.98 (240 fl oz total)
+- **Price per fl oz:** $0.1124 ⭐ **BELOW THRESHOLD**
+- **Link:** [B0BL75738K](https://www.amazon.com/dp/B0BL75738K)
 - **Savings:** $1.82 vs threshold
 
 ### Monster Energy Zero Ultra, 24 ounce (Pack of 12)
