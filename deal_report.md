@@ -1,6 +1,6 @@
 # Monster Energy Deal Report
 
-**Generated:** 2026-09-05 20:18:27 UTC
+**Generated:** 2026-09-06 12:55:57 UTC
 
 **Price Threshold:** $0.120/fl oz
 
@@ -13,7 +13,7 @@
 - **Seller:** Unknown
 - **Price:** $26.98 (384 fl oz total)
 - **Price per fl oz:** $0.0703 ⭐ **BELOW THRESHOLD**
-- **Link:** [B0072MDT5W](https://www.amazon.com/dp/B0072MDT5W)
+- **Link:** [B006IMBHVU](https://www.amazon.com/dp/B006IMBHVU)
 - **Savings:** $19.08 vs threshold
 
 ### Monster Energy Drink, Green, Original, 16 Ounce (Pack of 24)
@@ -23,7 +23,7 @@
 - **Seller:** Unknown
 - **Price:** $26.98 (384 fl oz total)
 - **Price per fl oz:** $0.0703 ⭐ **BELOW THRESHOLD**
-- **Link:** [B006IMBHVU](https://www.amazon.com/dp/B006IMBHVU)
+- **Link:** [B0072MDT5W](https://www.amazon.com/dp/B0072MDT5W)
 - **Savings:** $19.08 vs threshold
 
 ### Monster Energy Zero Ultra, 24 ounce (Pack of 12)
@@ -36,33 +36,33 @@
 - **Link:** [B088MLP1L9](https://www.amazon.com/dp/B088MLP1L9)
 - **Savings:** $7.57 vs threshold
 
-### Monster Energy Zero Sugar, Green, Original, Low Calorie Energy Drink, 16 Ounce (Pack of 15), Can
+### Monster Energy, Lo-Carb Monster, Low Carb Energy Drink, 16 Ounce (Pack of 15)
 
 - **Retailer:** Amazon
 - **Availability:** ✅ In Stock
 - **Seller:** Unknown
 - **Price:** $26.98 (240 fl oz total)
 - **Price per fl oz:** $0.1124 ⭐ **BELOW THRESHOLD**
-- **Link:** [B0BL6X167P](https://www.amazon.com/dp/B0BL6X167P)
+- **Link:** [B0BL75738K](https://www.amazon.com/dp/B0BL75738K)
 - **Savings:** $1.82 vs threshold
+
+### Monster Energy Drink, Green, Original, 16 Ounce (Pack of 12)
+
+- **Retailer:** Amazon
+- **Availability:** ⚠️ Unknown
+- **Seller:** Unknown
+- **Price:** $21.58 (192 fl oz total)
+- **Price per fl oz:** $0.1124 ⭐ **BELOW THRESHOLD**
+- **Link:** [B08M9NXMVS](https://www.amazon.com/dp/B08M9NXMVS)
+- **Savings:** $1.46 vs threshold
 
 ### Monster Zero Ultra Variety: Zero Ultra, Ultra Red, Ultra Violet, Ultra Blue, Sunrise, Paradise, Rosa, Fiesta, 16 ounce (Pack of 16) and Stinger Orange Blossom Chews
 
 - **Retailer:** Amazon
 - **Availability:** ⚠️ Unknown
 - **Seller:** Unknown
-- **Price:** $29.95 (256 fl oz total)
+- **Price:** $29.94 (256 fl oz total)
 - **Price per fl oz:** $0.1170 ⭐ **BELOW THRESHOLD**
 - **Link:** [B088Q3K8QZ](https://www.amazon.com/dp/B088Q3K8QZ)
 - **Savings:** $0.77 vs threshold
-
-### Monster Energy Java Monster Mean Bean, Coffee + Energy Drink, 11 Ounce (Pack of 24)
-
-- **Retailer:** Amazon
-- **Availability:** ⚠️ Unknown
-- **Seller:** Unknown
-- **Price:** $30.96 (264 fl oz total)
-- **Price per fl oz:** $0.1173 ⭐ **BELOW THRESHOLD**
-- **Link:** [B01MRHFQYT](https://www.amazon.com/dp/B01MRHFQYT)
-- **Savings:** $0.71 vs threshold
 
