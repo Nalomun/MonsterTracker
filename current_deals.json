@@ -1,8 +1,8 @@
 {
  "ok": true,
- "generated": "2026-09-28T04:44:19+00:00",
+ "generated": "2026-09-28T17:31:22+00:00",
  "threshold": 0.12,
- "listings_checked": 73,
+ "listings_checked": 95,
  "deals": [
   {
    "retailer": "Amazon",
@@ -23,9 +23,55 @@
    "seller_info": "Amazon.com",
    "verified": true,
    "link": "https://www.amazon.com/dp/B0BL6X167P",
-   "timestamp": "2026-09-28T04:42:46+00:00",
+   "timestamp": "2026-09-28T17:29:06+00:00",
    "verify_price": 21.49,
    "sns_price": 20.42
+  },
+  {
+   "retailer": "Amazon",
+   "asin": "B0CVQS5F4Q",
+   "title": "Monster Energy Drink, Green, Original,16oz (Pack of 15) + Monster Energy Zero Ultra, 16oz (Pack of 15) | Monster Energy Bundle (Pack of 30)",
+   "price": 46.54,
+   "fl_oz": 480.0,
+   "fl_oz_source": "title",
+   "fl_oz_estimated": false,
+   "price_per_oz": 0.097,
+   "amazon_unit_price": null,
+   "unit_price_mismatch": false,
+   "offer_type": "featured",
+   "other_offer_price": null,
+   "other_offer_count": null,
+   "availability": "In Stock",
+   "sponsored": false,
+   "seller_info": "Amazon.com",
+   "verified": true,
+   "link": "https://www.amazon.com/dp/B0CVQS5F4Q",
+   "timestamp": "2026-09-28T17:29:39+00:00",
+   "verify_price": 46.54,
+   "sns_price": null
+  },
+  {
+   "retailer": "Amazon",
+   "asin": "B0CVQVG5RF",
+   "title": "Monster Energy Zero Sugar, Green, Original, 16oz (Pack of 15) + Monster Energy, Lo-Carb Monster, 16oz (Pack of 15) | Monster Energy Bundle (Pack of 30)",
+   "price": 48.46,
+   "fl_oz": 480.0,
+   "fl_oz_source": "title",
+   "fl_oz_estimated": false,
+   "price_per_oz": 0.101,
+   "amazon_unit_price": null,
+   "unit_price_mismatch": false,
+   "offer_type": "featured",
+   "other_offer_price": null,
+   "other_offer_count": null,
+   "availability": "In Stock",
+   "sponsored": false,
+   "seller_info": "Amazon.com",
+   "verified": true,
+   "link": "https://www.amazon.com/dp/B0CVQVG5RF",
+   "timestamp": "2026-09-28T17:29:39+00:00",
+   "verify_price": 48.46,
+   "sns_price": null
   },
   {
    "retailer": "Amazon",
@@ -46,9 +92,32 @@
    "seller_info": "Amazon.com",
    "verified": true,
    "link": "https://www.amazon.com/dp/B0BJX5VNVF",
-   "timestamp": "2026-09-28T04:42:46+00:00",
+   "timestamp": "2026-09-28T17:29:06+00:00",
    "verify_price": 25.05,
    "sns_price": 23.8
+  },
+  {
+   "retailer": "Amazon",
+   "asin": "B0CVNNHCN4",
+   "title": "Monster Energy Drink Original, Green & Zero Ultra Variety Pack, 30 Cans (15 of Each Flavor, 16oz Cans)",
+   "price": 52.03,
+   "fl_oz": 480.0,
+   "fl_oz_source": "title+variant",
+   "fl_oz_estimated": false,
+   "price_per_oz": 0.1084,
+   "amazon_unit_price": null,
+   "unit_price_mismatch": false,
+   "offer_type": "featured",
+   "other_offer_price": null,
+   "other_offer_count": null,
+   "availability": "In Stock",
+   "sponsored": false,
+   "seller_info": "Amazon.com",
+   "verified": true,
+   "link": "https://www.amazon.com/dp/B0CVNNHCN4",
+   "timestamp": "2026-09-28T17:29:39+00:00",
+   "verify_price": 52.03,
+   "sns_price": null
   },
   {
    "retailer": "Amazon",
@@ -69,7 +138,7 @@
    "seller_info": "Third-party (10 offers, lowest)",
    "verified": true,
    "link": "https://www.amazon.com/dp/B006IMBHVU",
-   "timestamp": "2026-09-28T04:42:46+00:00",
+   "timestamp": "2026-09-28T17:29:06+00:00",
    "verify_price": null,
    "sns_price": null
   },
@@ -92,7 +161,7 @@
    "seller_info": "Amazon.com",
    "verified": true,
    "link": "https://www.amazon.com/dp/B0BL7316GD",
-   "timestamp": "2026-09-28T04:42:46+00:00",
+   "timestamp": "2026-09-28T17:29:06+00:00",
    "verify_price": 26.98,
    "sns_price": 25.63
   },
@@ -115,7 +184,7 @@
    "seller_info": "Amazon.com",
    "verified": true,
    "link": "https://www.amazon.com/dp/B0CGMF4B74",
-   "timestamp": "2026-09-28T04:42:46+00:00",
+   "timestamp": "2026-09-28T17:29:06+00:00",
    "verify_price": 26.98,
    "sns_price": 25.63
   },
@@ -123,7 +192,7 @@
    "retailer": "Amazon",
    "asin": "B0BL75738K",
    "title": "Monster Energy, Lo-Carb Monster, Low Carb Energy Drink, 16 Ounce (Pack of 15)",
-   "price": 26.98,
+   "price": 26.97,
    "fl_oz": 240.0,
    "fl_oz_source": "title",
    "fl_oz_estimated": false,
@@ -138,17 +207,14 @@
    "seller_info": "Amazon.com",
    "verified": true,
    "link": "https://www.amazon.com/dp/B0BL75738K",
-   "timestamp": "2026-09-28T04:42:46+00:00",
-   "verify_price": 26.98,
-   "sns_price": 25.63
+   "timestamp": "2026-09-28T17:29:06+00:00",
+   "verify_price": 26.97,
+   "sns_price": 25.62
   }
  ],
  "new_deal_asins": [
-  "B0BL6X167P",
-  "B0BJX5VNVF",
-  "B006IMBHVU",
-  "B0BL7316GD",
-  "B0CGMF4B74",
-  "B0BL75738K"
+  "B0CVQS5F4Q",
+  "B0CVQVG5RF",
+  "B0CVNNHCN4"
  ]
 }
