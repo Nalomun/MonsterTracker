@@ -6,54 +6,111 @@ on:
     - cron: '0 9,18 * * *'
   workflow_dispatch:  # Allow manual trigger
 
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: monster-tracker
+  cancel-in-progress: false
+
 jobs:
   check-deals:
     runs-on: ubuntu-latest
-    
+    timeout-minutes: 30
+
     steps:
     - name: Checkout repository
-      uses: actions/checkout@v3
-      with:
-        token: ${{ secrets.GITHUB_TOKEN }}
-    
+      uses: actions/checkout@v4
+
     - name: Set up Python
-      uses: actions/setup-python@v4
+      uses: actions/setup-python@v5
       with:
-        python-version: '3.11'
-    
+        python-version: '3.12'
+        cache: pip
+
     - name: Install dependencies
       run: |
-        pip install requests beautifulsoup4 lxml
-    
+        pip install -r requirements.txt
+        playwright install --with-deps chromium
+
     - name: Run deal tracker
-      run: |
-        python tracker.py
-    
+      id: tracker
+      continue-on-error: true
+      env:
+        PRICE_THRESHOLD: '0.12'
+      run: python tracker.py
+
     - name: Commit price history
+      if: steps.tracker.outcome == 'success'
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
-        git add price_history.json deal_report.md
-        git diff --quiet && git diff --staged --quiet || git commit -m "Update prices - $(date +'%Y-%m-%d %H:%M')"
-        git push
-    
-    - name: Check for deals and create issue
-      uses: actions/github-script@v6
+        git add price_history.json deal_report.md current_deals.json
+        if git diff --staged --quiet; then
+          echo "Nothing to commit"
+        else
+          git commit -m "Update prices - $(date -u +'%Y-%m-%d %H:%M')"
+          git pull --rebase origin "${GITHUB_REF_NAME}"
+          git push
+        fi
+
+    - name: Open or update deal issue
+      if: steps.tracker.outcome == 'success'
+      uses: actions/github-script@v7
       with:
         script: |
           const fs = require('fs');
-          
-          // Read the report
-          const report = fs.readFileSync('deal_report.md', 'utf8');
-          
-          // Check if deals were found
-          if (report.includes('🎉')) {
-            // Create an issue
-            await github.rest.issues.create({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              title: `🚨 Monster Energy Deal Alert - ${new Date().toLocaleDateString()}`,
-              body: report,
-              labels: ['deal-alert']
-            });
+          const MARKER = '<!-- monster-tracker-deal-issue -->';
+
+          if (!fs.existsSync('current_deals.json')) {
+            core.warning('current_deals.json missing; tracker did not run');
+            return;
           }
+          const state = JSON.parse(fs.readFileSync('current_deals.json', 'utf8'));
+          if (!state.ok) {
+            core.warning('Tracker failed (Amazon probably blocked the scrape); not touching issues.');
+            return;
+          }
+          if (!state.deals || state.deals.length === 0) {
+            core.info('No deals below threshold this run.');
+            return;
+          }
+
+          const report = fs.readFileSync('deal_report.md', 'utf8');
+          const body = `${MARKER}\n${report}`;
+          const { owner, repo } = context.repo;
+
+          // Issues this workflow opened earlier (identified by the marker).
+          const open = await github.paginate(github.rest.issues.listForRepo, {
+            owner, repo, state: 'open', labels: 'deal-alert', per_page: 100,
+          });
+          const mine = open.filter(i => !i.pull_request && (i.body || '').includes(MARKER));
+
+          const newDeals = state.new_deal_asins || [];
+          if (newDeals.length > 0 || mine.length === 0) {
+            const created = await github.rest.issues.create({
+              owner, repo,
+              title: `🚨 Monster deal: $${state.deals[0].price_per_oz.toFixed(4)}/fl oz - ${state.deals[0].title.slice(0, 60)}`,
+              body, labels: ['deal-alert'],
+            });
+            core.info(`Opened issue #${created.data.number} (${newDeals.length} new deal(s)).`);
+            for (const i of mine) {
+              await github.rest.issues.createComment({
+                owner, repo, issue_number: i.number,
+                body: `Superseded by #${created.data.number}.`,
+              });
+              await github.rest.issues.update({ owner, repo, issue_number: i.number, state: 'closed' });
+            }
+          } else {
+            // Same deals as before: refresh the existing issue quietly.
+            const latest = mine.sort((a, b) => b.number - a.number)[0];
+            await github.rest.issues.update({ owner, repo, issue_number: latest.number, body });
+            core.info(`Updated issue #${latest.number}; no new deals.`);
+          }
+
+    - name: Fail the job if the scrape failed
+      if: steps.tracker.outcome != 'success'
+      run: |
+        echo "::error::Tracker could not price any listings (Amazon blocked the scrape?)"
+        exit 1

@@ -1,114 +1,96 @@
 # Monster Energy Deal Tracker 🔋⚡
 
-Automated price tracking system for Monster Energy drinks across major online retailers.
+Scrapes Amazon twice a day for Monster Energy multi-packs, works out the
+price per fluid ounce, and opens a GitHub Issue when something is at or
+below the threshold (default **$0.12 / fl oz**).
 
-## Features
+## How it works
 
-- 🔍 Automatically checks Amazon (and Walmart with setup) for Monster Energy deals
-- 📊 Tracks price history over time
-- 🚨 Creates GitHub Issues when prices drop below $0.12/fl oz
-- ⏰ Runs automatically twice daily via GitHub Actions
-- 📈 Maintains price history in JSON format
-- 🆓 Completely free to run
+1. `tracker.py` loads a few pages of Amazon search results in a headless
+   Chromium browser (Playwright). Amazon serves an empty anti-bot page to
+   plain HTTP clients most of the time, but a real browser gets through.
+   Every request uses a fresh browser context and blocked responses are
+   retried with back-off.
+2. Each search result card already contains the ASIN, title, featured
+   price, Amazon's own "$x.xx / fluid ounce" and the stock / offer status,
+   so every Monster listing on those pages gets priced without opening its
+   product page.
+3. The can size and pack count are parsed from the title
+   (`16 Ounce (Pack of 15)`, `473 mL Cans, 12 Pack`, `16 Oz (24-Pack)`, ...)
+   and cross-checked against Amazon's unit price. Listings where the two
+   disagree are flagged (⚠️) and never alerted on unless verified.
+4. Deal candidates are re-checked on their product page (buy-box price,
+   seller, availability, Subscribe & Save price) before they are reported.
+5. Output:
+   - `deal_report.md` – latest report
+   - `price_history.json` – every priced listing from every run
+   - `current_deals.json` – state used by the workflow to tell new deals
+     from ones already alerted
+
+The GitHub Action opens a **new** issue only when a deal appears that was
+not in the previous run (or got ≥3% cheaper), and closes the issue it
+opened before. When the deals are unchanged it just refreshes the open
+issue's body. If Amazon blocks the scrape, nothing is committed and no
+issue is touched; the job fails visibly instead.
 
 ## Setup
 
-### 1. Clone and Push to GitHub
-
-```bash
-git init
-git add .
-git commit -m "Initial commit"
-git branch -M main
-git remote add origin https://github.com/YOUR_USERNAME/monster-deal-tracker.git
-git push -u origin main
-```
-
-### 2. File Structure
-
-```
-monster-deal-tracker/
-├── tracker.py              # Main scraping script
-├── requirements.txt        # Python dependencies
-├── price_history.json      # Price tracking database (auto-generated)
-├── deal_report.md          # Latest report (auto-generated)
-├── .github/
-│   └── workflows/
-│       └── tracker.yml     # GitHub Actions workflow
-└── README.md
-```
-
-### 3. GitHub Actions Setup
-
-The workflow is already configured! It will:
-- Run automatically at 9 AM and 6 PM UTC daily
-- Can be triggered manually from the "Actions" tab
-- Commits price updates to the repo
-- Creates Issues when deals are found
-
-### 4. Enable GitHub Actions
-
-1. Go to your repo → **Settings** → **Actions** → **General**
-2. Under "Workflow permissions", select **Read and write permissions**
-3. Click **Save**
+1. Push this repo to GitHub.
+2. **Settings → Actions → General → Workflow permissions**: choose
+   *Read and write permissions* and save.
+3. Run the workflow once from the **Actions** tab (*Monster Deal Tracker →
+   Run workflow*) to check it gets through Amazon from GitHub's runners.
 
 ## Configuration
 
-Edit `tracker.py` to customize:
+Everything is an environment variable (set in `.github/workflows/tracker.yml`
+or in your shell):
 
-```python
-self.price_threshold = 0.12  # Change alert threshold ($/fl oz)
-```
+| Variable | Default | Meaning |
+|---|---|---|
+| `PRICE_THRESHOLD` | `0.12` | $/fl oz that counts as a deal |
+| `MIN_FL_OZ` | `64` | ignore packs smaller than this (4 × 16 oz) |
+| `MAX_PAGES` | `3` | search result pages per query |
+| `SEARCH_QUERIES` | `monster energy drink` | `\|`-separated Amazon searches |
+| `VERIFY_DEALS` | `1` | `0` skips product-page verification of deals |
+| `USE_BROWSER` | `1` | `0` forces plain HTTP (usually blocked by Amazon) |
+| `DEBUG_HTML` | unset | `1` saves every fetched page under `debug_html/` |
 
-Edit `.github/workflows/tracker.yml` to change schedule:
+The schedule lives in `.github/workflows/tracker.yml`:
 
 ```yaml
 schedule:
-  - cron: '0 9,18 * * *'  # Modify timing here
+  - cron: '0 9,18 * * *'
 ```
 
-## Manual Testing
-
-Run locally:
+## Running locally
 
 ```bash
 pip install -r requirements.txt
+playwright install chromium
 python tracker.py
 ```
 
-## Notifications
+A run takes a few minutes because of the polite delays between requests.
 
-### GitHub Issues (Default)
-- Automatic issue creation when deals found
-- Subscribe to repo notifications
+Tests (no network needed):
 
-### Email Notifications
-Add to your GitHub notification settings:
-1. Watch the repository
-2. Configure email notifications for Issues
+```bash
+python -m pytest -q tests
+```
 
-### Alternative: Telegram/Discord
-You can add webhook notifications by modifying the GitHub Actions workflow to send HTTP requests to Telegram/Discord webhooks.
+## Notes
 
-## Limitations
-
-- Amazon may occasionally block requests (rotating user agents helps)
-- Walmart requires more advanced scraping (Selenium)
-- Results depend on HTML structure (may need updates if sites change)
-
-## Future Enhancements
-
-- [ ] Add more retailers (Target, Costco)
-- [ ] Implement Selenium for JavaScript-heavy sites
-- [ ] Add Discord/Telegram bot notifications
-- [ ] Create price trend visualizations
-- [ ] Track specific Monster flavors
-- [ ] Add unit tests
-
-## Legal Note
-
-This tool is for personal use only. Please respect retailers' Terms of Service and robots.txt. Consider rate limiting and don't hammer their servers.
+- Amazon's own unit price is not always per fluid ounce (some listings
+  show `$1.80/count`), so the title-derived pack size is used whenever it
+  parses, and the unit price only as a fallback or a sanity check.
+- Listings with "No featured offers available" are priced from the
+  cheapest third-party offer and marked as such in the report.
+- Out-of-stock listings are recorded in the history but never alerted on.
+- Results depend on Amazon's HTML; if the layout changes, the parsers in
+  `tracker.py` (`parse_search_cards`, `parse_product_page`) are the place
+  to look. Run with `DEBUG_HTML=1` to capture what Amazon served.
 
 ## License
 
-MIT License - Feel free to modify and use!
+MIT
