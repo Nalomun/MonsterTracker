@@ -79,6 +79,39 @@ Tests (no network needed):
 python -m pytest -q tests
 ```
 
+## Data for a website or dashboard
+
+Every run also writes `dashboard.json` (about 50 KB), meant to be fetched
+directly from GitHub by a website, for example
+
+```
+https://raw.githubusercontent.com/Nalomun/MonsterTracker/main/dashboard.json
+```
+
+Shape:
+
+```jsonc
+{
+  "generated": "2026-09-28T04:44:00+00:00",  // UTC, when the tracker ran
+  "ok": true,
+  "threshold": 0.12,                          // $/fl oz that counts as a deal
+  "reliable_since": "2026-09-28",             // earlier history came from a buggy parser
+  "listings_checked": 73,
+  "deals": [ { "asin", "title", "price", "fl_oz", "price_per_oz", "seller_info",
+               "availability", "offer_type", "sns_price", "verified", "link" } ],
+  "best":  [ /* same shape, the 10 cheapest listings this run */ ],
+  "daily": [ { "date": "2026-09-28", "best_price_per_oz": 0.0895, "best_asin", "best_title",
+               "deals": 6, "listings": 73, "reliable": true } ],   // up to 120 days
+  "products": [ { "asin", "title", "link", "fl_oz", "latest_price", "latest_price_per_oz",
+                  "latest_seen", "min_price_per_oz",
+                  "series": [["2026-09-01", 0.1124], ...] } ]      // 15 most-seen listings, 90 days
+}
+```
+
+`current_deals.json` (deals plus `new_deal_asins`) and `deal_report.md` are
+also fetchable the same way. Avoid fetching `price_history.json` from a
+site: it holds every listing from every run and keeps growing.
+
 ## Notes
 
 - Amazon's own unit price is not always per fluid ounce (some listings

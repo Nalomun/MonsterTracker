@@ -52,6 +52,10 @@ except ImportError:  # pragma: no cover
 HISTORY_FILE = 'price_history.json'
 REPORT_FILE = 'deal_report.md'
 STATE_FILE = 'current_deals.json'
+DASHBOARD_FILE = 'dashboard.json'
+# Entries recorded before the search-page rewrite came from an unreliable
+# parser; they are kept in the history but flagged for dashboards.
+RELIABLE_SINCE = '2026-09-28'
 
 ML_PER_FL_OZ = 29.5735
 
@@ -715,6 +719,81 @@ class MonsterDealTracker:
         return report
 
 
+def _slim(r):
+    """The fields a dashboard needs from a result."""
+    return {k: r.get(k) for k in (
+        'asin', 'title', 'price', 'fl_oz', 'price_per_oz', 'seller_info', 'availability',
+        'offer_type', 'sns_price', 'verified', 'link')}
+
+
+def build_dashboard(history, results, deals, threshold, ok=True, max_days=120, max_products=15):
+    """Compact JSON for a website: current deals, top prices, daily best-price
+    series and per-product sparklines.  Kept small so it can be fetched on
+    every page view (the full history grows without bound)."""
+    from collections import defaultdict
+
+    def plausible(r):
+        return r.get('price_per_oz') is not None and 0.05 <= r['price_per_oz'] <= 1.0 \
+            and 'out of stock' not in str(r.get('availability', '')).lower()
+
+    by_day = defaultdict(list)
+    for r in history:
+        if plausible(r):
+            by_day[r['timestamp'][:10]].append(r)
+    daily = []
+    for day in sorted(by_day)[-max_days:]:
+        rows = by_day[day]
+        best = min(rows, key=lambda r: r['price_per_oz'])
+        daily.append({
+            'date': day,
+            'best_price_per_oz': best['price_per_oz'],
+            'best_asin': best['asin'],
+            'best_title': best['title'][:80],
+            'deals': len({r['asin'] for r in rows if r['price_per_oz'] <= threshold}),
+            'listings': len({r['asin'] for r in rows}),
+            'reliable': day >= RELIABLE_SINCE,
+        })
+
+    # Per-product series for the most frequently seen listings.
+    per_asin = defaultdict(list)
+    for r in history:
+        if plausible(r):
+            per_asin[r['asin']].append(r)
+    cutoff = sorted(by_day)[-90] if len(by_day) > 90 else ''
+    products = []
+    for asin, rows in sorted(per_asin.items(), key=lambda kv: -len(kv[1]))[:max_products]:
+        latest = max(rows, key=lambda r: r['timestamp'])
+        per_day = {}
+        for r in rows:
+            d = r['timestamp'][:10]
+            if d >= cutoff and (d not in per_day or r['price_per_oz'] < per_day[d]):
+                per_day[d] = r['price_per_oz']
+        products.append({
+            'asin': asin,
+            'title': latest['title'][:80],
+            'link': f'https://www.amazon.com/dp/{asin}',
+            'fl_oz': latest['fl_oz'],
+            'latest_price': latest['price'],
+            'latest_price_per_oz': latest['price_per_oz'],
+            'latest_seen': latest['timestamp'][:10],
+            'min_price_per_oz': min(r['price_per_oz'] for r in rows),
+            'series': [[d, v] for d, v in sorted(per_day.items())],
+        })
+
+    best_now = sorted((r for r in results if plausible(r)), key=lambda r: r['price_per_oz'])[:10]
+    return {
+        'generated': datetime.now(timezone.utc).isoformat(timespec='seconds'),
+        'ok': ok,
+        'threshold': threshold,
+        'reliable_since': RELIABLE_SINCE,
+        'listings_checked': len(results),
+        'deals': [_slim(d) for d in deals],
+        'best': [_slim(r) for r in best_now],
+        'daily': daily,
+        'products': products,
+    }
+
+
 def main():
     tracker = MonsterDealTracker()
     log('=' * 70)
@@ -739,6 +818,12 @@ def main():
     report = tracker.generate_report(deals, new_deals)
     with open(REPORT_FILE, 'w', encoding='utf-8') as f:
         f.write(report)
+    with open(HISTORY_FILE, 'r', encoding='utf-8') as f:
+        history = json.load(f)
+    dashboard = build_dashboard(history, tracker.results, deals, tracker.price_threshold)
+    with open(DASHBOARD_FILE, 'w', encoding='utf-8') as f:
+        json.dump(dashboard, f, separators=(',', ':'))
+    log(f'📈 Wrote {DASHBOARD_FILE} ({os.path.getsize(DASHBOARD_FILE) // 1024} KB)')
 
     log('\n' + '=' * 70)
     log(report)

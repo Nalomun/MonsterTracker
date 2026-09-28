@@ -211,3 +211,18 @@ def test_save_state_detects_new_deals(tmp_path):
     assert t.save_state([cheaper], ok=True, filename=str(state)) == ['A']
     assert t.save_state([cheaper, {'asin': 'B', 'price_per_oz': 0.11, 'title': 'u'}],
                         ok=True, filename=str(state)) == ['B']
+
+
+def test_build_dashboard_is_compact_and_filters_garbage():
+    from tracker import build_dashboard
+    good = {'asin': 'A', 'title': 'Monster 16 Ounce (Pack of 15)', 'price': 24.0, 'fl_oz': 240,
+            'price_per_oz': 0.10, 'availability': 'In Stock', 'timestamp': '2026-09-28T10:00:00+00:00',
+            'seller_info': 'Amazon.com', 'offer_type': 'featured', 'verified': True, 'link': 'x'}
+    garbage = dict(good, asin='B', price=0.14, price_per_oz=0.0004, timestamp='2025-12-07T10:00:00+00:00')
+    oos = dict(good, asin='C', price_per_oz=0.08, availability='Out of Stock')
+    d = build_dashboard([good, garbage, oos], [good, oos], [good], 0.12)
+    assert [x['asin'] for x in d['deals']] == ['A']
+    assert [x['asin'] for x in d['best']] == ['A']
+    assert len(d['daily']) == 1 and d['daily'][0]['best_asin'] == 'A' and d['daily'][0]['reliable']
+    assert [p['asin'] for p in d['products']] == ['A']
+    assert d['products'][0]['series'] == [['2026-09-28', 0.10]]

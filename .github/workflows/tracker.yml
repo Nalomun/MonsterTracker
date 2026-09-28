@@ -46,7 +46,7 @@ jobs:
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
-        git add price_history.json deal_report.md current_deals.json
+        git add price_history.json deal_report.md current_deals.json dashboard.json
         if git diff --staged --quiet; then
           echo "Nothing to commit"
         else
