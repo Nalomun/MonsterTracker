@@ -1,50 +1,75 @@
-# Monster Energy Deal Tracker 🔋⚡
+# Monster Energy Deal Tracker
 
-Scrapes Amazon twice a day for Monster Energy multi-packs, works out the
-price per fluid ounce, and opens a GitHub Issue when something is at or
-below the threshold (default **$0.12 / fl oz**).
+A small price-tracking pipeline that checks Amazon twice a day for Monster
+Energy multi-packs, works out the price per fluid ounce for each listing, and
+opens a GitHub Issue when something drops to $0.12/fl oz or lower. It runs
+entirely on GitHub Actions and costs nothing to operate.
+
+I built this because I drink a lot of Monster and got tired of checking
+Amazon by hand. It has also turned into a decent exercise in keeping a
+scraper alive against a site that actively tries to block scrapers.
+
+**Live output:** [`deal_report.md`](deal_report.md) is regenerated on every
+run. [`dashboard.json`](dashboard.json) is a compact feed built for the
+dashboard on my portfolio site.
 
 ## How it works
 
-1. `tracker.py` loads a few pages of Amazon search results in a headless
-   Chromium browser (Playwright). Amazon serves an empty anti-bot page to
-   plain HTTP clients most of the time, but a real browser gets through.
-   Every request uses a fresh browser context and blocked responses are
-   retried with back-off.
-2. Each search result card already contains the ASIN, title, featured
-   price, Amazon's own "$x.xx / fluid ounce" and the stock / offer status,
-   so every Monster listing on those pages gets priced without opening its
-   product page.
-3. The can size and pack count are parsed from the title
-   (`16 Ounce (Pack of 15)`, `473 mL Cans, 12 Pack`, `16 Oz (24-Pack)`, ...)
-   and cross-checked against Amazon's unit price. Listings where the two
-   disagree are flagged (⚠️) and never alerted on unless verified.
-4. Deal candidates are re-checked on their product page (buy-box price,
-   seller, availability, Subscribe & Save price) before they are reported.
-5. Output:
-   - `deal_report.md` – latest report
-   - `price_history.json` – every priced listing from every run
-   - `current_deals.json` – state used by the workflow to tell new deals
-     from ones already alerted
+```
+GitHub Actions (09:00 / 18:00 UTC)
+  └─ tracker.py
+       ├─ headless Chromium fetches 3 pages of Amazon search results
+       ├─ parses every Monster listing: price, pack size, $/fl oz, stock
+       ├─ re-checks deal candidates on their product page
+       ├─ appends to price_history.json, writes deal_report.md, dashboard.json
+       └─ current_deals.json → workflow opens/updates an Issue only if a new deal appeared
+```
 
-The GitHub Action opens a **new** issue only when a deal appears that was
-not in the previous run (or got ≥3% cheaper), and closes the issue it
-opened before. When the deals are unchanged it just refreshes the open
-issue's body. If Amazon blocks the scrape, nothing is committed and no
-issue is touched; the job fails visibly instead.
+**Fetching.** Amazon serves an empty anti-bot page to plain HTTP clients
+almost every time, so pages are loaded in a real headless browser
+(Playwright). Each request gets a fresh browser context, there are randomised
+delays between requests, and blocked responses are retried with back-off.
+If the browser is unavailable the tracker falls back to `requests`.
+
+**Pricing from search results.** A search result card already carries the
+ASIN, full title, featured price, Amazon's own unit price and the stock or
+offer status. Reading those means every Monster listing on the results pages
+gets priced with three requests, instead of opening 100+ product pages. It
+also avoids the trap the first version of this project fell into: pulling a
+price from a product page and getting the "lower-priced alternative" widget
+instead of the buy box.
+
+**Pack size.** Total fluid ounces are parsed from the title and its variant
+text, which comes in a lot of forms (`16 Ounce (Pack of 15)`, `16 Fl Oz |
+Pack of 12`, `473 mL Cans, 12 Pack`, `16 Oz (24-Pack)`, bundles like
+`Pack of 15 + Pack of 15`). The result is cross-checked against Amazon's
+unit price. Amazon's figure is not trustworthy on its own (some listings
+show `$1.80/count` or a per-ounce price that is off by 10x), so it is only a
+fallback and a sanity check. Listings where the two disagree are flagged and
+never alerted on.
+
+**Verification.** Anything at or below the threshold is re-checked on its
+product page for the buy-box price, seller, availability and Subscribe &
+Save price before it goes in the report.
+
+**Alerting.** The workflow keeps one open Issue. It opens a new one only when
+a deal appears that was not there last run (or got at least 3% cheaper),
+closes the previous one, and otherwise just refreshes the body. If Amazon
+blocks the scrape, nothing is committed, no Issue is touched, and the job
+fails so it shows up red.
 
 ## Setup
 
-1. Push this repo to GitHub.
-2. **Settings → Actions → General → Workflow permissions**: choose
-   *Read and write permissions* and save.
-3. Run the workflow once from the **Actions** tab (*Monster Deal Tracker →
-   Run workflow*) to check it gets through Amazon from GitHub's runners.
+1. Fork or clone, then push to your own GitHub repo.
+2. **Settings → Actions → General → Workflow permissions**: select
+   *Read and write permissions*.
+3. Trigger the workflow once from the Actions tab to confirm the runner can
+   get through to Amazon.
 
 ## Configuration
 
-Everything is an environment variable (set in `.github/workflows/tracker.yml`
-or in your shell):
+All settings are environment variables, set in
+`.github/workflows/tracker.yml` or in your shell.
 
 | Variable | Default | Meaning |
 |---|---|---|
@@ -52,16 +77,11 @@ or in your shell):
 | `MIN_FL_OZ` | `64` | ignore packs smaller than this (4 × 16 oz) |
 | `MAX_PAGES` | `3` | search result pages per query |
 | `SEARCH_QUERIES` | `monster energy drink` | `\|`-separated Amazon searches |
-| `VERIFY_DEALS` | `1` | `0` skips product-page verification of deals |
-| `USE_BROWSER` | `1` | `0` forces plain HTTP (usually blocked by Amazon) |
+| `VERIFY_DEALS` | `1` | `0` skips product-page verification |
+| `USE_BROWSER` | `1` | `0` forces plain HTTP (usually blocked) |
 | `DEBUG_HTML` | unset | `1` saves every fetched page under `debug_html/` |
 
-The schedule lives in `.github/workflows/tracker.yml`:
-
-```yaml
-schedule:
-  - cron: '0 9,18 * * *'
-```
+Schedule (cron, UTC) is at the top of the workflow file.
 
 ## Running locally
 
@@ -71,58 +91,64 @@ playwright install chromium
 python tracker.py
 ```
 
-A run takes a few minutes because of the polite delays between requests.
-
-Tests (no network needed):
+A run takes three to five minutes because of the deliberate delays between
+requests. Unit tests cover the title parsing, search-card parsing, product
+page parsing and deal logic, and need no network:
 
 ```bash
 python -m pytest -q tests
 ```
 
-## Data for a website or dashboard
+## Output files
 
-Every run also writes `dashboard.json` (about 50 KB), meant to be fetched
-directly from GitHub by a website, for example
+| File | Purpose |
+|---|---|
+| `deal_report.md` | Human-readable report from the latest run |
+| `current_deals.json` | Latest deals plus which ones are new; used by the workflow |
+| `dashboard.json` | Compact feed for a website (see below) |
+| `price_history.json` | Every priced listing from every run, append-only |
+
+### `dashboard.json`
+
+About 50 KB, regenerated every run, fetchable without auth from
 
 ```
 https://raw.githubusercontent.com/Nalomun/MonsterTracker/main/dashboard.json
 ```
 
-Shape:
-
 ```jsonc
 {
-  "generated": "2026-09-28T04:44:00+00:00",  // UTC, when the tracker ran
-  "ok": true,
-  "threshold": 0.12,                          // $/fl oz that counts as a deal
-  "reliable_since": "2026-09-28",             // earlier history came from a buggy parser
+  "generated": "2026-09-28T04:44:00+00:00",  // UTC
+  "ok": true,                                 // false if the scrape was blocked
+  "threshold": 0.12,
+  "reliable_since": "2026-09-28",             // earlier history used the old parser
   "listings_checked": 73,
   "deals": [ { "asin", "title", "price", "fl_oz", "price_per_oz", "seller_info",
                "availability", "offer_type", "sns_price", "verified", "link" } ],
-  "best":  [ /* same shape, the 10 cheapest listings this run */ ],
-  "daily": [ { "date": "2026-09-28", "best_price_per_oz": 0.0895, "best_asin", "best_title",
-               "deals": 6, "listings": 73, "reliable": true } ],   // up to 120 days
-  "products": [ { "asin", "title", "link", "fl_oz", "latest_price", "latest_price_per_oz",
-                  "latest_seen", "min_price_per_oz",
-                  "series": [["2026-09-01", 0.1124], ...] } ]      // 15 most-seen listings, 90 days
+  "best":  [ /* same shape; 10 cheapest listings this run */ ],
+  "daily": [ { "date", "best_price_per_oz", "best_asin", "best_title",
+               "deals", "listings", "reliable" } ],                 // up to 120 days
+  "products": [ { "asin", "title", "link", "fl_oz", "latest_price",
+                  "latest_price_per_oz", "latest_seen", "min_price_per_oz",
+                  "series": [["2026-09-01", 0.1124], ...] } ]      // 15 most-seen, 90 days
 }
 ```
 
-`current_deals.json` (deals plus `new_deal_asins`) and `deal_report.md` are
-also fetchable the same way. Avoid fetching `price_history.json` from a
-site: it holds every listing from every run and keeps growing.
+Don't point a website at `price_history.json`; it grows by roughly 40 KB per
+run.
 
-## Notes
+## Known limitations
 
-- Amazon's own unit price is not always per fluid ounce (some listings
-  show `$1.80/count`), so the title-derived pack size is used whenever it
-  parses, and the unit price only as a fallback or a sanity check.
-- Listings with "No featured offers available" are priced from the
-  cheapest third-party offer and marked as such in the report.
-- Out-of-stock listings are recorded in the history but never alerted on.
-- Results depend on Amazon's HTML; if the layout changes, the parsers in
-  `tracker.py` (`parse_search_cards`, `parse_product_page`) are the place
-  to look. Run with `DEBUG_HTML=1` to capture what Amazon served.
+- Amazon's HTML changes. The parsers live in `parse_search_cards` and
+  `parse_product_page` in `tracker.py`; run with `DEBUG_HTML=1` to capture
+  what was served when something breaks.
+- Search results vary by session and region, so the set of listings differs
+  a little from run to run.
+- Listings with no featured offer are priced from the cheapest third-party
+  offer and labelled as such. Out-of-stock listings are recorded but never
+  alerted on.
+- History before 2026-09-28 was collected by an earlier version with a buggy
+  price parser and should not be trusted; `dashboard.json` flags those days.
 
 ## License
 

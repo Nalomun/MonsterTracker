@@ -91,7 +91,7 @@ jobs:
           if (newDeals.length > 0 || mine.length === 0) {
             const created = await github.rest.issues.create({
               owner, repo,
-              title: `🚨 Monster deal: $${state.deals[0].price_per_oz.toFixed(4)}/fl oz - ${state.deals[0].title.slice(0, 60)}`,
+              title: `Monster deal: $${state.deals[0].price_per_oz.toFixed(4)}/fl oz - ${state.deals[0].title.slice(0, 60)}`,
               body, labels: ['deal-alert'],
             });
             core.info(`Opened issue #${created.data.number} (${newDeals.length} new deal(s)).`);

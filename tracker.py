@@ -471,7 +471,7 @@ class MonsterDealTracker:
         """Fetch search pages and turn Monster listings into results."""
         seen = set()
         for query in self.queries:
-            log(f'\n🔍 Searching Amazon for "{query}"...')
+            log(f'\nSearching Amazon for "{query}"...')
             for page_no in range(1, self.max_pages + 1):
                 if page_no > 1 or self.pages_fetched:
                     time.sleep(random.uniform(5, 10))
@@ -496,7 +496,7 @@ class MonsterDealTracker:
                         self.results.append(result)
                         added += 1
                 log(f'  Page {page_no}: {len(cards)} cards, {added} Monster multi-packs priced')
-        log(f'\n📦 {len(self.results)} Monster listings priced from '
+        log(f'\n{len(self.results)} Monster listings priced from '
             f'{self.pages_fetched} page(s) ({self.pages_failed} failed)')
 
     def build_result(self, card):
@@ -568,7 +568,7 @@ class MonsterDealTracker:
                             key=lambda r: r['price_per_oz'])[:max_items]
         if not candidates:
             return
-        log(f'\n🔎 Verifying {len(candidates)} deal candidate(s) on their product pages...')
+        log(f'\nVerifying {len(candidates)} deal candidate(s) on their product pages...')
         for r in candidates:
             time.sleep(random.uniform(5, 9))
             html = fetcher.get(r['link'], label=f'product {r["asin"]}')
@@ -611,7 +611,7 @@ class MonsterDealTracker:
                 log(f'  {r["asin"]}: no buy-box price on product page; marking unverified')
                 r['verified'] = False
                 r['verify_note'] = 'no buy box price on product page'
-            status = '⭐' if r['price_per_oz'] <= self.price_threshold else '  '
+            status = '*' if r['price_per_oz'] <= self.price_threshold else ' '
             log(f'  {status} {r["asin"]} ${r["price_per_oz"]:.4f}/oz  {r["availability"]}  '
                 f'{r["seller_info"]}  {r["title"][:50]}')
 
@@ -645,7 +645,7 @@ class MonsterDealTracker:
         history.extend(self.results)
         with open(filename, 'w', encoding='utf-8') as f:
             json.dump(history, f, indent=1)
-        log(f'\n💾 Appended {len(self.results)} results to {filename} ({len(history)} total)')
+        log(f'\nAppended {len(self.results)} results to {filename} ({len(history)} total)')
 
     def load_previous_state(self, filename=STATE_FILE):
         if not os.path.exists(filename):
@@ -684,12 +684,12 @@ class MonsterDealTracker:
         report += f'**Listings priced:** {len(self.results)}\n\n'
 
         if deals:
-            report += f'## 🎉 {len(deals)} deal(s) at or below ${self.price_threshold:.2f}/fl oz\n\n'
+            report += f'## {len(deals)} deal(s) at or below ${self.price_threshold:.2f}/fl oz\n\n'
             report += '| $/fl oz | Price | Size | Product | Seller | Notes |\n|---|---|---|---|---|---|\n'
             for d in deals:
                 notes = []
                 if d['asin'] in new_deal_asins:
-                    notes.append('🆕 new')
+                    notes.append('new')
                 if d['offer_type'] == 'third_party':
                     notes.append('third-party offer, not the buy box')
                 if not d['verified']:
@@ -709,12 +709,12 @@ class MonsterDealTracker:
             report += '## Best current prices\n\n'
             report += '| $/fl oz | Price | Size | Product | Offer |\n|---|---|---|---|---|\n'
             for r in best:
-                flag = ' ⚠️' if r['unit_price_mismatch'] else ''
+                flag = ' (?)' if r['unit_price_mismatch'] else ''
                 size = f'{r["fl_oz"]:.0f} oz' + (' (est.)' if r['fl_oz_estimated'] else '')
                 offer = r['offer_type'] + ('' if 'in stock' in r['availability'].lower() else f', {r["availability"][:30]}')
                 report += (f'| ${r["price_per_oz"]:.4f}{flag} | ${r["price"]:.2f} | {size} '
                            f'| [{r["title"][:70]}]({r["link"]}) | {offer} |\n')
-            report += ('\n⚠️ = Amazon\'s own unit price disagrees with the pack size parsed from the title. '
+            report += ('\n(?) = Amazon\'s own unit price disagrees with the pack size parsed from the title. '
                        '(est.) = size estimated from Amazon\'s rounded unit price.\n')
         return report
 
@@ -797,7 +797,7 @@ def build_dashboard(history, results, deals, threshold, ok=True, max_days=120, m
 def main():
     tracker = MonsterDealTracker()
     log('=' * 70)
-    log('🔋 MONSTER ENERGY DEAL TRACKER')
+    log('MONSTER ENERGY DEAL TRACKER')
     log(f'   threshold ${tracker.price_threshold:.3f}/fl oz, min {tracker.min_fl_oz:.0f} fl oz, '
         f'{tracker.max_pages} page(s) x {len(tracker.queries)} query(ies)')
     log('=' * 70)
@@ -808,7 +808,7 @@ def main():
             tracker.verify_deals(fetcher)
 
     if not tracker.results:
-        log('\n⚠️  No listings could be priced. Amazon is probably blocking requests.')
+        log('\nNo listings could be priced. Amazon is probably blocking requests.')
         tracker.save_state([], ok=False)
         return 2
 
@@ -823,16 +823,16 @@ def main():
     dashboard = build_dashboard(history, tracker.results, deals, tracker.price_threshold)
     with open(DASHBOARD_FILE, 'w', encoding='utf-8') as f:
         json.dump(dashboard, f, separators=(',', ':'))
-    log(f'📈 Wrote {DASHBOARD_FILE} ({os.path.getsize(DASHBOARD_FILE) // 1024} KB)')
+    log(f'Wrote {DASHBOARD_FILE} ({os.path.getsize(DASHBOARD_FILE) // 1024} KB)')
 
     log('\n' + '=' * 70)
     log(report)
     log('=' * 70)
     if deals:
-        log(f'\n🚨 {len(deals)} deal(s) at or below ${tracker.price_threshold:.2f}/fl oz '
+        log(f'\n{len(deals)} deal(s) at or below ${tracker.price_threshold:.2f}/fl oz '
             f'({len(new_deals)} new since last run)')
     else:
-        log('\n📊 No deals below threshold. Keep monitoring!')
+        log('\nNo deals below threshold.')
     return 0
 
 
