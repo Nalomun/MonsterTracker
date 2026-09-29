@@ -1,6 +1,6 @@
 {
  "ok": true,
- "generated": "2026-09-29T15:33:05+00:00",
+ "generated": "2026-09-29T22:04:11+00:00",
  "threshold": 0.12,
  "listings_checked": 95,
  "deals": [
@@ -23,9 +23,32 @@
    "seller_info": "Amazon.com",
    "verified": true,
    "link": "https://www.amazon.com/dp/B0BJX5VNVF",
-   "timestamp": "2026-09-29T15:31:25+00:00",
+   "timestamp": "2026-09-29T22:02:20+00:00",
    "verify_price": 25.05,
    "sns_price": 23.8
+  },
+  {
+   "retailer": "Amazon",
+   "asin": "B0CVNNHCN4",
+   "title": "Monster Energy Drink Original, Green & Zero Ultra Variety Pack, 30 Cans (15 of Each Flavor, 16oz Cans)",
+   "price": 52.03,
+   "fl_oz": 480.0,
+   "fl_oz_source": "title+variant",
+   "fl_oz_estimated": false,
+   "price_per_oz": 0.1084,
+   "amazon_unit_price": null,
+   "unit_price_mismatch": false,
+   "offer_type": "featured",
+   "other_offer_price": null,
+   "other_offer_count": null,
+   "availability": "In Stock",
+   "sponsored": false,
+   "seller_info": "Amazon.com",
+   "verified": true,
+   "link": "https://www.amazon.com/dp/B0CVNNHCN4",
+   "timestamp": "2026-09-29T22:02:43+00:00",
+   "verify_price": 52.03,
+   "sns_price": null
   },
   {
    "retailer": "Amazon",
@@ -46,7 +69,7 @@
    "seller_info": "Amazon.com",
    "verified": true,
    "link": "https://www.amazon.com/dp/B0CVQS5F4Q",
-   "timestamp": "2026-09-29T15:31:46+00:00",
+   "timestamp": "2026-09-29T22:02:43+00:00",
    "verify_price": 52.03,
    "sns_price": null
   },
@@ -69,7 +92,7 @@
    "seller_info": "Third-party (10 offers, lowest)",
    "verified": true,
    "link": "https://www.amazon.com/dp/B006IMBHVU",
-   "timestamp": "2026-09-29T15:31:25+00:00",
+   "timestamp": "2026-09-29T22:02:20+00:00",
    "verify_price": null,
    "sns_price": null
   },
@@ -92,7 +115,7 @@
    "seller_info": "Amazon.com",
    "verified": true,
    "link": "https://www.amazon.com/dp/B0BL7316GD",
-   "timestamp": "2026-09-29T15:31:25+00:00",
+   "timestamp": "2026-09-29T22:02:20+00:00",
    "verify_price": 26.98,
    "sns_price": 25.63
   },
@@ -115,30 +138,7 @@
    "seller_info": "Amazon.com",
    "verified": true,
    "link": "https://www.amazon.com/dp/B0BL6X167P",
-   "timestamp": "2026-09-29T15:31:25+00:00",
-   "verify_price": 26.98,
-   "sns_price": 25.63
-  },
-  {
-   "retailer": "Amazon",
-   "asin": "B0CGMF4B74",
-   "title": "Monster Energy Ultra Variety Pack, PKZSD, Sugar Free Energy Drink, 16 Ounce (Pack of 15)",
-   "price": 26.98,
-   "fl_oz": 240.0,
-   "fl_oz_source": "title+variant",
-   "fl_oz_estimated": false,
-   "price_per_oz": 0.1124,
-   "amazon_unit_price": 0.11,
-   "unit_price_mismatch": false,
-   "offer_type": "featured",
-   "other_offer_price": null,
-   "other_offer_count": null,
-   "availability": "In Stock",
-   "sponsored": false,
-   "seller_info": "Amazon.com",
-   "verified": true,
-   "link": "https://www.amazon.com/dp/B0CGMF4B74",
-   "timestamp": "2026-09-29T15:31:25+00:00",
+   "timestamp": "2026-09-29T22:02:20+00:00",
    "verify_price": 26.98,
    "sns_price": 25.63
   },
@@ -161,12 +161,36 @@
    "seller_info": "Amazon.com",
    "verified": true,
    "link": "https://www.amazon.com/dp/B0BL75738K",
-   "timestamp": "2026-09-29T15:31:25+00:00",
+   "timestamp": "2026-09-29T22:02:20+00:00",
    "verify_price": 26.97,
    "sns_price": 25.62
+  },
+  {
+   "retailer": "Amazon",
+   "asin": "B0CVQVG5RF",
+   "title": "Monster Energy Zero Sugar, Green, Original, 16oz (Pack of 15) + Monster Energy, Lo-Carb Monster, 16oz (Pack of 15) | Monster Energy Bundle (Pack of 30)",
+   "price": 53.95,
+   "fl_oz": 480.0,
+   "fl_oz_source": "title",
+   "fl_oz_estimated": false,
+   "price_per_oz": 0.1124,
+   "amazon_unit_price": null,
+   "unit_price_mismatch": false,
+   "offer_type": "featured",
+   "other_offer_price": null,
+   "other_offer_count": null,
+   "availability": "In Stock",
+   "sponsored": false,
+   "seller_info": "Amazon.com",
+   "verified": true,
+   "link": "https://www.amazon.com/dp/B0CVQVG5RF",
+   "timestamp": "2026-09-29T22:02:43+00:00",
+   "verify_price": 53.95,
+   "sns_price": null
   }
  ],
  "new_deal_asins": [
-  "B0CGMF4B74"
+  "B0CVNNHCN4",
+  "B0CVQVG5RF"
  ]
 }
