@@ -1,8 +1,8 @@
 # Monster Energy Deal Report
 
-**Generated:** 2026-10-03 14:13 UTC  
+**Generated:** 2026-10-03 20:49 UTC  
 **Threshold:** $0.120/fl oz  
-**Listings priced:** 97
+**Listings priced:** 94
 
 ## 5 deal(s) at or below $0.12/fl oz
 
@@ -25,8 +25,8 @@
 | $0.1189 | $57.05 | 480 oz | [Monster Energy Drink, Green, Original,16oz (Pack of 15) + Monster Ener](https://www.amazon.com/dp/B0CVQS5F4Q) | featured |
 | $0.1229 | $58.98 | 480 oz | [Monster Energy Zero Sugar, Green, Original, 16oz (Pack of 15) + Monste](https://www.amazon.com/dp/B0CVQVG5RF) | featured |
 | $0.1249 | $29.98 | 240 oz | [Monster Energy Juice Monster Variety Pack, PPMLPP, Energy Drink, 16 Ou](https://www.amazon.com/dp/B0CGMF1J8Z) | featured |
-| $0.1249 | $29.98 | 240 oz | [Monster Energy Ultra Variety Pack, Blue Hawaiian, Vice Guava, Fantasy ](https://www.amazon.com/dp/B0DWCX9R49) | featured |
 | $0.1249 | $29.98 | 240 oz | [Monster Energy Ultra Sunrise, Sugar Free Energy Drink, 16 Fl Oz (Pack ](https://www.amazon.com/dp/B0BL6WQKPM) | featured |
-| $0.1249 | $29.98 | 240 oz | [Monster Energy Ultra Strawberry Dreams, Sugar Free Energy Drink, 16 Ou](https://www.amazon.com/dp/B0BL7D61N5) | featured |
+| $0.1249 | $29.98 | 240 oz | [Monster Energy Ultra Variety Pack, Blue Hawaiian, Vice Guava, Fantasy ](https://www.amazon.com/dp/B0DWCX9R49) | featured |
+| $0.1249 | $29.98 | 240 oz | [Monster Energy Ultra Violet, Sugar Free Energy Drink, 16 Ounce (Pack o](https://www.amazon.com/dp/B0BL6WMRGG) | featured |
 
 (?) = Amazon's own unit price disagrees with the pack size parsed from the title. (est.) = size estimated from Amazon's rounded unit price.
