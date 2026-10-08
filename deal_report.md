@@ -1,8 +1,8 @@
 # Monster Energy Deal Report
 
-**Generated:** 2026-10-08 16:16 UTC  
+**Generated:** 2026-10-08 23:09 UTC  
 **Threshold:** $0.120/fl oz  
-**Listings priced:** 89
+**Listings priced:** 86
 
 ## 24 deal(s) at or below $0.12/fl oz
 
@@ -28,10 +28,10 @@
 | **$0.1061** | $24.67 | 232 oz | [Monster Rehab Tea + Lemonade + Energy, Energy Drink 15.5 Ounce (Energy](https://www.amazon.com/dp/B0BL756S36) | Amazon featured offer | unverified |
 | **$0.1084** | $52.03 | 480 oz | [Monster Energy Drink Original, Green & Zero Ultra Variety Pack, 30 Can](https://www.amazon.com/dp/B0CVNNHCN4) | Amazon featured offer | unverified |
 | **$0.1124** | $26.98 | 240 oz | [Monster Energy Zero Ultra, Sugar Free Energy Drink, 16 Ounce (Pack of ](https://www.amazon.com/dp/B0BL7316GD) | Amazon featured offer | unverified |
-| **$0.1124** | $26.98 | 240 oz | [Monster Energy, Lo-Carb Monster, Low Carb Energy Drink, 16 Ounce (Pack](https://www.amazon.com/dp/B0BL75738K) | Amazon featured offer | unverified |
-| **$0.1134** | $54.45 | 480 oz | [Monster Energy Zero Sugar, Green, Original, 16oz (Pack of 15) + Monste](https://www.amazon.com/dp/B0CVQVG5RF) | Amazon featured offer | unverified |
-| **$0.1145** | $27.47 | 240 oz | [Monster Energy Zero Sugar, Green, Original, Low Calorie Energy Drink, ](https://www.amazon.com/dp/B0BL6X167P) | Amazon featured offer | unverified |
-| **$0.1175** | $28.20 | 240 oz | [Monster Energy Juice Pipeline Punch, Energy Drink, 16 Ounce (Energy + ](https://www.amazon.com/dp/B0BL6SXDL4) | Amazon featured offer | new, unverified |
+| **$0.1124** | $26.97 | 240 oz | [Monster Energy Zero Sugar, Green, Original, Low Calorie Energy Drink, ](https://www.amazon.com/dp/B0BL6X167P) | Amazon featured offer | unverified |
+| **$0.1124** | $26.97 | 240 oz | [Monster Energy, Lo-Carb Monster, Low Carb Energy Drink, 16 Ounce (Pack](https://www.amazon.com/dp/B0BL75738K) | Amazon featured offer | unverified |
+| **$0.1124** | $53.94 | 480 oz | [Monster Energy Zero Sugar, Green, Original, 16oz (Pack of 15) + Monste](https://www.amazon.com/dp/B0CVQVG5RF) | Amazon featured offer | unverified |
+| **$0.1175** | $28.20 | 240 oz | [Monster Energy Juice Pipeline Punch, Energy Drink, 16 Ounce (Energy + ](https://www.amazon.com/dp/B0BL6SXDL4) | Amazon featured offer | unverified |
 
 ## Best current prices
 
