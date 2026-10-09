@@ -1,8 +1,8 @@
 {
  "ok": true,
- "generated": "2026-10-09T16:00:09+00:00",
+ "generated": "2026-10-09T22:29:39+00:00",
  "threshold": 0.12,
- "listings_checked": 92,
+ "listings_checked": 89,
  "deals": [
   {
    "retailer": "Amazon",
@@ -23,7 +23,7 @@
    "seller_info": "Amazon.com",
    "verified": true,
    "link": "https://www.amazon.com/dp/B0BL6X167P",
-   "timestamp": "2026-10-09T15:57:03+00:00",
+   "timestamp": "2026-10-09T22:26:22+00:00",
    "verify_price": 21.49,
    "sns_price": 20.42
   },
@@ -46,7 +46,7 @@
    "seller_info": "Amazon.com",
    "verified": true,
    "link": "https://www.amazon.com/dp/B0BL6WMRGG",
-   "timestamp": "2026-10-09T15:57:03+00:00",
+   "timestamp": "2026-10-09T22:26:22+00:00",
    "verify_price": 23.42,
    "sns_price": 22.25
   },
@@ -69,7 +69,7 @@
    "seller_info": "Amazon.com",
    "verified": true,
    "link": "https://www.amazon.com/dp/B0CGMF1J8Z",
-   "timestamp": "2026-10-09T15:57:03+00:00",
+   "timestamp": "2026-10-09T22:26:22+00:00",
    "verify_price": 24.19,
    "sns_price": 22.98
   },
@@ -92,7 +92,7 @@
    "seller_info": "Amazon.com",
    "verified": true,
    "link": "https://www.amazon.com/dp/B0CVQVG5RF",
-   "timestamp": "2026-10-09T15:57:24+00:00",
+   "timestamp": "2026-10-09T22:26:46+00:00",
    "verify_price": 48.47,
    "sns_price": null
   },
@@ -115,7 +115,7 @@
    "seller_info": "Amazon.com",
    "verified": true,
    "link": "https://www.amazon.com/dp/B0DWCX9R49",
-   "timestamp": "2026-10-09T15:57:03+00:00",
+   "timestamp": "2026-10-09T22:26:22+00:00",
    "verify_price": 24.67,
    "sns_price": 23.44
   },
@@ -138,7 +138,7 @@
    "seller_info": "Amazon.com",
    "verified": true,
    "link": "https://www.amazon.com/dp/B0BL6KG7D2",
-   "timestamp": "2026-10-09T15:57:03+00:00",
+   "timestamp": "2026-10-09T22:26:22+00:00",
    "verify_price": 24.67,
    "sns_price": 23.44
   },
@@ -161,7 +161,7 @@
    "seller_info": "Amazon.com",
    "verified": true,
    "link": "https://www.amazon.com/dp/B0BL7D61N5",
-   "timestamp": "2026-10-09T15:57:03+00:00",
+   "timestamp": "2026-10-09T22:26:22+00:00",
    "verify_price": 24.67,
    "sns_price": 23.44
   },
@@ -184,7 +184,7 @@
    "seller_info": "Amazon.com",
    "verified": true,
    "link": "https://www.amazon.com/dp/B0G2Z2L3Z7",
-   "timestamp": "2026-10-09T15:57:03+00:00",
+   "timestamp": "2026-10-09T22:26:22+00:00",
    "verify_price": 24.67,
    "sns_price": 23.44
   },
@@ -207,99 +207,7 @@
    "seller_info": "Amazon.com",
    "verified": true,
    "link": "https://www.amazon.com/dp/B0G5B6MM22",
-   "timestamp": "2026-10-09T15:57:03+00:00",
-   "verify_price": 24.67,
-   "sns_price": 23.44
-  },
-  {
-   "retailer": "Amazon",
-   "asin": "B0DSGP2GML",
-   "title": "Monster Energy Juice Viking Berry, Energy Drink, 16 Ounce (Energy + Juice, Pack of 15)",
-   "price": 24.67,
-   "fl_oz": 240.0,
-   "fl_oz_source": "title+variant",
-   "fl_oz_estimated": false,
-   "price_per_oz": 0.1028,
-   "amazon_unit_price": 0.1,
-   "unit_price_mismatch": false,
-   "offer_type": "featured",
-   "other_offer_price": null,
-   "other_offer_count": null,
-   "availability": "In Stock",
-   "sponsored": false,
-   "seller_info": "Amazon.com",
-   "verified": true,
-   "link": "https://www.amazon.com/dp/B0DSGP2GML",
-   "timestamp": "2026-10-09T15:57:03+00:00",
-   "verify_price": 24.67,
-   "sns_price": 23.44
-  },
-  {
-   "retailer": "Amazon",
-   "asin": "B0BL7789WW",
-   "title": "Monster Energy Ultra Paradise, Sugar Free Energy Drink, 16 Ounce (Pack of 15)",
-   "price": 24.67,
-   "fl_oz": 240.0,
-   "fl_oz_source": "title+variant",
-   "fl_oz_estimated": false,
-   "price_per_oz": 0.1028,
-   "amazon_unit_price": 0.1,
-   "unit_price_mismatch": false,
-   "offer_type": "featured",
-   "other_offer_price": null,
-   "other_offer_count": null,
-   "availability": "In Stock",
-   "sponsored": false,
-   "seller_info": "Amazon.com",
-   "verified": true,
-   "link": "https://www.amazon.com/dp/B0BL7789WW",
-   "timestamp": "2026-10-09T15:57:03+00:00",
-   "verify_price": 24.67,
-   "sns_price": 23.44
-  },
-  {
-   "retailer": "Amazon",
-   "asin": "B0BL6XL5QZ",
-   "title": "Monster Energy Ultra Peachy Keen, Sugar Free Energy Drink, 16 oz (Pack of 15)",
-   "price": 24.67,
-   "fl_oz": 240.0,
-   "fl_oz_source": "title",
-   "fl_oz_estimated": false,
-   "price_per_oz": 0.1028,
-   "amazon_unit_price": 0.1,
-   "unit_price_mismatch": false,
-   "offer_type": "featured",
-   "other_offer_price": null,
-   "other_offer_count": null,
-   "availability": "In Stock",
-   "sponsored": false,
-   "seller_info": "Amazon.com",
-   "verified": true,
-   "link": "https://www.amazon.com/dp/B0BL6XL5QZ",
-   "timestamp": "2026-10-09T15:57:03+00:00",
-   "verify_price": 24.67,
-   "sns_price": 23.44
-  },
-  {
-   "retailer": "Amazon",
-   "asin": "B0G2Z28NT8",
-   "title": "Monster Energy Electric Blue, Energy Drink, 16 Ounce (Pack of 15)",
-   "price": 24.67,
-   "fl_oz": 240.0,
-   "fl_oz_source": "title",
-   "fl_oz_estimated": false,
-   "price_per_oz": 0.1028,
-   "amazon_unit_price": 0.1,
-   "unit_price_mismatch": false,
-   "offer_type": "featured",
-   "other_offer_price": null,
-   "other_offer_count": null,
-   "availability": "In Stock",
-   "sponsored": false,
-   "seller_info": "Amazon.com",
-   "verified": true,
-   "link": "https://www.amazon.com/dp/B0G2Z28NT8",
-   "timestamp": "2026-10-09T15:57:03+00:00",
+   "timestamp": "2026-10-09T22:26:22+00:00",
    "verify_price": 24.67,
    "sns_price": 23.44
   },
@@ -322,7 +230,76 @@
    "seller_info": "Amazon.com",
    "verified": true,
    "link": "https://www.amazon.com/dp/B0G2Z5FDCZ",
-   "timestamp": "2026-10-09T15:57:03+00:00",
+   "timestamp": "2026-10-09T22:26:22+00:00",
+   "verify_price": 24.67,
+   "sns_price": 23.44
+  },
+  {
+   "retailer": "Amazon",
+   "asin": "B0DSGP2GML",
+   "title": "Monster Energy Juice Viking Berry, Energy Drink, 16 Ounce (Energy + Juice, Pack of 15)",
+   "price": 24.67,
+   "fl_oz": 240.0,
+   "fl_oz_source": "title+variant",
+   "fl_oz_estimated": false,
+   "price_per_oz": 0.1028,
+   "amazon_unit_price": 0.1,
+   "unit_price_mismatch": false,
+   "offer_type": "featured",
+   "other_offer_price": null,
+   "other_offer_count": null,
+   "availability": "In Stock",
+   "sponsored": false,
+   "seller_info": "Amazon.com",
+   "verified": true,
+   "link": "https://www.amazon.com/dp/B0DSGP2GML",
+   "timestamp": "2026-10-09T22:26:22+00:00",
+   "verify_price": 24.67,
+   "sns_price": 23.44
+  },
+  {
+   "retailer": "Amazon",
+   "asin": "B0G2Z28NT8",
+   "title": "Monster Energy Electric Blue, Energy Drink, 16 Ounce (Pack of 15)",
+   "price": 24.67,
+   "fl_oz": 240.0,
+   "fl_oz_source": "title",
+   "fl_oz_estimated": false,
+   "price_per_oz": 0.1028,
+   "amazon_unit_price": 0.1,
+   "unit_price_mismatch": false,
+   "offer_type": "featured",
+   "other_offer_price": null,
+   "other_offer_count": null,
+   "availability": "In Stock",
+   "sponsored": false,
+   "seller_info": "Amazon.com",
+   "verified": true,
+   "link": "https://www.amazon.com/dp/B0G2Z28NT8",
+   "timestamp": "2026-10-09T22:26:22+00:00",
+   "verify_price": 24.67,
+   "sns_price": 23.44
+  },
+  {
+   "retailer": "Amazon",
+   "asin": "B0G5BBHY3H",
+   "title": "Monster Energy Strawberry Shot, Green, Original, Energy Drink, 16 Ounce (Pack of 15)",
+   "price": 24.67,
+   "fl_oz": 240.0,
+   "fl_oz_source": "title",
+   "fl_oz_estimated": false,
+   "price_per_oz": 0.1028,
+   "amazon_unit_price": 0.1,
+   "unit_price_mismatch": false,
+   "offer_type": "featured",
+   "other_offer_price": null,
+   "other_offer_count": null,
+   "availability": "In Stock",
+   "sponsored": false,
+   "seller_info": "Amazon.com",
+   "verified": true,
+   "link": "https://www.amazon.com/dp/B0G5BBHY3H",
+   "timestamp": "2026-10-09T22:26:22+00:00",
    "verify_price": 24.67,
    "sns_price": 23.44
   },
@@ -345,7 +322,7 @@
    "seller_info": "Amazon.com",
    "verified": true,
    "link": "https://www.amazon.com/dp/B0G5BC65FV",
-   "timestamp": "2026-10-09T15:57:03+00:00",
+   "timestamp": "2026-10-09T22:26:22+00:00",
    "verify_price": 24.67,
    "sns_price": 23.44
   },
@@ -365,10 +342,12 @@
    "other_offer_count": null,
    "availability": "In Stock",
    "sponsored": false,
-   "seller_info": "Amazon featured offer",
-   "verified": false,
+   "seller_info": "Amazon.com",
+   "verified": true,
    "link": "https://www.amazon.com/dp/B0G312MKQQ",
-   "timestamp": "2026-10-09T15:57:03+00:00"
+   "timestamp": "2026-10-09T22:26:22+00:00",
+   "verify_price": 24.67,
+   "sns_price": 23.44
   },
   {
    "retailer": "Amazon",
@@ -389,7 +368,7 @@
    "seller_info": "Amazon featured offer",
    "verified": false,
    "link": "https://www.amazon.com/dp/B0G5BCL69N",
-   "timestamp": "2026-10-09T15:57:03+00:00"
+   "timestamp": "2026-10-09T22:26:22+00:00"
   },
   {
    "retailer": "Amazon",
@@ -410,7 +389,7 @@
    "seller_info": "Amazon featured offer",
    "verified": false,
    "link": "https://www.amazon.com/dp/B0BJX5VNVF",
-   "timestamp": "2026-10-09T15:57:03+00:00"
+   "timestamp": "2026-10-09T22:26:22+00:00"
   },
   {
    "retailer": "Amazon",
@@ -431,28 +410,7 @@
    "seller_info": "Amazon featured offer",
    "verified": false,
    "link": "https://www.amazon.com/dp/B0BL756S36",
-   "timestamp": "2026-10-09T15:57:03+00:00"
-  },
-  {
-   "retailer": "Amazon",
-   "asin": "B0CGMC9L58",
-   "title": "Monster Energy Ultra Variety Pack, POP, Sugar Free Energy Drink, 16 Ounce (Pack of 15)",
-   "price": 25.97,
-   "fl_oz": 240.0,
-   "fl_oz_source": "title+variant",
-   "fl_oz_estimated": false,
-   "price_per_oz": 0.1082,
-   "amazon_unit_price": 0.11,
-   "unit_price_mismatch": false,
-   "offer_type": "featured",
-   "other_offer_price": null,
-   "other_offer_count": null,
-   "availability": "In Stock",
-   "sponsored": false,
-   "seller_info": "Amazon featured offer",
-   "verified": false,
-   "link": "https://www.amazon.com/dp/B0CGMC9L58",
-   "timestamp": "2026-10-09T15:57:03+00:00"
+   "timestamp": "2026-10-09T22:26:22+00:00"
   },
   {
    "retailer": "Amazon",
@@ -473,7 +431,7 @@
    "seller_info": "Amazon featured offer",
    "verified": false,
    "link": "https://www.amazon.com/dp/B0CVNNHCN4",
-   "timestamp": "2026-10-09T15:57:24+00:00"
+   "timestamp": "2026-10-09T22:26:46+00:00"
   },
   {
    "retailer": "Amazon",
@@ -494,7 +452,7 @@
    "seller_info": "Amazon featured offer",
    "verified": false,
    "link": "https://www.amazon.com/dp/B0BL7316GD",
-   "timestamp": "2026-10-09T15:57:03+00:00"
+   "timestamp": "2026-10-09T22:26:22+00:00"
   },
   {
    "retailer": "Amazon",
@@ -515,7 +473,7 @@
    "seller_info": "Amazon featured offer",
    "verified": false,
    "link": "https://www.amazon.com/dp/B0BL75738K",
-   "timestamp": "2026-10-09T15:57:03+00:00"
+   "timestamp": "2026-10-09T22:26:22+00:00"
   },
   {
    "retailer": "Amazon",
@@ -536,12 +494,10 @@
    "seller_info": "Amazon featured offer",
    "verified": false,
    "link": "https://www.amazon.com/dp/B0BL6SXDL4",
-   "timestamp": "2026-10-09T15:57:03+00:00"
+   "timestamp": "2026-10-09T22:26:22+00:00"
   }
  ],
  "new_deal_asins": [
-  "B0BL6X167P",
-  "B0CVQVG5RF",
-  "B0BL6XL5QZ"
+  "B0G5BBHY3H"
  ]
 }
