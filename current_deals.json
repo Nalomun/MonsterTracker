@@ -1,8 +1,8 @@
 {
  "ok": true,
- "generated": "2026-10-15T21:08:01+00:00",
+ "generated": "2026-10-16T20:44:38+00:00",
  "threshold": 0.12,
- "listings_checked": 88,
+ "listings_checked": 91,
  "deals": [
   {
    "retailer": "Amazon",
@@ -23,7 +23,7 @@
    "seller_info": "Amazon.com",
    "verified": true,
    "link": "https://www.amazon.com/dp/B0BJX5VNVF",
-   "timestamp": "2026-10-15T21:06:09+00:00",
+   "timestamp": "2026-10-16T20:42:50+00:00",
    "verify_price": 25.05,
    "sns_price": 23.8
   },
@@ -46,32 +46,9 @@
    "seller_info": "Amazon.com",
    "verified": true,
    "link": "https://www.amazon.com/dp/B0CVQS5F4Q",
-   "timestamp": "2026-10-15T21:06:32+00:00",
+   "timestamp": "2026-10-16T20:43:09+00:00",
    "verify_price": 51.62,
    "sns_price": null
-  },
-  {
-   "retailer": "Amazon",
-   "asin": "B0BL6JXSZ9",
-   "title": "Monster Energy Nitro Super Dry, Maximum Strength, Energy Drink, 16 ounce (Pack of 15)",
-   "price": 26.55,
-   "fl_oz": 240.0,
-   "fl_oz_source": "title+variant",
-   "fl_oz_estimated": false,
-   "price_per_oz": 0.1106,
-   "amazon_unit_price": 0.11,
-   "unit_price_mismatch": false,
-   "offer_type": "featured",
-   "other_offer_price": null,
-   "other_offer_count": null,
-   "availability": "In Stock",
-   "sponsored": false,
-   "seller_info": "Amazon.com",
-   "verified": true,
-   "link": "https://www.amazon.com/dp/B0BL6JXSZ9",
-   "timestamp": "2026-10-15T21:06:09+00:00",
-   "verify_price": 26.55,
-   "sns_price": 25.22
   },
   {
    "retailer": "Amazon",
@@ -92,7 +69,7 @@
    "seller_info": "Amazon.com",
    "verified": true,
    "link": "https://www.amazon.com/dp/B0BL6X167P",
-   "timestamp": "2026-10-15T21:06:09+00:00",
+   "timestamp": "2026-10-16T20:42:50+00:00",
    "verify_price": 26.57,
    "sns_price": 25.24
   },
@@ -112,12 +89,13 @@
    "other_offer_count": null,
    "availability": "In Stock",
    "sponsored": false,
-   "seller_info": "Amazon.com",
-   "verified": true,
+   "seller_info": "Amazon featured offer",
+   "verified": false,
    "link": "https://www.amazon.com/dp/B0BL75738K",
-   "timestamp": "2026-10-15T21:06:09+00:00",
-   "verify_price": 26.57,
-   "sns_price": 25.24
+   "timestamp": "2026-10-16T20:42:50+00:00",
+   "verify_price": null,
+   "sns_price": null,
+   "verify_note": "no buy box price on product page"
   },
   {
    "retailer": "Amazon",
@@ -138,7 +116,7 @@
    "seller_info": "Amazon.com",
    "verified": true,
    "link": "https://www.amazon.com/dp/B0CVQVG5RF",
-   "timestamp": "2026-10-15T21:06:32+00:00",
+   "timestamp": "2026-10-16T20:43:09+00:00",
    "verify_price": 53.14,
    "sns_price": null
   },
@@ -161,9 +139,32 @@
    "seller_info": "Amazon.com",
    "verified": true,
    "link": "https://www.amazon.com/dp/B0BL7316GD",
-   "timestamp": "2026-10-15T21:06:09+00:00",
+   "timestamp": "2026-10-16T20:42:50+00:00",
    "verify_price": 26.98,
    "sns_price": 25.63
+  },
+  {
+   "retailer": "Amazon",
+   "asin": "B0CYFJMRDD",
+   "title": "Monster Energy Ultra 3 Flavor Variety Pack, Zero Ultra, Ultra Peachy Keen, Ultra Strawberry Dreams, Sugar Free Energy Drink, 16 Ounce (Pack of 12)",
+   "price": 21.58,
+   "fl_oz": 192.0,
+   "fl_oz_source": "title",
+   "fl_oz_estimated": false,
+   "price_per_oz": 0.1124,
+   "amazon_unit_price": 0.11,
+   "unit_price_mismatch": false,
+   "offer_type": "featured",
+   "other_offer_price": null,
+   "other_offer_count": null,
+   "availability": "In Stock",
+   "sponsored": false,
+   "seller_info": "AmazonFresh",
+   "verified": true,
+   "link": "https://www.amazon.com/dp/B0CYFJMRDD",
+   "timestamp": "2026-10-16T20:42:50+00:00",
+   "verify_price": 21.58,
+   "sns_price": null
   },
   {
    "retailer": "Amazon",
@@ -184,10 +185,12 @@
    "seller_info": "Amazon.com",
    "verified": true,
    "link": "https://www.amazon.com/dp/B0BL6SXDL4",
-   "timestamp": "2026-10-15T21:06:09+00:00",
+   "timestamp": "2026-10-16T20:42:50+00:00",
    "verify_price": 28.2,
    "sns_price": 26.79
   }
  ],
- "new_deal_asins": []
+ "new_deal_asins": [
+  "B0CYFJMRDD"
+ ]
 }
