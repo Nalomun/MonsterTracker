@@ -1,8 +1,8 @@
 {
  "ok": true,
- "generated": "2026-10-22T14:27:46+00:00",
+ "generated": "2026-10-22T21:22:21+00:00",
  "threshold": 0.12,
- "listings_checked": 93,
+ "listings_checked": 85,
  "deals": [
   {
    "retailer": "Amazon",
@@ -23,7 +23,7 @@
    "seller_info": "Amazon.com",
    "verified": true,
    "link": "https://www.amazon.com/dp/B0BJX5VNVF",
-   "timestamp": "2026-10-22T14:25:16+00:00",
+   "timestamp": "2026-10-22T21:20:13+00:00",
    "verify_price": 25.45,
    "sns_price": 24.18
   },
@@ -46,7 +46,7 @@
    "seller_info": "Amazon.com",
    "verified": true,
    "link": "https://www.amazon.com/dp/B0CVQS5F4Q",
-   "timestamp": "2026-10-22T14:25:40+00:00",
+   "timestamp": "2026-10-22T21:20:37+00:00",
    "verify_price": 52.02,
    "sns_price": null
   },
@@ -69,7 +69,7 @@
    "seller_info": "Amazon.com",
    "verified": true,
    "link": "https://www.amazon.com/dp/B0CVNNHCN4",
-   "timestamp": "2026-10-22T14:25:40+00:00",
+   "timestamp": "2026-10-22T21:20:37+00:00",
    "verify_price": 52.43,
    "sns_price": null
   },
@@ -92,7 +92,7 @@
    "seller_info": "Amazon.com",
    "verified": true,
    "link": "https://www.amazon.com/dp/B0BL6X167P",
-   "timestamp": "2026-10-22T14:25:16+00:00",
+   "timestamp": "2026-10-22T21:20:13+00:00",
    "verify_price": 26.57,
    "sns_price": 25.24
   },
@@ -115,7 +115,7 @@
    "seller_info": "Amazon.com",
    "verified": true,
    "link": "https://www.amazon.com/dp/B0CVQVG5RF",
-   "timestamp": "2026-10-22T14:25:40+00:00",
+   "timestamp": "2026-10-22T21:20:37+00:00",
    "verify_price": 53.43,
    "sns_price": null
   },
@@ -138,7 +138,7 @@
    "seller_info": "Amazon.com",
    "verified": true,
    "link": "https://www.amazon.com/dp/B0BL75738K",
-   "timestamp": "2026-10-22T14:25:16+00:00",
+   "timestamp": "2026-10-22T21:20:13+00:00",
    "verify_price": 26.86,
    "sns_price": 25.52
   },
@@ -161,32 +161,9 @@
    "seller_info": "Amazon.com",
    "verified": true,
    "link": "https://www.amazon.com/dp/B0BL7316GD",
-   "timestamp": "2026-10-22T14:25:16+00:00",
+   "timestamp": "2026-10-22T21:20:13+00:00",
    "verify_price": 26.98,
    "sns_price": 25.63
-  },
-  {
-   "retailer": "Amazon",
-   "asin": "B08M9NXMVS",
-   "title": "Monster Energy Drink, Green, Original, 16 Ounce (Pack of 12)",
-   "price": 21.58,
-   "fl_oz": 192.0,
-   "fl_oz_source": "title",
-   "fl_oz_estimated": false,
-   "price_per_oz": 0.1124,
-   "amazon_unit_price": null,
-   "unit_price_mismatch": false,
-   "offer_type": "featured",
-   "other_offer_price": null,
-   "other_offer_count": null,
-   "availability": "Only 2 left in stock - order soon.",
-   "sponsored": false,
-   "seller_info": "Amazon.com",
-   "verified": true,
-   "link": "https://www.amazon.com/dp/B08M9NXMVS",
-   "timestamp": "2026-10-22T14:25:16+00:00",
-   "verify_price": 21.58,
-   "sns_price": null
   },
   {
    "retailer": "Amazon",
@@ -202,12 +179,12 @@
    "offer_type": "featured",
    "other_offer_price": null,
    "other_offer_count": null,
-   "availability": "Only 11 left in stock - order soon.",
+   "availability": "Only 2 left in stock - order soon.",
    "sponsored": false,
    "seller_info": "Amazon.com",
    "verified": true,
    "link": "https://www.amazon.com/dp/B0CYFJMRDD",
-   "timestamp": "2026-10-22T14:25:16+00:00",
+   "timestamp": "2026-10-22T21:20:13+00:00",
    "verify_price": 21.58,
    "sns_price": null
   },
@@ -230,14 +207,10 @@
    "seller_info": "Amazon.com",
    "verified": true,
    "link": "https://www.amazon.com/dp/B0BL6SXDL4",
-   "timestamp": "2026-10-22T14:25:16+00:00",
+   "timestamp": "2026-10-22T21:20:13+00:00",
    "verify_price": 28.2,
    "sns_price": 26.79
   }
  ],
- "new_deal_asins": [
-  "B0CVNNHCN4",
-  "B08M9NXMVS",
-  "B0BL6SXDL4"
- ]
+ "new_deal_asins": []
 }
