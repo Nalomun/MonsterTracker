@@ -1,6 +1,6 @@
 {
  "ok": true,
- "generated": "2026-10-25T13:39:14+00:00",
+ "generated": "2026-10-25T20:37:45+00:00",
  "threshold": 0.12,
  "listings_checked": 89,
  "deals": [
@@ -23,7 +23,7 @@
    "seller_info": "Amazon.com",
    "verified": true,
    "link": "https://www.amazon.com/dp/B0BJX5VNVF",
-   "timestamp": "2026-10-25T13:37:20+00:00",
+   "timestamp": "2026-10-25T20:36:06+00:00",
    "verify_price": 25.45,
    "sns_price": 24.18
   },
@@ -46,7 +46,7 @@
    "seller_info": "Amazon.com",
    "verified": true,
    "link": "https://www.amazon.com/dp/B0CVQS5F4Q",
-   "timestamp": "2026-10-25T13:37:44+00:00",
+   "timestamp": "2026-10-25T20:36:31+00:00",
    "verify_price": 52.02,
    "sns_price": null
   },
@@ -66,13 +66,12 @@
    "other_offer_count": null,
    "availability": "In Stock",
    "sponsored": false,
-   "seller_info": "Amazon featured offer",
-   "verified": false,
+   "seller_info": "Amazon.com",
+   "verified": true,
    "link": "https://www.amazon.com/dp/B0BL6X167P",
-   "timestamp": "2026-10-25T13:37:20+00:00",
-   "verify_price": null,
-   "sns_price": null,
-   "verify_note": "no buy box price on product page"
+   "timestamp": "2026-10-25T20:36:06+00:00",
+   "verify_price": 26.57,
+   "sns_price": 25.24
   },
   {
    "retailer": "Amazon",
@@ -90,12 +89,13 @@
    "other_offer_count": null,
    "availability": "In Stock",
    "sponsored": false,
-   "seller_info": "Amazon.com",
-   "verified": true,
+   "seller_info": "Amazon featured offer",
+   "verified": false,
    "link": "https://www.amazon.com/dp/B0CVQVG5RF",
-   "timestamp": "2026-10-25T13:37:44+00:00",
-   "verify_price": 53.55,
-   "sns_price": null
+   "timestamp": "2026-10-25T20:36:31+00:00",
+   "verify_price": null,
+   "sns_price": null,
+   "verify_note": "no buy box price on product page"
   },
   {
    "retailer": "Amazon",
@@ -113,35 +113,13 @@
    "other_offer_count": null,
    "availability": "In Stock",
    "sponsored": false,
-   "seller_info": "Amazon.com",
-   "verified": true,
+   "seller_info": "Amazon featured offer",
+   "verified": false,
    "link": "https://www.amazon.com/dp/B0BL7316GD",
-   "timestamp": "2026-10-25T13:37:20+00:00",
-   "verify_price": 26.98,
-   "sns_price": 25.63
-  },
-  {
-   "retailer": "Amazon",
-   "asin": "B0CGMF4B74",
-   "title": "Monster Energy Ultra Variety Pack, PKZSD, Sugar Free Energy Drink, 16 Ounce (Pack of 15)",
-   "price": 26.98,
-   "fl_oz": 240.0,
-   "fl_oz_source": "title+variant",
-   "fl_oz_estimated": false,
-   "price_per_oz": 0.1124,
-   "amazon_unit_price": 0.11,
-   "unit_price_mismatch": false,
-   "offer_type": "featured",
-   "other_offer_price": null,
-   "other_offer_count": null,
-   "availability": "In Stock",
-   "sponsored": false,
-   "seller_info": "Amazon.com",
-   "verified": true,
-   "link": "https://www.amazon.com/dp/B0CGMF4B74",
-   "timestamp": "2026-10-25T13:37:20+00:00",
-   "verify_price": 26.98,
-   "sns_price": 25.63
+   "timestamp": "2026-10-25T20:36:06+00:00",
+   "verify_price": null,
+   "sns_price": null,
+   "verify_note": "no buy box price on product page"
   },
   {
    "retailer": "Amazon",
@@ -162,7 +140,7 @@
    "seller_info": "Amazon.com",
    "verified": true,
    "link": "https://www.amazon.com/dp/B0BL75738K",
-   "timestamp": "2026-10-25T13:37:20+00:00",
+   "timestamp": "2026-10-25T20:36:06+00:00",
    "verify_price": 26.98,
    "sns_price": 25.63
   },
@@ -185,12 +163,10 @@
    "seller_info": "Amazon.com",
    "verified": true,
    "link": "https://www.amazon.com/dp/B0BL6SXDL4",
-   "timestamp": "2026-10-25T13:37:20+00:00",
+   "timestamp": "2026-10-25T20:36:06+00:00",
    "verify_price": 28.2,
    "sns_price": 26.79
   }
  ],
- "new_deal_asins": [
-  "B0CGMF4B74"
- ]
+ "new_deal_asins": []
 }
