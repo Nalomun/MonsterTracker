@@ -1,8 +1,8 @@
 {
  "ok": true,
- "generated": "2026-10-26T16:00:27+00:00",
+ "generated": "2026-10-26T22:28:36+00:00",
  "threshold": 0.12,
- "listings_checked": 73,
+ "listings_checked": 71,
  "deals": [
   {
    "retailer": "Amazon",
@@ -23,7 +23,7 @@
    "seller_info": "Amazon.com",
    "verified": true,
    "link": "https://www.amazon.com/dp/B0BJX5VNVF",
-   "timestamp": "2026-10-26T15:58:07+00:00",
+   "timestamp": "2026-10-26T22:26:39+00:00",
    "verify_price": 25.45,
    "sns_price": 24.18
   },
@@ -46,7 +46,7 @@
    "seller_info": "Amazon.com",
    "verified": true,
    "link": "https://www.amazon.com/dp/B0CVQS5F4Q",
-   "timestamp": "2026-10-26T15:58:27+00:00",
+   "timestamp": "2026-10-26T22:27:01+00:00",
    "verify_price": 52.02,
    "sns_price": null
   },
@@ -66,13 +66,12 @@
    "other_offer_count": null,
    "availability": "In Stock",
    "sponsored": false,
-   "seller_info": "Amazon featured offer",
-   "verified": false,
+   "seller_info": "Amazon.com",
+   "verified": true,
    "link": "https://www.amazon.com/dp/B0BL6X167P",
-   "timestamp": "2026-10-26T15:58:07+00:00",
-   "verify_price": null,
-   "sns_price": null,
-   "verify_note": "no buy box price on product page"
+   "timestamp": "2026-10-26T22:26:39+00:00",
+   "verify_price": 26.57,
+   "sns_price": 25.24
   },
   {
    "retailer": "Amazon",
@@ -93,7 +92,7 @@
    "seller_info": "Amazon.com",
    "verified": true,
    "link": "https://www.amazon.com/dp/B0CVQVG5RF",
-   "timestamp": "2026-10-26T15:58:27+00:00",
+   "timestamp": "2026-10-26T22:27:01+00:00",
    "verify_price": 53.55,
    "sns_price": null
   },
@@ -116,33 +115,9 @@
    "seller_info": "Amazon.com",
    "verified": true,
    "link": "https://www.amazon.com/dp/B0BL7316GD",
-   "timestamp": "2026-10-26T15:58:07+00:00",
+   "timestamp": "2026-10-26T22:26:39+00:00",
    "verify_price": 26.98,
    "sns_price": 25.63
-  },
-  {
-   "retailer": "Amazon",
-   "asin": "B08M9NXMVS",
-   "title": "Monster Energy Drink, Green, Original, 16 Ounce (Pack of 12)",
-   "price": 21.58,
-   "fl_oz": 192.0,
-   "fl_oz_source": "title",
-   "fl_oz_estimated": false,
-   "price_per_oz": 0.1124,
-   "amazon_unit_price": null,
-   "unit_price_mismatch": false,
-   "offer_type": "featured",
-   "other_offer_price": null,
-   "other_offer_count": null,
-   "availability": "In Stock",
-   "sponsored": false,
-   "seller_info": "Amazon featured offer",
-   "verified": false,
-   "link": "https://www.amazon.com/dp/B08M9NXMVS",
-   "timestamp": "2026-10-26T15:58:07+00:00",
-   "verify_price": null,
-   "sns_price": null,
-   "verify_note": "no buy box price on product page"
   },
   {
    "retailer": "Amazon",
@@ -163,7 +138,7 @@
    "seller_info": "Amazon.com",
    "verified": true,
    "link": "https://www.amazon.com/dp/B0CGMF4B74",
-   "timestamp": "2026-10-26T15:58:07+00:00",
+   "timestamp": "2026-10-26T22:26:39+00:00",
    "verify_price": 26.98,
    "sns_price": 25.63
   },
@@ -186,32 +161,9 @@
    "seller_info": "Amazon.com",
    "verified": true,
    "link": "https://www.amazon.com/dp/B0BL75738K",
-   "timestamp": "2026-10-26T15:58:07+00:00",
+   "timestamp": "2026-10-26T22:26:39+00:00",
    "verify_price": 26.98,
    "sns_price": 25.63
-  },
-  {
-   "retailer": "Amazon",
-   "asin": "B0CYFJMRDD",
-   "title": "Monster Energy Ultra 3 Flavor Variety Pack, Zero Ultra, Ultra Peachy Keen, Ultra Strawberry Dreams, Sugar Free Energy Drink, 16 Ounce (Pack of 12)",
-   "price": 21.58,
-   "fl_oz": 192.0,
-   "fl_oz_source": "title",
-   "fl_oz_estimated": false,
-   "price_per_oz": 0.1124,
-   "amazon_unit_price": 0.11,
-   "unit_price_mismatch": false,
-   "offer_type": "featured",
-   "other_offer_price": null,
-   "other_offer_count": null,
-   "availability": "Only 1 left in stock - order soon.",
-   "sponsored": false,
-   "seller_info": "Amazon.com",
-   "verified": true,
-   "link": "https://www.amazon.com/dp/B0CYFJMRDD",
-   "timestamp": "2026-10-26T15:58:07+00:00",
-   "verify_price": 21.58,
-   "sns_price": null
   },
   {
    "retailer": "Amazon",
@@ -232,14 +184,10 @@
    "seller_info": "Amazon.com",
    "verified": true,
    "link": "https://www.amazon.com/dp/B0BL6SXDL4",
-   "timestamp": "2026-10-26T15:58:07+00:00",
+   "timestamp": "2026-10-26T22:26:39+00:00",
    "verify_price": 28.2,
    "sns_price": 26.79
   }
  ],
- "new_deal_asins": [
-  "B08M9NXMVS",
-  "B0CGMF4B74",
-  "B0CYFJMRDD"
- ]
+ "new_deal_asins": []
 }
