@@ -1,8 +1,8 @@
 {
  "ok": true,
- "generated": "2026-10-28T15:49:15+00:00",
+ "generated": "2026-10-28T22:22:35+00:00",
  "threshold": 0.12,
- "listings_checked": 90,
+ "listings_checked": 67,
  "deals": [
   {
    "retailer": "Amazon",
@@ -20,12 +20,13 @@
    "other_offer_count": null,
    "availability": "In Stock",
    "sponsored": false,
-   "seller_info": "Amazon.com",
-   "verified": true,
+   "seller_info": "Amazon featured offer",
+   "verified": false,
    "link": "https://www.amazon.com/dp/B0BJX5VNVF",
-   "timestamp": "2026-10-28T15:48:19+00:00",
-   "verify_price": 25.45,
-   "sns_price": 24.18
+   "timestamp": "2026-10-28T22:21:43+00:00",
+   "verify_price": null,
+   "sns_price": null,
+   "verify_note": "no buy box price on product page"
   },
   {
    "retailer": "Amazon",
@@ -46,7 +47,7 @@
    "seller_info": "Amazon.com",
    "verified": true,
    "link": "https://www.amazon.com/dp/B0BL7316GD",
-   "timestamp": "2026-10-28T15:48:19+00:00",
+   "timestamp": "2026-10-28T22:21:43+00:00",
    "verify_price": 26.98,
    "sns_price": 25.63
   },
@@ -69,7 +70,7 @@
    "seller_info": "Amazon.com",
    "verified": true,
    "link": "https://www.amazon.com/dp/B0BL75738K",
-   "timestamp": "2026-10-28T15:48:19+00:00",
+   "timestamp": "2026-10-28T22:21:43+00:00",
    "verify_price": 26.97,
    "sns_price": 25.62
   }
