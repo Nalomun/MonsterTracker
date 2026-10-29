@@ -1,8 +1,8 @@
 {
  "ok": true,
- "generated": "2026-10-29T15:58:20+00:00",
+ "generated": "2026-10-29T22:36:20+00:00",
  "threshold": 0.12,
- "listings_checked": 73,
+ "listings_checked": 87,
  "deals": [
   {
    "retailer": "Amazon",
@@ -23,7 +23,7 @@
    "seller_info": "Amazon.com",
    "verified": true,
    "link": "https://www.amazon.com/dp/B0BJX5VNVF",
-   "timestamp": "2026-10-29T15:56:52+00:00",
+   "timestamp": "2026-10-29T22:34:51+00:00",
    "verify_price": 25.45,
    "sns_price": 24.18
   },
@@ -46,7 +46,7 @@
    "seller_info": "Amazon.com",
    "verified": true,
    "link": "https://www.amazon.com/dp/B0CVQS5F4Q",
-   "timestamp": "2026-10-29T15:57:13+00:00",
+   "timestamp": "2026-10-29T22:35:13+00:00",
    "verify_price": 52.43,
    "sns_price": null
   },
@@ -69,17 +69,17 @@
    "seller_info": "Amazon.com",
    "verified": true,
    "link": "https://www.amazon.com/dp/B0BL7316GD",
-   "timestamp": "2026-10-29T15:56:52+00:00",
+   "timestamp": "2026-10-29T22:34:51+00:00",
    "verify_price": 26.98,
    "sns_price": 25.63
   },
   {
    "retailer": "Amazon",
-   "asin": "B0BL6X167P",
-   "title": "Monster Energy Zero Sugar, Green, Original, Low Calorie Energy Drink, 16 Ounce (Pack of 15), Can",
+   "asin": "B0CGMF4B74",
+   "title": "Monster Energy Ultra Variety Pack, PKZSD, Sugar Free Energy Drink, 16 Ounce (Pack of 15)",
    "price": 26.98,
    "fl_oz": 240.0,
-   "fl_oz_source": "title",
+   "fl_oz_source": "title+variant",
    "fl_oz_estimated": false,
    "price_per_oz": 0.1124,
    "amazon_unit_price": 0.11,
@@ -91,8 +91,8 @@
    "sponsored": false,
    "seller_info": "Amazon.com",
    "verified": true,
-   "link": "https://www.amazon.com/dp/B0BL6X167P",
-   "timestamp": "2026-10-29T15:56:52+00:00",
+   "link": "https://www.amazon.com/dp/B0CGMF4B74",
+   "timestamp": "2026-10-29T22:34:51+00:00",
    "verify_price": 26.98,
    "sns_price": 25.63
   },
@@ -115,7 +115,7 @@
    "seller_info": "Amazon.com",
    "verified": true,
    "link": "https://www.amazon.com/dp/B0BL75738K",
-   "timestamp": "2026-10-29T15:56:52+00:00",
+   "timestamp": "2026-10-29T22:34:51+00:00",
    "verify_price": 26.97,
    "sns_price": 25.62
   },
@@ -138,14 +138,12 @@
    "seller_info": "Amazon.com",
    "verified": true,
    "link": "https://www.amazon.com/dp/B0CVQVG5RF",
-   "timestamp": "2026-10-29T15:57:13+00:00",
+   "timestamp": "2026-10-29T22:35:13+00:00",
    "verify_price": 53.95,
    "sns_price": null
   }
  ],
  "new_deal_asins": [
-  "B0CVQS5F4Q",
-  "B0BL6X167P",
-  "B0CVQVG5RF"
+  "B0CGMF4B74"
  ]
 }
