@@ -1,18 +1,18 @@
 {
  "ok": true,
- "generated": "2026-11-01T15:54:46+00:00",
+ "generated": "2026-11-01T21:51:54+00:00",
  "threshold": 0.12,
- "listings_checked": 91,
+ "listings_checked": 87,
  "deals": [
   {
    "retailer": "Amazon",
    "asin": "B0BJX5VNVF",
    "title": "Monster Energy Drink, Green, Original, 16 Ounce (Pack of 15)",
-   "price": 25.45,
+   "price": 25.75,
    "fl_oz": 240.0,
    "fl_oz_source": "title",
    "fl_oz_estimated": false,
-   "price_per_oz": 0.106,
+   "price_per_oz": 0.1073,
    "amazon_unit_price": 0.11,
    "unit_price_mismatch": false,
    "offer_type": "featured",
@@ -23,9 +23,9 @@
    "seller_info": "Amazon.com",
    "verified": true,
    "link": "https://www.amazon.com/dp/B0BJX5VNVF",
-   "timestamp": "2026-11-01T15:53:39+00:00",
-   "verify_price": 25.45,
-   "sns_price": 24.18
+   "timestamp": "2026-11-01T21:50:48+00:00",
+   "verify_price": 25.75,
+   "sns_price": 24.46
   },
   {
    "retailer": "Amazon",
@@ -46,7 +46,7 @@
    "seller_info": "Amazon.com",
    "verified": true,
    "link": "https://www.amazon.com/dp/B0BL7316GD",
-   "timestamp": "2026-11-01T15:53:39+00:00",
+   "timestamp": "2026-11-01T21:50:48+00:00",
    "verify_price": 26.98,
    "sns_price": 25.63
   },
@@ -69,7 +69,7 @@
    "seller_info": "Amazon.com",
    "verified": true,
    "link": "https://www.amazon.com/dp/B0CGMF4B74",
-   "timestamp": "2026-11-01T15:53:39+00:00",
+   "timestamp": "2026-11-01T21:50:48+00:00",
    "verify_price": 26.98,
    "sns_price": 25.63
   },
@@ -92,7 +92,7 @@
    "seller_info": "Amazon.com",
    "verified": true,
    "link": "https://www.amazon.com/dp/B0BL75738K",
-   "timestamp": "2026-11-01T15:53:39+00:00",
+   "timestamp": "2026-11-01T21:50:48+00:00",
    "verify_price": 26.98,
    "sns_price": 25.63
   }
