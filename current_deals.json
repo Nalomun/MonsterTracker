@@ -1,8 +1,8 @@
 {
  "ok": true,
- "generated": "2026-11-02T19:19:13+00:00",
+ "generated": "2026-11-03T16:54:59+00:00",
  "threshold": 0.12,
- "listings_checked": 89,
+ "listings_checked": 91,
  "deals": [
   {
    "retailer": "Amazon",
@@ -23,9 +23,32 @@
    "seller_info": "Amazon.com",
    "verified": true,
    "link": "https://www.amazon.com/dp/B0BJX5VNVF",
-   "timestamp": "2026-11-02T19:18:06+00:00",
+   "timestamp": "2026-11-03T16:53:36+00:00",
    "verify_price": 25.75,
    "sns_price": 24.46
+  },
+  {
+   "retailer": "Amazon",
+   "asin": "B0CVQS5F4Q",
+   "title": "Monster Energy Drink, Green, Original,16oz (Pack of 15) + Monster Energy Zero Ultra, 16oz (Pack of 15) | Monster Energy Bundle (Pack of 30)",
+   "price": 52.73,
+   "fl_oz": 480.0,
+   "fl_oz_source": "title",
+   "fl_oz_estimated": false,
+   "price_per_oz": 0.1099,
+   "amazon_unit_price": null,
+   "unit_price_mismatch": false,
+   "offer_type": "featured",
+   "other_offer_price": null,
+   "other_offer_count": null,
+   "availability": "In Stock",
+   "sponsored": false,
+   "seller_info": "Amazon.com",
+   "verified": true,
+   "link": "https://www.amazon.com/dp/B0CVQS5F4Q",
+   "timestamp": "2026-11-03T16:53:56+00:00",
+   "verify_price": 52.73,
+   "sns_price": null
   },
   {
    "retailer": "Amazon",
@@ -46,7 +69,7 @@
    "seller_info": "Amazon.com",
    "verified": true,
    "link": "https://www.amazon.com/dp/B0BL7316GD",
-   "timestamp": "2026-11-02T19:18:06+00:00",
+   "timestamp": "2026-11-03T16:53:36+00:00",
    "verify_price": 26.98,
    "sns_price": 25.63
   },
@@ -69,7 +92,7 @@
    "seller_info": "Amazon.com",
    "verified": true,
    "link": "https://www.amazon.com/dp/B0CGMF4B74",
-   "timestamp": "2026-11-02T19:18:06+00:00",
+   "timestamp": "2026-11-03T16:53:36+00:00",
    "verify_price": 26.98,
    "sns_price": 25.63
   },
@@ -92,10 +115,36 @@
    "seller_info": "Amazon.com",
    "verified": true,
    "link": "https://www.amazon.com/dp/B0BL75738K",
-   "timestamp": "2026-11-02T19:18:06+00:00",
+   "timestamp": "2026-11-03T16:53:36+00:00",
    "verify_price": 26.98,
    "sns_price": 25.63
+  },
+  {
+   "retailer": "Amazon",
+   "asin": "B0CVQVG5RF",
+   "title": "Monster Energy Zero Sugar, Green, Original, 16oz (Pack of 15) + Monster Energy, Lo-Carb Monster, 16oz (Pack of 15) | Monster Energy Bundle (Pack of 30)",
+   "price": 53.96,
+   "fl_oz": 480.0,
+   "fl_oz_source": "title",
+   "fl_oz_estimated": false,
+   "price_per_oz": 0.1124,
+   "amazon_unit_price": null,
+   "unit_price_mismatch": false,
+   "offer_type": "featured",
+   "other_offer_price": null,
+   "other_offer_count": null,
+   "availability": "In Stock",
+   "sponsored": false,
+   "seller_info": "Amazon.com",
+   "verified": true,
+   "link": "https://www.amazon.com/dp/B0CVQVG5RF",
+   "timestamp": "2026-11-03T16:53:56+00:00",
+   "verify_price": 53.96,
+   "sns_price": null
   }
  ],
- "new_deal_asins": []
+ "new_deal_asins": [
+  "B0CVQS5F4Q",
+  "B0CVQVG5RF"
+ ]
 }
