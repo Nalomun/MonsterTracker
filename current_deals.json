@@ -1,8 +1,8 @@
 {
  "ok": true,
- "generated": "2026-11-05T17:14:14+00:00",
+ "generated": "2026-11-05T23:28:44+00:00",
  "threshold": 0.12,
- "listings_checked": 87,
+ "listings_checked": 83,
  "deals": [
   {
    "retailer": "Amazon",
@@ -16,14 +16,14 @@
    "amazon_unit_price": 0.11,
    "unit_price_mismatch": false,
    "offer_type": "featured",
-   "other_offer_price": null,
-   "other_offer_count": null,
+   "other_offer_price": 24.79,
+   "other_offer_count": 6,
    "availability": "In Stock",
    "sponsored": false,
    "seller_info": "Amazon.com",
    "verified": true,
    "link": "https://www.amazon.com/dp/B0BJX5VNVF",
-   "timestamp": "2026-11-05T17:12:41+00:00",
+   "timestamp": "2026-11-05T23:26:58+00:00",
    "verify_price": 25.75,
    "sns_price": 24.46
   },
@@ -46,7 +46,7 @@
    "seller_info": "Amazon.com",
    "verified": true,
    "link": "https://www.amazon.com/dp/B0CVQS5F4Q",
-   "timestamp": "2026-11-05T17:13:07+00:00",
+   "timestamp": "2026-11-05T23:27:19+00:00",
    "verify_price": 53.23,
    "sns_price": null
   },
@@ -69,7 +69,7 @@
    "seller_info": "Amazon.com",
    "verified": true,
    "link": "https://www.amazon.com/dp/B0BL7316GD",
-   "timestamp": "2026-11-05T17:12:41+00:00",
+   "timestamp": "2026-11-05T23:26:58+00:00",
    "verify_price": 26.98,
    "sns_price": 25.63
   },
@@ -92,9 +92,32 @@
    "seller_info": "Amazon.com",
    "verified": true,
    "link": "https://www.amazon.com/dp/B0CGMF4B74",
-   "timestamp": "2026-11-05T17:12:41+00:00",
+   "timestamp": "2026-11-05T23:26:58+00:00",
    "verify_price": 26.98,
    "sns_price": 25.63
+  },
+  {
+   "retailer": "Amazon",
+   "asin": "B0CYFJMRDD",
+   "title": "Monster Energy Ultra 3 Flavor Variety Pack, Zero Ultra, Ultra Peachy Keen, Ultra Strawberry Dreams, Sugar Free Energy Drink, 16 Ounce (Pack of 12)",
+   "price": 21.58,
+   "fl_oz": 192.0,
+   "fl_oz_source": "title",
+   "fl_oz_estimated": false,
+   "price_per_oz": 0.1124,
+   "amazon_unit_price": 0.11,
+   "unit_price_mismatch": false,
+   "offer_type": "featured",
+   "other_offer_price": null,
+   "other_offer_count": null,
+   "availability": "Only 2 left in stock - order soon.",
+   "sponsored": false,
+   "seller_info": "Amazon.com",
+   "verified": true,
+   "link": "https://www.amazon.com/dp/B0CYFJMRDD",
+   "timestamp": "2026-11-05T23:26:58+00:00",
+   "verify_price": 21.58,
+   "sns_price": null
   },
   {
    "retailer": "Amazon",
@@ -115,7 +138,7 @@
    "seller_info": "Amazon.com",
    "verified": true,
    "link": "https://www.amazon.com/dp/B0BL6X167P",
-   "timestamp": "2026-11-05T17:12:41+00:00",
+   "timestamp": "2026-11-05T23:26:58+00:00",
    "verify_price": 27.48,
    "sns_price": 26.11
   },
@@ -138,13 +161,12 @@
    "seller_info": "Amazon.com",
    "verified": true,
    "link": "https://www.amazon.com/dp/B0CVQVG5RF",
-   "timestamp": "2026-11-05T17:13:07+00:00",
+   "timestamp": "2026-11-05T23:27:19+00:00",
    "verify_price": 56.83,
    "sns_price": null
   }
  ],
  "new_deal_asins": [
-  "B0CGMF4B74",
-  "B0BL6X167P"
+  "B0CYFJMRDD"
  ]
 }
