@@ -1,8 +1,8 @@
 # Monster Energy Deal Report
 
-**Generated:** 2026-11-07 15:32 UTC  
+**Generated:** 2026-11-07 21:38 UTC  
 **Threshold:** $0.120/fl oz  
-**Listings priced:** 88
+**Listings priced:** 90
 
 ## 5 deal(s) at or below $0.12/fl oz
 
