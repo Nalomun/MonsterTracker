@@ -1,6 +1,6 @@
 {
  "ok": true,
- "generated": "2026-11-14T15:40:05+00:00",
+ "generated": "2026-11-14T22:08:27+00:00",
  "threshold": 0.12,
  "listings_checked": 87,
  "deals": [
@@ -23,7 +23,7 @@
    "seller_info": "Amazon.com",
    "verified": true,
    "link": "https://www.amazon.com/dp/B0BL7316GD",
-   "timestamp": "2026-11-14T15:39:32+00:00",
+   "timestamp": "2026-11-14T22:07:57+00:00",
    "verify_price": 26.98,
    "sns_price": 25.63
   }
