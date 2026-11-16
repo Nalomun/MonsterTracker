@@ -1,8 +1,8 @@
 {
  "ok": true,
- "generated": "2026-11-15T22:38:38+00:00",
+ "generated": "2026-11-16T19:25:05+00:00",
  "threshold": 0.12,
- "listings_checked": 88,
+ "listings_checked": 91,
  "deals": [
   {
    "retailer": "Amazon",
@@ -23,12 +23,10 @@
    "seller_info": "Amazon.com",
    "verified": true,
    "link": "https://www.amazon.com/dp/B0BL6SXDL4",
-   "timestamp": "2026-11-15T22:38:06+00:00",
+   "timestamp": "2026-11-16T19:24:28+00:00",
    "verify_price": 28.2,
    "sns_price": 26.79
   }
  ],
- "new_deal_asins": [
-  "B0BL6SXDL4"
- ]
+ "new_deal_asins": []
 }
