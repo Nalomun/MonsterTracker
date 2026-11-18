@@ -1,8 +1,8 @@
 {
  "ok": true,
- "generated": "2026-11-17T18:18:54+00:00",
+ "generated": "2026-11-18T17:54:12+00:00",
  "threshold": 0.12,
- "listings_checked": 93,
+ "listings_checked": 92,
  "deals": [
   {
    "retailer": "Amazon",
@@ -23,20 +23,20 @@
    "seller_info": "Amazon.com",
    "verified": true,
    "link": "https://www.amazon.com/dp/B0G2Z2L3Z7",
-   "timestamp": "2026-11-17T18:18:04+00:00",
+   "timestamp": "2026-11-18T17:53:23+00:00",
    "verify_price": 26.7,
    "sns_price": 25.36
   },
   {
    "retailer": "Amazon",
-   "asin": "B0BL6SXDL4",
-   "title": "Monster Energy Juice Pipeline Punch, Energy Drink, 16 Ounce (Energy + Juice, Pack of 15)",
-   "price": 28.2,
+   "asin": "B0BL77J44B",
+   "title": "Monster Energy Juice Monster Mango Loco, Energy Drink, 16 Ounce (Energy + Juice, Pack of 15)",
+   "price": 26.7,
    "fl_oz": 240.0,
    "fl_oz_source": "title+variant",
    "fl_oz_estimated": false,
-   "price_per_oz": 0.1175,
-   "amazon_unit_price": 0.12,
+   "price_per_oz": 0.1113,
+   "amazon_unit_price": 0.11,
    "unit_price_mismatch": false,
    "offer_type": "featured",
    "other_offer_price": null,
@@ -45,16 +45,16 @@
    "sponsored": false,
    "seller_info": "Amazon.com",
    "verified": true,
-   "link": "https://www.amazon.com/dp/B0BL6SXDL4",
-   "timestamp": "2026-11-17T18:18:04+00:00",
-   "verify_price": 28.2,
-   "sns_price": 26.79
+   "link": "https://www.amazon.com/dp/B0BL77J44B",
+   "timestamp": "2026-11-18T17:53:23+00:00",
+   "verify_price": 26.7,
+   "sns_price": 25.36
   },
   {
    "retailer": "Amazon",
    "asin": "B0BL6X167P",
    "title": "Monster Energy Zero Sugar, Green, Original, Low Calorie Energy Drink, 16 Ounce (Pack of 15), Can",
-   "price": 28.26,
+   "price": 28.28,
    "fl_oz": 240.0,
    "fl_oz_source": "title",
    "fl_oz_estimated": false,
@@ -69,13 +69,12 @@
    "seller_info": "Amazon.com",
    "verified": true,
    "link": "https://www.amazon.com/dp/B0BL6X167P",
-   "timestamp": "2026-11-17T18:18:04+00:00",
-   "verify_price": 28.26,
-   "sns_price": 26.85
+   "timestamp": "2026-11-18T17:53:23+00:00",
+   "verify_price": 28.28,
+   "sns_price": 26.87
   }
  ],
  "new_deal_asins": [
-  "B0G2Z2L3Z7",
-  "B0BL6X167P"
+  "B0BL77J44B"
  ]
 }
