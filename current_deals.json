@@ -1,8 +1,8 @@
 {
  "ok": true,
- "generated": "2026-11-19T18:04:40+00:00",
+ "generated": "2026-11-20T17:39:59+00:00",
  "threshold": 0.12,
- "listings_checked": 89,
+ "listings_checked": 92,
  "deals": [
   {
    "retailer": "Amazon",
@@ -23,7 +23,7 @@
    "seller_info": "Amazon.com",
    "verified": true,
    "link": "https://www.amazon.com/dp/B0BJX5VNVF",
-   "timestamp": "2026-11-19T18:03:30+00:00",
+   "timestamp": "2026-11-20T17:39:04+00:00",
    "verify_price": 16.64,
    "sns_price": 15.81
   },
@@ -31,11 +31,11 @@
    "retailer": "Amazon",
    "asin": "B0CVQS5F4Q",
    "title": "Monster Energy Drink, Green, Original,16oz (Pack of 15) + Monster Energy Zero Ultra, 16oz (Pack of 15) | Monster Energy Bundle (Pack of 30)",
-   "price": 43.34,
+   "price": 44.93,
    "fl_oz": 480.0,
    "fl_oz_source": "title",
    "fl_oz_estimated": false,
-   "price_per_oz": 0.0903,
+   "price_per_oz": 0.0936,
    "amazon_unit_price": null,
    "unit_price_mismatch": false,
    "offer_type": "featured",
@@ -46,8 +46,8 @@
    "seller_info": "Amazon.com",
    "verified": true,
    "link": "https://www.amazon.com/dp/B0CVQS5F4Q",
-   "timestamp": "2026-11-19T18:03:55+00:00",
-   "verify_price": 43.34,
+   "timestamp": "2026-11-20T17:39:21+00:00",
+   "verify_price": 44.93,
    "sns_price": null
   },
   {
@@ -69,7 +69,7 @@
    "seller_info": "Amazon.com",
    "verified": true,
    "link": "https://www.amazon.com/dp/B0BL77J44B",
-   "timestamp": "2026-11-19T18:03:30+00:00",
+   "timestamp": "2026-11-20T17:39:04+00:00",
    "verify_price": 26.7,
    "sns_price": 25.36
   },
@@ -92,14 +92,10 @@
    "seller_info": "Amazon.com",
    "verified": true,
    "link": "https://www.amazon.com/dp/B0G2Z2L3Z7",
-   "timestamp": "2026-11-19T18:03:30+00:00",
+   "timestamp": "2026-11-20T17:39:04+00:00",
    "verify_price": 26.7,
    "sns_price": 25.36
   }
  ],
- "new_deal_asins": [
-  "B0BJX5VNVF",
-  "B0CVQS5F4Q",
-  "B0BL77J44B"
- ]
+ "new_deal_asins": []
 }
