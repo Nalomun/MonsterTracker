@@ -1,8 +1,8 @@
 {
  "ok": true,
- "generated": "2026-11-21T16:41:21+00:00",
+ "generated": "2026-11-21T22:55:47+00:00",
  "threshold": 0.12,
- "listings_checked": 94,
+ "listings_checked": 90,
  "deals": [
   {
    "retailer": "Amazon",
@@ -23,7 +23,7 @@
    "seller_info": "Amazon.com",
    "verified": true,
    "link": "https://www.amazon.com/dp/B0BJX5VNVF",
-   "timestamp": "2026-11-21T16:40:28+00:00",
+   "timestamp": "2026-11-21T22:54:42+00:00",
    "verify_price": 16.64,
    "sns_price": 15.81
   },
@@ -46,7 +46,7 @@
    "seller_info": "Amazon.com",
    "verified": true,
    "link": "https://www.amazon.com/dp/B0CVQS5F4Q",
-   "timestamp": "2026-11-21T16:40:49+00:00",
+   "timestamp": "2026-11-21T22:55:03+00:00",
    "verify_price": 44.95,
    "sns_price": null
   },
@@ -69,10 +69,35 @@
    "seller_info": "Amazon.com",
    "verified": true,
    "link": "https://www.amazon.com/dp/B0G2Z2L3Z7",
-   "timestamp": "2026-11-21T16:40:28+00:00",
+   "timestamp": "2026-11-21T22:54:42+00:00",
    "verify_price": 26.7,
    "sns_price": 25.36
+  },
+  {
+   "retailer": "Amazon",
+   "asin": "B0BL6X167P",
+   "title": "Monster Energy Zero Sugar, Green, Original, Low Calorie Energy Drink, 16 Ounce (Pack of 15), Can",
+   "price": 28.31,
+   "fl_oz": 240.0,
+   "fl_oz_source": "title",
+   "fl_oz_estimated": false,
+   "price_per_oz": 0.118,
+   "amazon_unit_price": 0.12,
+   "unit_price_mismatch": false,
+   "offer_type": "featured",
+   "other_offer_price": null,
+   "other_offer_count": null,
+   "availability": "In Stock",
+   "sponsored": false,
+   "seller_info": "Amazon.com",
+   "verified": true,
+   "link": "https://www.amazon.com/dp/B0BL6X167P",
+   "timestamp": "2026-11-21T22:54:42+00:00",
+   "verify_price": 28.31,
+   "sns_price": 26.89
   }
  ],
- "new_deal_asins": []
+ "new_deal_asins": [
+  "B0BL6X167P"
+ ]
 }
