@@ -1,8 +1,8 @@
 {
  "ok": true,
- "generated": "2026-11-25T19:02:16+00:00",
+ "generated": "2026-11-26T18:54:49+00:00",
  "threshold": 0.12,
- "listings_checked": 90,
+ "listings_checked": 86,
  "deals": [
   {
    "retailer": "Amazon",
@@ -23,7 +23,7 @@
    "seller_info": "Amazon.com",
    "verified": true,
    "link": "https://www.amazon.com/dp/B0BJX5VNVF",
-   "timestamp": "2026-11-25T19:01:14+00:00",
+   "timestamp": "2026-11-26T18:53:30+00:00",
    "verify_price": 19.97,
    "sns_price": 18.97
   },
@@ -46,7 +46,7 @@
    "seller_info": "Amazon.com",
    "verified": true,
    "link": "https://www.amazon.com/dp/B0CVQS5F4Q",
-   "timestamp": "2026-11-25T19:01:36+00:00",
+   "timestamp": "2026-11-26T18:53:52+00:00",
    "verify_price": 48.34,
    "sns_price": null
   },
@@ -69,9 +69,32 @@
    "seller_info": "Amazon.com",
    "verified": true,
    "link": "https://www.amazon.com/dp/B0G2Z2L3Z7",
-   "timestamp": "2026-11-25T19:01:14+00:00",
+   "timestamp": "2026-11-26T18:53:30+00:00",
    "verify_price": 26.7,
    "sns_price": 25.36
+  },
+  {
+   "retailer": "Amazon",
+   "asin": "B00A2G0FRK",
+   "title": "Monster Lo Carb Energy Drink - 24/16 Ounce (16 Fl Oz (Pack of 24))",
+   "price": 44.0,
+   "fl_oz": 384.0,
+   "fl_oz_source": "title+variant",
+   "fl_oz_estimated": false,
+   "price_per_oz": 0.1146,
+   "amazon_unit_price": null,
+   "unit_price_mismatch": false,
+   "offer_type": "third_party",
+   "other_offer_price": 44.0,
+   "other_offer_count": 5,
+   "availability": "No featured offer (see all buying options)",
+   "sponsored": false,
+   "seller_info": "Third-party (5 offers, lowest)",
+   "verified": true,
+   "link": "https://www.amazon.com/dp/B00A2G0FRK",
+   "timestamp": "2026-11-26T18:53:52+00:00",
+   "verify_price": null,
+   "sns_price": null
   },
   {
    "retailer": "Amazon",
@@ -92,12 +115,12 @@
    "seller_info": "Amazon.com",
    "verified": true,
    "link": "https://www.amazon.com/dp/B0BL6X167P",
-   "timestamp": "2026-11-25T19:01:14+00:00",
+   "timestamp": "2026-11-26T18:53:30+00:00",
    "verify_price": 28.37,
    "sns_price": 26.95
   }
  ],
  "new_deal_asins": [
-  "B0CVQS5F4Q"
+  "B00A2G0FRK"
  ]
 }
